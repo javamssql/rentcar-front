@@ -1,0 +1,149 @@
+<footer class="footer">
+	<div class="container">
+		<div class="footer-box">
+			<div class="footer-row">
+				<div class="footer-logo"><img src="../../comn/img/layout/logo-blue.svg" alt="그냥이차"></div>
+				<address class="footer-addr">
+					<div class="addr-btn ui-addr-btn">그냥이차 사업자정보<img src="../../comn/img/layout/icon-down.svg" alt=""></div>
+					<div class="addr-box ui-addr-box">
+						<p class="info"><span>(주) 그냥이차오토</span><span>서울특별시 강남구 테헤란로 1234</span></p>
+						<p class="info"><span>사업자 등록번호 : 123-45-67890</span></p>
+						<p class="info"><span>통신판매신고 : 1234-456-789</span></p>
+					</div>
+				</address>
+				<div class="footer-copy">COPYRIGHT ©2026그냥이차. ALL RIGHT RESERVED.</div>
+			</div>
+			<div class="footer-row">
+				<div class="footer-lnk">
+					<a href="#lnk" class="lnk">이용약관</a>
+					<a href="#lnk" class="lnk color-primary">개인정보취급방침</a>
+					<a href="#lnk" class="lnk">사업자정보</a>
+				</div>
+				<div class="footer-contact">
+					<a href="tel:02-1234-5678" class="call"><img src="../../comn/img/layout/icon-call.svg" alt="전화걸기">02-1234-5678</a>
+				<p class="info">평일 09:00 - 18:00</p>
+				<p class="info">info@ngfde.com</p>
+				</div>
+				<div class="footer-sns">
+					<a href="#lnk" class="lnk"><img src="../../comn/img/layout/sns-instagram.svg" alt="인스타그램"></a>
+					<a href="#lnk" class="lnk"><img src="../../comn/img/layout/sns-naver.svg" alt="네이버"></a>
+					<a href="#lnk" class="lnk"><img src="../../comn/img/layout/sns-youtube.svg" alt="유튜브"></a>
+					<a href="#lnk" class="lnk"><img src="../../comn/img/layout/sns-kakao.svg" alt="카카오톡"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="quick-menu">
+	<div class="quick-list">
+		<a href="#" class="quick-btn" onclick="frontJS.modal('consult').show();">
+			<div class="img"><img src="../../comn/img/layout/quick-icon01.svg" alt=""></div>
+			<span class="quick-label">간편상담</span>
+		</a>
+		<a href="#" class="quick-btn">
+			<div class="img"><img src="../../comn/img/layout/quick-icon02.svg" alt=""></div>
+			<span class="quick-label">나의차고</span>
+		</a>
+		<a href="#" class="quick-btn">
+			<div class="img"><img src="../../comn/img/layout/quick-icon03.svg" alt=""></div>
+			<span class="quick-label">내차찾기</span>
+		</a>
+		<a href="#" class="quick-btn">
+			<div class="img"><img src="../../comn/img/layout/quick-icon04.svg" alt=""></div>
+			<span class="quick-label">즉시출고</span>
+		</a>
+		<a href="#" class="quick-btn">
+			<div class="img"><img src="../../comn/img/layout/quick-icon05.svg" alt=""></div>
+			<span class="quick-label">마이페이지</span>
+		</a>
+	</div>
+	<button type="button" class="top-btn" title="상단으로 이동" onclick="layout.top();"><img src="../../comn/img/layout/quick-icon-top.svg" alt=""></button>
+</div>
+
+<!-- ## 팝업 :: 간편상담 s ## -->
+<dialog class="modal modal-size-sm modal-consult" data-modal="consult">
+	<div class="modal-header">
+		<h4 class="modal-title">간편상담신청</h4>
+	</div>
+	<div class="modal-box">
+		<div class="modal-body">
+			<form action="">
+				<ul class="form modal-consult-form">
+					<li class="form-row">
+						<label for="name" class="form-title form-required">성함</label>
+						<div class="form-item">
+							<input type="text" id="name" name="name" class="form-input" placeholder="이름을 입력해주세요">
+						</div>
+					</li>
+					<li class="form-row">
+						<label for="phone" class="form-title form-required">연락처</label>
+						<div class="form-item">
+							<input type="text" id="phone" name="phone" class="form-input" placeholder="연락처를 입력해주세요">
+						</div>
+					</li>
+					<li class="form-row">
+						<label for="model" class="form-title form-required">모델명</label>
+						<div class="form-item">
+							<input type="text" id="model" name="model" class="form-input" placeholder="관심차종을 입력해주세요">
+						</div>
+					</li>
+					<li class="form-row">
+						<label for="" class="form-title form-required">개인정보처리방침</label>
+						<div class="form-item">
+							<div class="agree-box">
+								<div class="agree-header">
+									<div class="checkbox">
+										<label class="checkbox-label">
+											<input type="checkbox" name="check" class="checkbox-input">
+											<span class="checkbox-check"></span>
+											<span class="checkbox-text">[필수] 개인정보 수집 이용 제공동의</span>
+										</label>
+									</div>
+									<button type="button" class="button button-size-sm" onclick="frontJS.toggle(this, 'agree').toggle();">자세히보기</button>
+								</div>
+								<div class="agree-body" data-toggle="agree">
+									제 1 조 수집하는 개인 정보 항목 <br>
+									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+									제 1 조 수집하는 개인 정보 항목 <br>
+									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+									제 1 조 수집하는 개인 정보 항목 <br>
+									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+								</div>
+							</div>
+							<div class="agree-box">
+								<div class="agree-header">
+									<div class="checkbox">
+										<label class="checkbox-label">
+											<input type="checkbox" name="check" class="checkbox-input">
+											<span class="checkbox-check"></span>
+											<span class="checkbox-text">[필수] 개인정보 3자 제공 동의</span>
+										</label>
+									</div>
+									<button type="button" class="button button-size-sm" onclick="frontJS.toggle(this, 'agree2').toggle();">자세히보기</button>
+								</div>
+								<div class="agree-body" data-toggle="agree2">
+									제 1 조 수집하는 개인 정보 항목 <br>
+									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+									제 1 조 수집하는 개인 정보 항목 <br>
+									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+									제 1 조 수집하는 개인 정보 항목 <br>
+									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="button-wrap">
+					<button type="submit" class="button button-color-primary">신청하기</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('consult').hide();"></button>
+</dialog>
+<!-- ## 팝업 :: 간편상담 e ## -->
+
+<script>
+	layout.addr();
+</script>

@@ -1,0 +1,252 @@
+@charset "utf-8";
+
+
+/*
+	** 회원 관련 CSS(로그인, 회원가입, 개인정보처리방침)
+*/
+
+
+.member-form .form-row {
+	display: block;
+	border:none;
+}
+.member-form .form-title {
+	display: block;
+	margin-bottom:5px;
+}
+.member-form .form-item {
+	gap:0;
+	margin-bottom:10px;
+}
+.member-form .form-item:last-child {
+	margin-bottom:0;
+}
+.member-certify {
+	position: relative;
+	width: 100%;
+}
+.member-certify .certify-count {
+	position: absolute;
+	right:15px;
+	top:50%;
+	transform:translateY(-50%);
+	color: #999;
+	font-size: var(--font-size-14);
+}
+.member-sns {
+	display: flex;
+	align-items: center;
+	gap:10px;
+	margin-top:var(--space-md);
+	padding-top:var(--space-md);
+	border-top:1px solid #ddd;
+}
+.member-sns .button {
+	flex: 1 1 auto;
+	position: relative;
+	gap:8px;
+}
+.member-sns .button.naver {
+	background-color: #03c75a;
+	border-color: #03c75a;
+	color: #fff;
+}
+.member-sns .button.kakao {
+	background-color: #f4e24f;
+	border-color: #f4e24f;
+	color: #000;
+}
+.member-sns .button::before {
+	display: inline-flex;
+	align-items: center;
+	content:"";
+}
+.member-sns .button.naver::before {
+	width: 14px;
+	height: 14px;
+	background:url("https://project.impacsys.kr/imPublish/img/icon-naver-white.svg") no-repeat center center;
+	margin-top:-1px;
+}
+.member-sns .button.kakao::before {
+	width: 19px;
+	height: 18px;
+	background:url("https://project.impacsys.kr/imPublish/img/icon-kakao-brown.svg") no-repeat center center;
+}
+.member-lnk {
+	--member-space: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap:var(--member-space);
+	margin-top:var(--space-md);
+}
+.member-lnk .lnk {
+	position: relative;
+	color: #888;
+}
+.member-lnk .lnk:not(:last-child)::after {
+	display: block;
+	content:"";
+	width: 1px;
+	height: 12px;
+	background:#ddd;
+	position: absolute;
+	right:calc(var(--member-space) / -2);
+	top:50%;
+	transform:translateY(-50%);
+}
+@media all and (max-width: 767px) {
+	.member-sns {
+		flex-direction: column;
+		gap:5px;
+		margin-top:var(--space-sm);
+		padding-top:var(--space-sm);
+	}
+	.member-sns .button {
+		width: 100%;
+	}
+	.member-lnk {
+		--member-space: 20px;
+		margin-top:var(--space-sm);
+	}
+	.member-lnk .lnk {
+		font-size: var(--font-size-14);
+	}
+	.member-lnk .lnk:not(:last-child)::after {
+
+	}
+}
+
+
+.policy-docu {
+	color: #616161;
+}
+.policy-docu article:first-of-type {
+	margin-top: 0;
+}
+.policy-area-lg {
+	margin-top: 100px;
+}
+.policy-area-md {
+	margin-top: 60px;
+}
+.policy-area-sm {
+	margin-top: 30px;
+}
+.policy-docu :is(.title-lg,.title-md,.title-sm,.title-xs) {
+	font-weight: 700;
+	color: #1d1d1d;
+}
+.policy-docu .policy-title {
+	color: var(--primary-color);
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 10px;
+}
+.policy-docu strong {
+	font-weight: 700;
+}
+.policy-line {
+	border-bottom: 1px solid #dcdcdc;
+}
+.policy-box {
+	padding: 40px;
+	border: 1px solid #dcdcdc;
+}
+.policy-box.small {
+	padding: 15px 20px;
+	margin: 5px 0;
+}
+.policy-txt {
+	margin: 10px 0;
+	line-height: 1.5;
+}
+.policy-list ul {
+	margin-top: 10px;
+	counter-reset: list-number;
+}
+.policy-list > li {
+	position: relative;
+	padding-left: 13px;
+	line-height: 1.5;
+	counter-increment: list-number;
+}
+.policy-list > li:not(:last-child) {
+	margin-bottom: 10px;
+}
+.policy-list li::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.policy-list.disc > li::before {
+	content: "•";
+	font-size: var(--font-size-14);
+}
+.policy-list.dash > li::before {
+	content: "-";
+}
+.policy-list.square > li::before {
+	content: "▪";
+}
+.policy-list:is(.decimal, .hangul, .lower-alpha, .upper-alpha) {
+	padding-left: 20px;
+}
+.policy-list:is(.decimal, .hangul, .lower-alpha, .upper-alpha) > li {
+	padding-left: 3px;
+}
+.policy-list.decimal > li {
+	list-style: decimal;
+}
+.policy-list.hangul > li {
+	list-style: hangul;
+}
+.policy-list.lower-alpha > li {
+	list-style: lower-alpha;
+}
+.policy-list.upper-alpha > li {
+	list-style: upper-alpha;
+}
+.policy-list.circle-number > li {
+	padding-left: 23px;
+}
+.policy-list.circle-number > li::before {
+	content: counter(list-number);
+	display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    border-radius: 50%;
+    background: #fff;
+	border: 1px solid #777;
+    font-size: 0.7rem;
+    line-height: 1.25em;
+    text-align: center;
+	top: 3px;
+}
+
+@media all and (max-width: 767px) {
+	.policy-box {
+		padding: 15px 20px;
+	}
+}
+
+
+
+.modal-login .img {
+	margin: 20px 0 30px;
+	text-align: center;
+}
+.modal-login .text {
+	font-size: var(--font-size-20);
+	font-weight: 700;
+	text-align: center;
+}
+@media all and (max-width: 767px) {
+	.modal-login .img {
+		margin: 0 auto 25px;
+		width: 280px;
+	}
+	.modal-login .text {
+		font-size: var(--font-size-18);
+		font-weight: 600;
+	}
+}
