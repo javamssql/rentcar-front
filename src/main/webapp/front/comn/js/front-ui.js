@@ -372,10 +372,9 @@ const main = {
 
 	visual: function () {
 		const elemStr = `[data-slide="main-visual-card"]`;
-
-		// loop: true 시 복제 슬라이드를 제외한 실제 개수
-		const realTotal = document.querySelectorAll(`${elemStr} .swiper-slide:not(.swiper-slide-duplicate)`).length;
-
+		const REAL_COUNT = document.querySelectorAll(`${elemStr} .swiper-slide`).length;
+		const COPIES = 4;
+		const JUMP_AT = REAL_COUNT * (COPIES - 1);
 		const CIRCUMFERENCE = 2 * Math.PI * 11; // r=11 → ≈ 69.12
 
 		const progressCircle = document.querySelector(`${elemStr} #progressCircle`);
@@ -386,21 +385,20 @@ const main = {
 			return String(n).padStart(2, '0');
 		}
 
-		function updatePagination(sw) {
-			const current = sw.realIndex + 1; // realIndex → loop 복제본 제외한 실제 인덱스
-
-			progressCircle.style.strokeDashoffset = CIRCUMFERENCE * (1 - current / realTotal);
+		function updatePagination(index) {
+			const current = (index % REAL_COUNT) + 1;
+			progressCircle.style.strokeDashoffset = CIRCUMFERENCE * (1 - current / REAL_COUNT);
 			fracCurrent.textContent = pad(current);
-			fracTotal.textContent   = pad(realTotal);
+			fracTotal.textContent   = pad(REAL_COUNT);
 		}
 
-		const swiper = new Swiper(`${elemStr}`, {
+		const swiper = new Swiper(elemStr, {
 			effect: "cards",
 			grabCursor: true,
 			speed: 500,
 			autoplay: {
 				delay: 3000,
-				disableOnInteraction: false
+				disableOnInteraction: false,
 			},
 			cardsEffect: {
 				rotate: true,
@@ -408,8 +406,21 @@ const main = {
 				perSlideOffset: 40,
 			},
 			on: {
-				init(sw)        { updatePagination(sw); },
-				slideChange(sw) { updatePagination(sw); }
+				init(sw) {
+					const wrapper = sw.wrapperEl;
+					const originals = [...wrapper.children];
+					for (let i = 1; i < COPIES; i++) {
+						originals.forEach(slide => wrapper.appendChild(slide.cloneNode(true)));
+					}
+					sw.update();
+					updatePagination(sw.activeIndex);
+				},
+				slideChange(sw) {
+					if (sw.activeIndex >= JUMP_AT) {
+						sw.slideTo(sw.activeIndex % REAL_COUNT, 0);
+					}
+					updatePagination(sw.activeIndex);
+				},
 			},
 		});
 	},
@@ -542,12 +553,23 @@ const main = {
 	tv: function () {
 		const elemStr = `[data-slide="main-tv"]`;
 		const elemPause = $(`${elemStr} .swiper-button-pause`);
-		const elemPlay = $(`${elemStr} .swiper-button-play`);
+		const elemPlay  = $(`${elemStr} .swiper-button-play`);
 		const elemClose = $(".modal-tv .modal-close");
-		
+
+		const REAL_COUNT = document.querySelectorAll(`${elemStr} .swiper-slide`).length;
+		const COPIES     = 4;
+		const JUMP_FWD   = REAL_COUNT * (COPIES - 1);
+		const JUMP_BWD   = REAL_COUNT - 1;
+
+		// pagination
+		const paginationEl = document.querySelector(`${elemStr} .swiper-pagination`);
+		function updatePagination(index) {
+			const current = (index % REAL_COUNT) + 1;
+			paginationEl.textContent = `${current} / ${REAL_COUNT}`;
+		}
+
 		const swiper = new Swiper(`${elemStr} .swiper`, {
 			effect: "cards",
-			slidesPerView: 1,
 			grabCursor: true,
 			cardsEffect: {
 				rotate: true,
@@ -556,31 +578,52 @@ const main = {
 			},
 			autoplay: {
 				delay: 3000,
-				disableOnInteraction: false
-			},
-			pagination: {
-				el: `${elemStr} .swiper-pagination`,
-				type: "fraction",
+				disableOnInteraction: false,
 			},
 			navigation: {
 				nextEl: `${elemStr} .swiper-button-next`,
 				prevEl: `${elemStr} .swiper-button-prev`,
 			},
+			on: {
+				init(sw) {
+					const wrapper   = sw.wrapperEl;
+					const originals = [...wrapper.children];
+					for (let i = 1; i < COPIES; i++) {
+						originals.forEach(slide => wrapper.appendChild(slide.cloneNode(true)));
+					}
+					sw.update();
+					sw.slideTo(REAL_COUNT, 0);
+					updatePagination(REAL_COUNT);
+				},
+				slideChange(sw) {
+					const idx = sw.activeIndex;
+
+					if (idx >= JUMP_FWD) {
+						sw.slideTo(idx % REAL_COUNT, 0);
+						return;
+					}
+					if (idx <= JUMP_BWD - 1) {
+						sw.slideTo(idx + REAL_COUNT * 2, 0);
+						return;
+					}
+					updatePagination(idx);
+				},
+			},
 		});
 
-		elemPause.on("click", function(){
+		elemPause.on("click", function () {
 			elemPlay.addClass(frontJS.CLASSNAME.ACTIVE);
 			elemPause.removeClass(frontJS.CLASSNAME.ACTIVE);
 			swiper.autoplay.stop();
 		});
 
-		elemPlay.on("click", function(){
+		elemPlay.on("click", function () {
 			elemPlay.removeClass(frontJS.CLASSNAME.ACTIVE);
 			elemPause.addClass(frontJS.CLASSNAME.ACTIVE);
 			swiper.autoplay.start();
 		});
 
-		$(document).on("click", `${elemStr} .swiper-slide`, function(e) {
+		$(document).on("click", `${elemStr} .swiper-slide`, function (e) {
 			e.preventDefault();
 			frontJS.modal("tv").show();
 			swiper.autoplay.stop();
@@ -588,7 +631,7 @@ const main = {
 			elemPause.removeClass(frontJS.CLASSNAME.ACTIVE);
 		});
 
-		elemClose.on("click", function() {
+		elemClose.on("click", function () {
 			swiper.autoplay.start();
 			elemPlay.removeClass(frontJS.CLASSNAME.ACTIVE);
 			elemPause.addClass(frontJS.CLASSNAME.ACTIVE);

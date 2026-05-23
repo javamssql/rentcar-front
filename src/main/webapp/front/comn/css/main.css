@@ -174,7 +174,7 @@
 }
 .main-visual-card {
 	position: relative;
-	width: 380px;
+	width: 360px;
 }
 .main-visual-card .swiper-slide {
 	position: relative;
@@ -189,7 +189,7 @@
 	opacity: 0;
 	pointer-events: none;
 	visibility: hidden !important;
-	transition: 0.3s cubic-bezier(0.4, 0, 1, 1);
+	transition: 0.2s cubic-bezier(0.4, 0, 1, 1);
 }
 .main-visual-card .swiper-slide:not(.swiper-slide-active) .text-box {
 	opacity: 0;
@@ -198,7 +198,7 @@
 }
 .main-visual-card .img-box {
 	width: 100%;
-	aspect-ratio: 2 / 3;
+	aspect-ratio: 7 / 10;
 }
 .main-visual-card .img-box img {
 	width: 100%;
@@ -284,10 +284,30 @@
 		font-size: 3.75rem;
 	}
 	.main-visual-card {
-		width: 350px;
+		width: 300px;
+	}
+	.main-visual-card .text-box .text {
+		font-size: var(--font-size-28);
+		font-weight: 600;
 	}
 }
 @media all and (max-width: 1023px) {
+	.main-visual {
+		background-repeat: repeat-y;
+		background-position: left top;
+		background-size: 250%;
+		overflow: hidden;
+	}
+	.main-visual .main-grid {
+		flex-direction: column;
+		height: auto;
+		gap: 60px 0;
+		padding: 120px 0;
+	}
+	.main-visual-text {
+		flex: none;
+		text-align: center;
+	}
 	.main-visual-text .title {
 		font-size: var(--font-size-24);
 	}
@@ -295,7 +315,7 @@
 		font-size: 3rem;
 	}
 	.main-visual-card {
-		width: 280px;
+		width: 52%;
 	}
 	.main-visual-text .desc {
 		font-size: var(--font-size-18);
@@ -311,20 +331,17 @@
 	}
 }
 @media all and (max-width: 767px) {
-	.main-visual {
-		background-repeat: repeat-y;
-		background-position: left top;
-		background-size: 250%;
-		overflow: hidden;
-	}
-	.main-visual-text {
-		flex: none;
-		text-align: center;
-		padding-top: 80px;
+	.main-visual .main-grid {
+		gap: 40px 0;
+		padding: 80px 0;
 	}
 	.main-visual-text .title {
+		font-size: var(--font-size-22);
 		margin-bottom: 10px;
 		line-height: 1.25;
+	}
+	.main-visual-text .title strong {
+		font-size: 2.625rem;
 	}
 	.main-visual-text .text {
 		font-size: var(--font-size-14);
@@ -1335,7 +1352,7 @@
 .main-tv .slide-control {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-between;
 	height: 40px;
 	line-height: 40px;
 	padding: 0 20px;
@@ -1352,8 +1369,8 @@
 }
 .main-tv .swiper-pagination {
 	position: unset;
-	margin-left: 10px;
-	width: auto;
+	width: 40px;
+	text-align: right;
 }
 .main-tv .swiper-pagination :not(.swiper-pagination-current) {
 	color: #B8B8B8;

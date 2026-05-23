@@ -537,7 +537,7 @@ input[type="checkbox"].switch-input:checked {
 	max-width: 520px;
 }
 .modal-box {
-	max-height: calc(100vh - 100px);
+	max-height: calc(100vh - 200px);
 	border-radius: 30px;
 	overflow: hidden;
 	position: relative;
@@ -561,9 +561,6 @@ input[type="checkbox"].switch-input:checked {
 	overflow-y: auto;
 	flex: 1;
 	min-height: 0;
-}
-.modal:has(.modal-footer) .modal-body {
-	padding-bottom: 0;
 }
 .modal-footer {
 	padding:20px 40px 30px;
@@ -595,6 +592,15 @@ input[type="checkbox"].switch-input:checked {
 	height: 20px;
 	background: url("../img/layout/icon-close.svg") no-repeat center;
 	filter: brightness(0);
+}
+.modal:has(.modal-header) .modal-box {
+	border-top-right-radius: 0;
+}
+.modal:has(.modal-footer) .modal-box {
+	border-bottom-right-radius: 0;
+}
+.modal:has(.modal-footer) .modal-body {
+	padding-bottom: 0;
 }
 @media all and (max-width: 767px) {
 	.modal {
