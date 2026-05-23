@@ -9,6 +9,9 @@
 	margin: 0 auto;
 	padding: 0 20px;
 }
+.container.container-wide {
+	max-width: 1640px;
+}
 @media all and (max-width: 767px) {
 	.container {
 		padding: 0 15px;
@@ -24,9 +27,7 @@
 	left: 0;
 	width: 100%;
 	z-index: 30;
-	background: rgba(255,255,255,0.7);
-	backdrop-filter: blur(20px);
-	-webkit-backdrop-filter: blur(20px);
+	background: #fff;
 	border-bottom: 1px solid #eee;
 }
 .header-box {
@@ -607,9 +608,22 @@
 	}
 }
 
+
+/* sub */
 .sub-wrapper {
 	min-height: 600px;
+	padding-top: 80px;
 }
+.sub-wrapper.sub-bg-image { background: url("../img/layout/sub-bg-img.jpg") no-repeat top; }
+.sub-wrapper.sub-bg-light { background-color: #F6F6F7; }
+.sub-wrapper.sub-bg-gray { background-color: #EFEFEF; }
+.sub-box {
+	padding: 38px 110px 0;
+	border-radius: 40px 40px 0 0;
+	background: #fff;
+}
+
+
 
 
 /* ## black theme ## */

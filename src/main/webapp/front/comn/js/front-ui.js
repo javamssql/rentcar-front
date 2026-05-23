@@ -524,7 +524,7 @@ const main = {
 
 	banner: function () {
 		const elemStr = `[data-slide="main-banner"]`;
-		const swiper = new Swiper(`${elemStr}`, {
+		const swiper = new Swiper(elemStr, {
 			slidesPerView: 1,
 			spaceBetween: 20,
 			loop: true,
@@ -642,7 +642,7 @@ const main = {
 		const elemStr = `[data-slide="main-review"]`;
 		const elemClose = $(".modal-review .modal-close");
 
-		const swiper = new Swiper(`${elemStr}`, {
+		const swiper = new Swiper(elemStr, {
 			slidesPerView: 1.25,
 			spaceBetween: 20,
 			loop: true,
@@ -758,6 +758,59 @@ const layout = {
 		elemBtn.on('click', function () {
 			$(this).toggleClass(frontJS.CLASSNAME.ACTIVE);
 			elemAddr.stop(true).slideToggle(300);
+		});
+	},
+
+}
+
+
+/**
+ * ranking
+ *
+ */
+const ranking = {
+
+	slide: function () {
+		const elemStr = `[data-slide="ranking-slide"]`;
+
+		let swiperActive;
+
+		const swiperThumbs = new Swiper(`${elemStr} .ranking-slide-thumbs`, {
+			slidesPerView: 2.4,
+			spaceBetween: 36,
+			loop: true,
+			speed: 500,
+			slideToClickedSlide: true,
+			allowTouchMove: true,
+			on: {
+				activeIndexChange() {
+					if (swiperActive && swiperActive.realIndex !== this.realIndex) {
+						swiperActive.slideToLoop(this.realIndex);
+					}
+				},
+			},
+		});
+
+		swiperActive = new Swiper(`${elemStr} .ranking-slide-active`, {
+			slidesPerView: 1.001,
+			loop: true,
+			speed: 500,
+			preventInteractionOnTransition: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false
+			},
+			navigation: {
+				nextEl: `${elemStr} .swiper-button-next`,
+				prevEl: `${elemStr} .swiper-button-prev`,
+			},
+			on: {
+				activeIndexChange() {
+					if (swiperThumbs && swiperThumbs.realIndex !== this.realIndex) {
+						swiperThumbs.slideToLoop(this.realIndex);
+					}
+				},
+			},
 		});
 	},
 
