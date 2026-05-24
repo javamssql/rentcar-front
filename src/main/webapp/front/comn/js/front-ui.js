@@ -761,6 +761,22 @@ const layout = {
 		});
 	},
 
+	banner: function () {
+		const elemStr = `[data-slide="banner-slide"]`;
+		const swiper = new Swiper(elemStr, {
+			slidesPerView: 1,
+			loop: true,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false
+			},
+			pagination: {
+				el: `${elemStr} .swiper-pagination`,
+				type: "fraction",
+			},
+		});
+	},
+
 }
 
 
@@ -792,7 +808,8 @@ const ranking = {
 		});
 
 		swiperActive = new Swiper(`${elemStr} .ranking-slide-active`, {
-			slidesPerView: 1.001,
+			slidesPerView: 3,
+			spaceBetween: 10,
 			loop: true,
 			speed: 500,
 			preventInteractionOnTransition: true,
@@ -809,6 +826,11 @@ const ranking = {
 					if (swiperThumbs && swiperThumbs.realIndex !== this.realIndex) {
 						swiperThumbs.slideToLoop(this.realIndex);
 					}
+				},
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 1.001,
 				},
 			},
 		});
