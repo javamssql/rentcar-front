@@ -1589,6 +1589,7 @@
 }
 .modal-review-slide .swiper-slide .img-box {
 	width: 100%;
+	height: 390px;
 	aspect-ratio: 3 / 2;
 }
 .modal-review-slide .swiper-slide .img-box img {
@@ -1652,6 +1653,9 @@
 	font-weight: 700;
 }
 .modal-review-desc {
+	height: 100px;
+	overflow-x: hidden;
+	overflow-y: auto;
 	color: #555555;
 }
 .modal-review-pagination {
@@ -1686,7 +1690,15 @@
 .modal-review-pagination .btn .icon-custom {
     border: none;
 }
+@media all and (max-width: 1023px) {
+	.modal-review-slide .swiper-slide .img-box {
+		height: 340px;
+	}
+}
 @media all and (max-width: 767px) {
+	.modal-review-slide .swiper-slide .img-box {
+		height: 220px;
+	}
 	.modal-review-slide .swiper-pagination {
 		bottom: 5px;
 		width: 54px;

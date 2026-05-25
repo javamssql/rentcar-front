@@ -62,82 +62,84 @@
 </div>
 
 <!-- ## 팝업 :: 간편상담 s ## -->
-<dialog class="modal modal-size-sm modal-consult" data-modal="consult">
-	<div class="modal-header">
-		<h4 class="modal-title">간편상담신청</h4>
-	</div>
-	<div class="modal-box">
-		<div class="modal-body">
-			<form action="">
-				<ul class="form modal-consult-form">
-					<li class="form-row">
-						<label for="name" class="form-title form-required">성함</label>
-						<div class="form-item">
-							<input type="text" id="name" name="name" class="form-input" placeholder="이름을 입력해주세요">
-						</div>
-					</li>
-					<li class="form-row">
-						<label for="phone" class="form-title form-required">연락처</label>
-						<div class="form-item">
-							<input type="text" id="phone" name="phone" class="form-input" placeholder="연락처를 입력해주세요">
-						</div>
-					</li>
-					<li class="form-row">
-						<label for="model" class="form-title form-required">모델명</label>
-						<div class="form-item">
-							<input type="text" id="model" name="model" class="form-input" placeholder="관심차종을 입력해주세요">
-						</div>
-					</li>
-					<li class="form-row">
-						<label for="" class="form-title form-required">개인정보처리방침</label>
-						<div class="form-item">
-							<div class="agree-box">
-								<div class="agree-header">
-									<div class="checkbox">
-										<label class="checkbox-label">
-											<input type="checkbox" name="check" class="checkbox-input">
-											<span class="checkbox-check"></span>
-											<span class="checkbox-text">[필수] 개인정보 수집 이용 제공동의</span>
-										</label>
+<dialog class="modal modal-sheet modal-size-sm modal-consult" data-modal="consult">
+	<div class="modal-wrap">
+		<div class="modal-box">
+			<div class="modal-header">
+				<h4 class="modal-title">간편상담신청</h4>
+			</div>
+			<div class="modal-body">
+				<form action="">
+					<ul class="form modal-consult-form">
+						<li class="form-row">
+							<label for="name" class="form-title form-required">성함</label>
+							<div class="form-item">
+								<input type="text" id="name" name="name" class="form-input" placeholder="이름을 입력해주세요">
+							</div>
+						</li>
+						<li class="form-row">
+							<label for="phone" class="form-title form-required">연락처</label>
+							<div class="form-item">
+								<input type="text" id="phone" name="phone" class="form-input" placeholder="연락처를 입력해주세요">
+							</div>
+						</li>
+						<li class="form-row">
+							<label for="model" class="form-title form-required">모델명</label>
+							<div class="form-item">
+								<input type="text" id="model" name="model" class="form-input" placeholder="관심차종을 입력해주세요">
+							</div>
+						</li>
+						<li class="form-row">
+							<label for="" class="form-title form-required">개인정보처리방침</label>
+							<div class="form-item">
+								<div class="agree-box">
+									<div class="agree-header">
+										<div class="checkbox">
+											<label class="checkbox-label">
+												<input type="checkbox" name="check" class="checkbox-input">
+												<span class="checkbox-check"></span>
+												<span class="checkbox-text">[필수] 개인정보 수집 이용 제공동의</span>
+											</label>
+										</div>
+										<button type="button" class="button button-size-sm" onclick="frontJS.toggle(this, 'agree').toggle();">자세히보기</button>
 									</div>
-									<button type="button" class="button button-size-sm" onclick="frontJS.toggle(this, 'agree').toggle();">자세히보기</button>
+									<div class="agree-body" data-toggle="agree">
+										제 1 조 수집하는 개인 정보 항목 <br>
+										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+										제 1 조 수집하는 개인 정보 항목 <br>
+										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+										제 1 조 수집하는 개인 정보 항목 <br>
+										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+									</div>
 								</div>
-								<div class="agree-body" data-toggle="agree">
-									제 1 조 수집하는 개인 정보 항목 <br>
-									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
-									제 1 조 수집하는 개인 정보 항목 <br>
-									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
-									제 1 조 수집하는 개인 정보 항목 <br>
-									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+								<div class="agree-box">
+									<div class="agree-header">
+										<div class="checkbox">
+											<label class="checkbox-label">
+												<input type="checkbox" name="check" class="checkbox-input">
+												<span class="checkbox-check"></span>
+												<span class="checkbox-text">[필수] 개인정보 3자 제공 동의</span>
+											</label>
+										</div>
+										<button type="button" class="button button-size-sm" onclick="frontJS.toggle(this, 'agree2').toggle();">자세히보기</button>
+									</div>
+									<div class="agree-body" data-toggle="agree2">
+										제 1 조 수집하는 개인 정보 항목 <br>
+										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+										제 1 조 수집하는 개인 정보 항목 <br>
+										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+										제 1 조 수집하는 개인 정보 항목 <br>
+										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+									</div>
 								</div>
 							</div>
-							<div class="agree-box">
-								<div class="agree-header">
-									<div class="checkbox">
-										<label class="checkbox-label">
-											<input type="checkbox" name="check" class="checkbox-input">
-											<span class="checkbox-check"></span>
-											<span class="checkbox-text">[필수] 개인정보 3자 제공 동의</span>
-										</label>
-									</div>
-									<button type="button" class="button button-size-sm" onclick="frontJS.toggle(this, 'agree2').toggle();">자세히보기</button>
-								</div>
-								<div class="agree-body" data-toggle="agree2">
-									제 1 조 수집하는 개인 정보 항목 <br>
-									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
-									제 1 조 수집하는 개인 정보 항목 <br>
-									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
-									제 1 조 수집하는 개인 정보 항목 <br>
-									회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-				<div class="button-wrap">
-					<button type="submit" class="button button-color-primary">신청하기</button>
-				</div>
-			</form>
+						</li>
+					</ul>
+					<div class="button-wrap">
+						<button type="submit" class="button button-color-primary">신청하기</button>
+					</div>
+				</form>
+			</div>
 		</div>
 	</div>
 	<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('consult').hide();"></button>
