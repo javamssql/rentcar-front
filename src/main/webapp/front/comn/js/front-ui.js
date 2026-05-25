@@ -102,6 +102,38 @@ const frontJS = {
 						frontJS.modal(idx).hide();
 					}
 				});
+
+				// sheet type: touch event
+				if (elemModal.hasClass("modal-sheet")) {
+					let startY = 0;
+					let startScrollTop = 0;
+					let isScrolling = false;
+					const box = elemModal.find(".modal-box")[0];
+
+					box.addEventListener("touchstart", function (e) {
+						startY = e.touches[0].clientY;
+						startScrollTop = box.scrollTop;
+						isScrolling = false;
+					}, { passive: true });
+
+					box.addEventListener("touchmove", function (e) {
+						const deltaY = e.touches[0].clientY - startY;
+
+						if (startScrollTop > 0 || deltaY < 0) {
+							isScrolling = true;
+						}
+					}, { passive: true });
+
+					box.addEventListener("touchend", function (e) {
+						const deltaY = e.changedTouches[0].clientY - startY;
+
+						if (isScrolling || startScrollTop > 0) return;
+
+						if (deltaY > 60) {
+							frontJS.modal(idx).hide();
+						}
+					}, { passive: true });
+            }
 			},
 
 			// 팝업 닫기

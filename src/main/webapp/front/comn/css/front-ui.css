@@ -569,8 +569,8 @@ input[type="checkbox"].switch-input:checked {
 	font-weight: 700;
 }
 .modal-title .title-icon {
-	width: 20px;
-	height: 20px;
+	width: 26px;
+	height: 26px;
 	margin-right: 5px;
 	filter: invert(19%) sepia(100%) saturate(6625%) hue-rotate(224deg) brightness(96%) contrast(103%);
 }
@@ -615,6 +615,10 @@ input[type="checkbox"].switch-input:checked {
 	}
 	.modal-title {
 		font-size: var(--font-size-18);
+	}
+	.modal-title .title-icon {
+		width: 20px;
+		height: 20px;
 	}
 	.modal-body {
 		padding:20px;
@@ -665,6 +669,7 @@ input[type="checkbox"].switch-input:checked {
 	right:40px;
 	top:32px;
 	color: #999999;
+	background: none;
 	transform: translateX(0);
 }
 @media all and (max-width: 767px) {
