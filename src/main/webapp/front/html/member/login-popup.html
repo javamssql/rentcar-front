@@ -44,25 +44,27 @@
 	<!-- ## contents s ## -->
 	<main class="sub-wrapper">
 		<div class="container" style="display: flex;align-items: center;justify-content: center;height: 400px;">
-
-
 			
 			<!-- ## 로그인 팝업 버튼 ## -->
 			<button type="button" class="button" onclick="frontJS.modal('login').show();">로그인 팝업 열기</button>
-
-
 
 		</div>
 	</main>
 
 	<!-- ## 팝업 :: 로그인 s ## -->
-	<dialog class="modal modal-size-sm modal-login" data-modal="login">
-		<div class="modal-box">
-			<div class="modal-body">
-				<div class="img"><img src="../../comn/img/member/login-popup-img.png" alt=""></div>
-				<div class="text">로그인 한 번으로 견적 비교하고<br>나만의 그냥이차를 찾아보세요!</div>
-				<div class="button-wrap">
-					<a href="#lnk" class="button button-color-black">로그인</a>
+	<dialog class="modal modal-sheet modal-size-sm modal-login" data-modal="login">
+		<div class="madal-wrap">
+			<div class="modal-box">
+				<div class="modal-header">
+					<h4 class="modal-title"></h4>
+				</div>
+				<div class="modal-body">
+					<div class="img"><img src="../../comn/img/layout/logo-blue.svg" alt=""></div>
+					<div class="text">로그인 한 번으로 견적 비교하고<br>나만의 그냥이차를 찾아보세요!</div>
+					<div class="member-sns">
+						<a href="#lnk" class="button naver">네이버 로그인</a>
+						<a href="#lnk" class="button kakao">카카오 로그인</a>
+					</div>
 				</div>
 			</div>
 		</div>
