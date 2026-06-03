@@ -793,32 +793,16 @@ const layout = {
 		});
 	},
 
-	banner: function () {
-		const elemStr = `[data-slide="banner-slide"]`;
-		const swiper = new Swiper(elemStr, {
-			slidesPerView: 1,
-			loop: true,
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false
-			},
-			pagination: {
-				el: `${elemStr} .swiper-pagination`,
-				type: "fraction",
-			},
-		});
-	},
-
 }
 
 
 /**
- * ranking
+ * contents
  *
  */
-const ranking = {
+const contents = {
 
-	slide: function () {
+	ranking: function () {
 		const elemStr = `[data-slide="ranking-slide"]`;
 
 		let swiperActive;
@@ -865,6 +849,98 @@ const ranking = {
 					slidesPerView: 1.001,
 				},
 			},
+		});
+	},
+
+	promotion: function () {
+		const elemStr = `[data-slide="promotion-slide"]`;
+		const swiper = new Swiper(elemStr, {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			loop: true,
+			speed: 500,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false
+			},
+			pagination: {
+				el: `${elemStr} .swiper-pagination`,
+				type: "fraction",
+			},
+		});
+	},
+
+	capital: function () {
+		const elemStr = `[data-slide="capital-slide"]`;
+		const swiper = new Swiper(elemStr, {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			loop: true,
+			speed: 800,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false
+			},
+		});
+	},
+
+	review: function () {
+		const elemStr = `[data-slide="review-slide"]`;
+		const elemClose = $(".modal-review .modal-close");
+
+		const swiper = new Swiper(elemStr, {
+			slidesPerView: 1.6,
+			spaceBetween: 20,
+			loop: true,
+			speed: 800,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false
+			},
+			breakpoints: {
+				1440: {
+					slidesPerView: 2.6,
+					spaceBetween: 20,
+				},
+			},
+		});
+
+		const elemPopup = `[data-slide="review-popup"]`;
+		const popupSwiper = new Swiper(`${elemPopup}`, {
+			slidesPerView: 1,
+			loop: true,
+			autoplay: {
+				delay: 5000,
+				disableOnInteraction: false
+			},
+			pagination: {
+				el: `${elemPopup} .swiper-pagination`,
+				type: "fraction",
+			},
+		});
+
+		$(document).on("click", `${elemStr} .swiper-slide`, function(e) {
+			e.preventDefault();
+			frontJS.modal("review").show();
+			swiper.autoplay.stop();
+		});
+
+		elemClose.on("click", function() {
+			swiper.autoplay.start();
+		});
+	},
+
+	color: function () {
+		const elemColor  = $('.ui-color');
+
+		elemColor.on('click', function () {
+			const elemChip = $(this).closest('.color-chip');
+			const elemBox  = $(this).closest('.color-box');
+
+			elemChip.find('.color').removeClass(frontJS.CLASSNAME.ACTIVE);
+			$(this).addClass(frontJS.CLASSNAME.ACTIVE);
+
+			elemBox.find('.color-label').text($(this).data('label'));
 		});
 	},
 

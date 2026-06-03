@@ -77,7 +77,7 @@
 	:root {--height: 45px;}
 }
 @media all and (max-width: 767px) {
-	:root {--height: 40px;}
+	:root {--height: 45px;}
 }
 
 html, input, select, textarea, button {font-family: "Pretendard", sans-serif;}

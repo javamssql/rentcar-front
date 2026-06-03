@@ -178,7 +178,7 @@
 
 
 
-/* 랭킹 슬라이드 */
+/* ## 랭킹 슬라이드 ## */
 .ranking-box {
 	display: flex;
 	align-items: center;
@@ -486,9 +486,56 @@
 	}
 }
 
+/* ## 프로모션 슬라이드 ## */
+.promotion-slide {
+	width: 100%;
+	margin-top: 20px;
+}
+.promotion-slide .swiper-slide {
+	position: relative;
+	display: block;
+	height: 144px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.promotion-slide .img-box {
+	width: 100%;
+	height: 100%;
+}
+.promotion-slide .img-box img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.promotion-slide .text-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: linear-gradient(90deg, #111 0%, transparent 100%);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 18px 16px;
+	color: #fff;
+}
+.promotion-slide .swiper-pagination {
+	display: block;
+	left: auto;
+	bottom: auto;
+	top: 12px;
+	right: 12px;
+	width: auto;
+	color: #fff;
+	font-size: var(--font-size-13);
+	font-weight: 300;
+	background: rgba(0,0,0,.5);
+	padding: 5px 13px;
+	border-radius: 99px;
+}
 
-
-/* 필터 */
+/* ## 공통 목록 필터 ## */
 .rent-filter {
 	display: flex;
 	border-bottom: 1px solid #D9D9D9;
@@ -601,7 +648,7 @@
 }
 
 
-
+/* ## 공통 목록 그리드 ## */
 .rent-grid {
 	display: grid;
 	align-items: stretch;
@@ -643,26 +690,26 @@
 	top: 50px;
 	right: 28px;
 }
-.rent-grid .text-box {
+.rent-grid .grid-card .text-box {
 	padding: 0 8px;
 }
-.rent-grid .title {
+.rent-grid .grid-card .title {
 	margin-top: 10px;
 	font-size: var(--font-size-20);
 	font-weight: 700;
 }
-.rent-grid .price-box {
+.rent-grid .grid-card .price-box {
 	margin-top: 14px;
 	font-size: var(--font-size-24);
 	color: var(--primary-color);
 	font-weight: 700;
 }
-.rent-grid .unit {
+.rent-grid .grid-card .unit {
 	font-size: 14px;
 	color: #999999;
 	font-weight: 400;
 }
-.rent-grid .img-box {
+.rent-grid .grid-card .img-box {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -672,7 +719,7 @@
 	border-radius: 10px;
 	background: #F3F3F3;
 }
-.rent-grid .img-box img {
+.rent-grid .grid-card .img-box img {
 	max-width: 100%;
 	max-height: 100%;
 	object-fit: contain;
@@ -716,19 +763,19 @@
 	.rent-grid .grid-card::after {
 		display: none;
 	}
-	.rent-grid .text-box {
+	.rent-grid .grid-card .text-box {
 		flex: 1;
 		padding: 0 4px;
 	}
-	.rent-grid .title {
+	.rent-grid .grid-card .title {
 		margin-top: 15px;
 		font-size: var(--font-size-16);
 	}
-	.rent-grid .price-box {
+	.rent-grid .grid-card .price-box {
 		margin-top: 0;
 		font-size: var(--font-size-20);
 	}
-	.rent-grid .img-box {
+	.rent-grid .grid-card .img-box {
 		flex: 0 0 145px;
 		height: 100%;
 		padding: 10px;
@@ -736,6 +783,1241 @@
 	}
 	.rent-empty {
 		padding: 20px;
+		font-size: var(--font-size-14);
+	}
+}
+
+
+/* ## 브랜드 목록 ## */
+.rent-list.brand .rent-grid {
+	padding: 38px 38px 60px;
+	background: #F6F6F7;
+}
+.rent-list.brand .rent-brand-box {
+	padding: 22px 28px;
+	border-radius: 15px;
+	background: #fff;
+}
+.rent-list.brand .rent-brand-box .row-box {
+	margin-bottom: 30px;
+}
+.rent-list.brand .rent-brand-box .list-box {
+	gap: 12px;
+}
+.rent-list.brand .rent-brand-box .title {
+	font-size: var(--font-size-20);
+	font-weight: 700;
+}
+.rent-list.brand .rent-brand-box .btn {
+	width: 90px;
+	height: 90px;
+	font-size: var(--font-size-16);
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+	transition: var(--transition);
+}
+.rent-list.brand .rent-brand-box .btn:hover {
+	border-color: var(--primary-color);
+}
+.rent-brand-top {
+	padding: 20px 0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.rent-brand-top .text-box .title {
+	margin-bottom: 10px;
+	font-size: var(--font-size-28);
+	font-weight: 700;
+}
+.rent-brand-top .text-box .text {
+	font-size: var(--font-size-20);
+}
+.rent-brand-top .img-box {
+	animation: alarmTiggle 2.5s ease-in-out infinite;
+}
+@keyframes alarmTiggle {
+	0%, 70%, 100% { transform: scale(1); }
+	75% { transform: scale(1.05) rotate(-5deg); }
+	80% { transform: scale(1.05) rotate(5deg); }
+	85% { transform: scale(1.05) rotate(-5deg); }
+	90% { transform: scale(1.05) rotate(5deg); }
+	95% { transform: scale(1.05) rotate(0deg); }
+}
+@media all and (max-width: 1439px) {
+	.rent-brand-top .text-box .title {
+		font-size: var(--font-size-24);
+	}
+}
+@media all and (max-width: 1023px) {
+	.rent-brand-top {
+		padding-top: 10px;
+		flex-direction: column-reverse;
+	}
+	.rent-brand-top .text-box .title {
+		margin-bottom: 5px;
+		font-size: var(--font-size-20);
+	}
+	.rent-brand-top .text-box .text {
+		font-size: var(--font-size-16);
+	}
+}
+@media all and (max-width: 767px) {
+	.rent-list.brand .rent-grid {
+		padding: 15px 15px 60px;
+	}
+	.rent-list.brand .rent-brand-box {
+		padding: 20px 15px;
+		border-radius: 10px;
+	}
+	.rent-list.brand .rent-brand-box .btn {
+		width: 80px;
+		height: 80px;
+		font-size: var(--font-size-14);
+	}
+	.rent-brand-top .text-box .title {
+		font-size: var(--font-size-18);
+	}
+}
+
+.button-rent-list {
+	width: 520px;
+	height: 60px;
+	font-size: var(--font-size-20);
+	border-radius: var(--border-radius);
+}
+@media all and (max-width: 1023px) {
+	.button-rent-list {
+		width: 100%;
+		font-size: var(--font-size-18);
+	}
+}
+@media all and (max-width: 1023px) {
+	.button-rent-list {
+		height: 50px;
+		font-size: var(--font-size-16);
+	}
+}
+
+
+/* ## 진행 단계 ## */
+.rent-step {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	margin-top: 40px;
+	padding: 22px 10px;
+	background: #fff;
+	border-radius: 99px;
+}
+.rent-step .step-list {
+	display: flex;
+	align-items: center;
+	gap: 0 40px;
+}
+.rent-step .step-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding-left: 16px;
+	flex-shrink: 0;
+	position: relative;
+	color: var(--primary-color);
+}
+.rent-step .step-item:not(.done):not(.active) {
+	opacity: 0.3;
+}
+.rent-step .step-item::after {
+	content: '';
+	display: block;
+	width: 110px;
+	height: 5px;
+	background: var(--primary-color);
+	border-radius: 99px;
+	flex-shrink: 0;
+}
+.rent-step .step-item .icon {
+	width: 16px;
+	height: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 10px;
+	flex-shrink: 0;
+	position: absolute;
+	top: -5px;
+	left: 0;
+}
+.rent-step .step-item.active .icon {
+	font-size: 5px;
+}
+.rent-step .step-item:not(.done):not(.active) .icon {
+	visibility: hidden;
+}
+.rent-step .step-item .label {
+	font-weight: 700;
+	white-space: nowrap;
+}
+@media all and (max-width: 1023px) {
+	.rent-step .step-list {
+		gap: 0 20px;
+	}
+	.rent-step .step-item::after {
+		width: 50px;
+		height: 3px;
+	}
+}
+@media all and (max-width: 767px) {
+	.rent-step {
+		display: none;
+	}
+}
+
+
+/* ## 렌트 상세 ## */
+.rent-view {
+	--aside-width: 460px;
+	display: flex;
+	align-items: start;
+	gap: 20px;
+	margin-top: 30px;
+}
+.rent-view .view-box {
+	width: calc(100% - var(--aside-width) - 20px);
+}
+.aside-box {
+	width: var(--aside-width);
+	background: #fff;
+	border-radius: 16px;
+	padding: 30px;
+	border: 1px solid #D9D9D9;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.16);
+	position: sticky;
+	top: 100px;
+}
+.aside-box .aside-head {
+	display: flex;
+	flex-direction: column;
+	gap: 17px;
+}
+.aside-head .title-box .title {
+	margin-top: 15px;
+	font-weight: 700;
+	font-size: var(--font-size-28);
+}
+.aside-head .img-box {
+	width: 100%;
+	height: 200px;
+	padding: 20px;
+	background: #F6F6F7;
+	border-radius: 10px;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 4px;
+}
+.aside-head .img-box img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+.aside-info {
+	margin-top: 15px;
+}
+.aside-info .info-list + .info-list {
+	border-top: 1px solid #D9D9D9;
+	margin-top: 6px;
+	padding-top: 6px;
+}
+.aside-info .info-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 6px 0;
+}
+.aside-info .info-item .term {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	color: #999999;
+	font-weight: 500;
+}
+.aside-info .info-item .desc {
+	font-weight: 500;
+	text-align: right;
+}
+.aside-info .info-item .color-chip {
+	gap: 5px;
+	margin-top: 0;
+	line-height: 1;
+}
+.aside-info .info-item .color-chip .color {
+	width: 16px;
+	height: 16px;
+	cursor: default;
+}
+.aside-info .info-list.total .term {
+	font-size: var(--font-size-14);
+	color: #999999;
+}
+.aside-info .info-list.total .term .icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height: 30px;
+	margin-right: 7px;
+	background: #E9F1FC;
+	border-radius: 50%;
+}
+.aside-info .info-list.total .term .icon img {
+	width: 18px;
+	height: 18px;
+}
+.aside-info .info-list.total .desc {
+	font-size: var(--font-size-14);
+	color: #999999;
+}
+.aside-info .info-list.total .price {
+	display: block;
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--primary-color);
+}
+.aside-box .comment-box {
+	margin-top: 15px;
+	padding: 12px 14px;
+	background: #E9F1FC;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	font-size: var(--font-size-14);
+	color: #0067B9;
+}
+.aside-box .comment-box .icon {
+	transform: translateY(2px);
+}
+.aside-box .button-wrap {
+	margin-top: 15px;
+}
+.aside-box .button {
+	min-width: auto;
+}
+.aside-btn-wrap .button {
+	color: #999999;
+	justify-content: space-between;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.16);
+}
+.aside-btn-wrap .button .icon {
+	filter: invert(19%) sepia(100%) saturate(6625%) hue-rotate(224deg) brightness(96%) contrast(103%);
+}
+@media all and (max-width: 1439px) {
+	.rent-view {
+		--aside-width: 400px;
+	}
+}
+@media all and (max-width: 1023px) {
+	.rent-view {
+		flex-direction: column;
+	}
+	.rent-view .view-box {
+		width: 100%;
+	}
+	.aside-box {
+		width: 100%;
+		position: static;
+		order: -1;
+	}
+	.aside-box .mob-box {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		padding: 0 15px calc(12px + env(safe-area-inset-bottom));
+		background: #fff;
+	}
+	.aside-box .comment-box {
+		margin-top: 0;
+		width: calc(100% + 30px);
+		margin-left: -15px;
+		border-radius: 0;
+	}
+	.aside-box .button-wrap {
+		margin-top: 12px;
+	}
+}
+@media all and (max-width: 767px) {
+	.rent-view {
+		--aside-width: 320px;
+	}
+	.aside-box {
+		padding: 20px 16px;
+	}
+	.aside-box .aside-head {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+	.aside-head .title-box .title {
+		font-size: var(--font-size-20);
+	}
+	.aside-head .img-box{
+		width: auto;
+		height: 90px;
+		padding: 15px;
+		aspect-ratio: 5 / 3;
+		margin-bottom: 0;
+	}
+	.aside-info .info-list.total .price {
+		font-size: 20px;
+	}
+}
+/* ## 렌트 상세 - 카드 컴포넌트 ## */
+.view-card {
+	width: 100%;
+	padding: 32px 40px;
+	background: #fff;
+	border-radius: 20px;
+	border: 1px solid #D9D9D9;
+	overflow: hidden;
+}
+.view-card:not(:last-child) {
+	margin-bottom: 16px;
+}
+.view-card .card-head {
+	display: flex;
+	align-items: center;
+	gap: 18px;
+	margin-bottom: 20px;
+}
+.view-card .card-head.line {
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e4e8f0;;
+}
+.view-card .card-head .title {
+	font-size: var(--font-size-24);
+	font-weight: 700;
+}
+.view-card .card-head .more-btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	margin-left: auto;
+	line-height: 1;
+	font-weight: 500;
+	letter-spacing: 0;
+}
+:has(.card-group) .view-card {
+	padding: 24px 40px;
+}
+.view-card .card-group {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.view-card .card-group h3.title {
+	font-size: var(--font-size-20);
+	font-weight: 600;
+}
+@media all and (max-width: 767px) {
+	.view-card {
+		padding: 24px 20px;
+		border-radius: 16px;
+	}
+	.view-card .card-head {
+		margin-bottom: 15px;
+	}
+	.view-card .card-head .title {
+		font-size: var(--font-size-20);
+	}
+	.view-card .card-head .more-btn {
+		gap: 2px;
+		font-size: var(--font-size-14);
+	}
+	:has(.card-group) .view-card {
+		padding: 20px;
+	}
+	.view-card .card-group h3.title {
+		font-size: var(--font-size-18);
+	}
+	.view-card:has(.review-slide, .board-qna, .board-faq, .promotion-slide) {
+		width: calc(100% + 30px);
+		margin-left: -15px;
+		border-radius: 0;
+		border: none;
+	}
+	.view-card:has(.board-faq) {
+		margin-bottom: 0;
+	}
+}
+/* ## 렌트 상세 - 후기 ## */
+.view-card .review-slide {
+	width: calc(100% + 40px);
+}
+.view-card .review-slide .swiper-slide {
+	border: 1px solid #DFDFDF;
+}
+.view-card .review-slide .title {
+	font-size: var(--font-size-20);
+	font-weight: 500;
+}
+@media all and (max-width: 767px) {
+	.view-card .review-slide .title {
+		font-size: var(--font-size-16);
+	}
+}
+/* ## 렌트 상세 - qna ## */
+.view-card .board-qna {
+	padding-top: 30px;
+	border-top: 1px solid #DFDFDF;
+}
+@media all and (max-width: 767px) {
+	.view-card .board-qna {
+		padding-top: 20px;
+	}
+}
+/* ## 렌트 상세 - 프로모션 슬라이드 ## */
+.view-card:has(.promotion-slide) {
+	padding: 0;
+	border: none;
+}
+.view-card .promotion-slide {
+	margin-top: 0;
+}
+.view-card .promotion-slide .swiper-slide {
+	height: 200px;
+	border-radius: 16px;
+}
+.view-card .promotion-slide .text-box {
+	padding: 36px 38px; 
+}
+.view-card .promotion-slide .text-box .title {
+	font-size: var(--font-size-20);
+	font-weight: 500;
+}
+.view-card .promotion-slide .swiper-pagination {
+	top: 20px;
+	right: 20px;
+	width: 70px;
+	font-size: var(--font-size-14);
+}
+@media all and (max-width: 767px) {
+	.view-card:has(.promotion-slide) {
+		padding: 0 20px 25px;
+		background: #fff;
+	}
+	.view-card .promotion-slide .swiper-slide {
+		height: 150px;
+	}
+	.view-card .promotion-slide .text-box {
+		padding: 18px 16px;
+	}
+	.view-card .promotion-slide .text-box .text {
+		font-size: var(--font-size-14);
+	}
+	.view-card .promotion-slide .text-box .title {
+		font-size: var(--font-size-16);
+	}
+	.view-card .promotion-slide .swiper-pagination {
+		top: 12px;
+		right: 12px;
+		width: auto;
+		font-size: var(--font-size-13);
+	}
+}
+/* ## 렌트 상세 - 금융사 ## */
+.capital-box {
+	display: flex;
+	flex-direction: column;
+	height: 192px;
+	margin-bottom: 16px;
+	padding: 30px 40px;
+	border-radius: 20px;
+	background: transparent linear-gradient(90deg, #000021 0%, #4B81FF 100%);
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.16);
+}
+.capital-box::after {
+	content: "";
+	position: absolute;
+	top: 46%;
+	right: 30px;
+	transform: translateY(-50%);
+	width: 128px;
+	height: 128px;
+	background: url("../img/main/live-bg.svg") no-repeat center / contain;
+}
+.swiper-slide.slide01 .capital-box { background: transparent linear-gradient(90deg, #000021 0%, #4B81FF 100%); }
+.swiper-slide.slide02 .capital-box { background: transparent linear-gradient(90deg, #0D8DF3 0%, #41B5FB 100%); }
+.swiper-slide.slide03 .capital-box { background: transparent linear-gradient(90deg, #0048F1 0%, #2DBCFF 100%); }
+.capital-bank {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+.capital-bank .bank-text {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	color: #00FF94;
+}
+.capital-bank .bank-text::before {
+	content: "";
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #00FF94;
+	box-shadow: 0px 0px 10px rgba(0,255,148,0.86);
+}
+.bank-img {
+	padding: 0 5px;
+	border-radius: 5px;
+	background: #fff;
+	box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+}
+.capital-content {
+	margin-top: auto;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 20px 60px;
+}
+.capital-content .text {
+	font-size: var(--font-size-18);
+	font-weight: 300;
+	color: #fff;
+}
+.capital-price {
+	display: inline-flex;
+	align-items: baseline;
+	gap: 5px;
+	font-size: 2.75rem;
+	color: #fff;
+	font-weight: 700;
+	line-height: 1;
+}
+.capital-price .unit {
+	font-size: 16px;
+	font-weight: 300;
+}
+.condition-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 16px;
+}
+.condition-badge .badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	padding: 0 15px 0 42px;
+	line-height: 1;
+	background-repeat: no-repeat;
+	background-position: left 15px center;
+	background-size: 22px;
+	filter: brightness(0) saturate(100%) invert(100%);
+}
+.condition-badge .badge.period { background-image: url("../img/contents/icon-condition-period.svg"); }
+.condition-badge .badge.deposit { background-image: url("../img/contents/icon-condition-deposit.svg"); }
+.condition-badge .badge.distance { background-image: url("../img/contents/icon-condition-distance.svg"); }
+.condition-list li {
+	margin-bottom: 20px;
+}
+.condition-list .list-title {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+	font-weight: 700;
+}
+.condition-list .list-title .icon {
+	width: 16px;
+	height: 16px;
+	margin-right: 8px;
+	filter: brightness(0) saturate(100%);
+}
+@media all and (max-width: 1439px) {
+	.capital-content {
+		gap: 20px 40px;
+	}
+}
+@media all and (max-width: 767px) {
+	.capital-box {
+		height: 168px;
+		padding: 18px;
+		border-radius: 16px;
+	}
+	.capital-box::after {
+		top: 15px;
+		right: 15px;
+		transform: none;
+		width: 70px;
+		height: 70px;
+	}
+	.capital-bank {
+		gap: 12px;
+	}
+	.capital-bank .bank-text {
+		font-size: var(--font-size-14);
+	}
+	.capital-bank .bank-img {
+		padding: 0 2px;
+	}
+	.capital-content {
+		gap: 12px 40px;
+	}
+	.capital-content .text {
+		font-size: var(--font-size-16);
+	}
+	.capital-price {
+		font-size: 2rem;
+	}
+	.capital-price .unit {
+		font-size: 14px;
+	}
+	.condition-badge {
+		gap: 8px;
+	}
+	.condition-badge .badge {
+		height: 35px;
+		gap: 10px;
+		padding: 0 10px 0 32px;
+		background-position: left 10px center;
+		background-size: 18px;
+		font-size: var(--font-size-14);
+	}
+	.condition-list .list-title {
+		font-size: var(--font-size-14);
+	}
+	.condition-list .list-title .icon {
+		width: 14px;
+		height: 14px;
+	}
+}
+/* ## 렌트 상세 - 트림 선택 ## */
+.modal-trim .trim-label {
+	padding: 14px 18px;
+	margin-bottom: 12px;
+	border-radius: 5px;
+	background: #F6F6F7;
+}
+.modal-trim .checkbox-type02 .checkbox-text {
+	justify-content: space-between;
+}
+/* ## 렌트 상세 - 추가옵션 선택 ## */
+.modal-extra-option .modal-title .checkbox {
+	margin-left: 10px;
+}
+.modal-extra-option .modal-title .checkbox-text {
+	font-weight: 400;
+	color: #999999;
+}
+.modal-extra-option .modal-title .checkbox-input:checked ~ .checkbox-text {
+	color:var(--primary-color);
+}
+.extra-option-title {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+	margin-bottom: 15px;
+	font-weight: 600;
+}
+.extra-option-title img {
+	width: 24px;
+	height: 24px;
+}
+.extra-option .color-box {
+	border-bottom: 1px solid #D9D9D9;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.extra-option .color-box:last-child {
+	border: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.extra-option .color-title {
+	display: flex;
+	align-items: center;
+}
+.extra-option .color-title .title {
+	font-weight: 700;
+}
+.extra-option .color-label {
+	color: #979797;
+	font-weight: 500;
+	padding-left: 10px;
+	margin-left: 10px;
+	border-left: 1px solid #D9D9D9;
+	font-size: var(--font-size-14);
+}
+.color-chip {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	margin-top: 15px;
+}
+.color-chip .color {
+	position: relative;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: var(--color);
+	border: 1px solid #D9D9D9;
+	cursor: pointer;
+}
+.color-chip .color.double {
+	background: linear-gradient(90deg, var(--color1) 50%, var(--color2) 50%);
+}
+.color-chip .color.active {
+	outline: 1px solid var(--primary-color);
+	outline-offset: 4px;
+}
+.color-chip .color.active::after {
+	content: "";
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: url("../img/contents/icon-check.svg") no-repeat center / contain;
+	filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(5276%) hue-rotate(221deg) brightness(96%) contrast(111%);
+}
+.extra-option .add-box {
+	margin-top: 18px;
+}
+.extra-option .add-box .checkbox-type02 {
+	--checkbox-size: 20px;
+}
+.extra-option .add-box .checkbox-type02 .checkbox-text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	margin-left: 15px;
+	color: #999999;
+}
+.extra-option .add-box .checkbox-type02 .checkbox-label {
+	height: auto;
+	border-radius: 10px;
+}
+.extra-option .add-box .checkbox-type02 .checkbox-check::before {
+	-webkit-mask-image: url("../img/contents/icon-option-check.svg");
+	mask-image: url("../img/contents/icon-option-check.svg");
+}
+.extra-option .add-img {
+	flex: 0 0 112px;
+	aspect-ratio: 5 / 3;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+.extra-option .add-img::before {
+	content:"";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top:0;
+	z-index: -1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #F1F1F1 url("../img/layout/logo-blue.svg") no-repeat center;
+	background-size: 50%;
+}
+.extra-option .add-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.extra-option .add-text {
+	text-align: right;
+	letter-spacing: 0;
+}
+.extra-option .add-text .text {
+	font-weight: 500;
+}
+.extra-option .add-text .price {
+	margin-top: 5px;
+	font-size: var(--font-size-14);
+	color: #999999;
+}
+.extra-option .add-list li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px;
+	border-radius: 10px;
+	border: 1px solid #D9D9D9;
+	margin-bottom: 10px;
+}
+.extra-option .add-list .add-text .text {
+	color: #000;
+}
+.extra-option .add-list .add-text .price {
+	color: #B8B8B8;
+}
+@media all and (max-width: 767px) {
+	.color-chip {
+		gap: 10px;
+	}
+	.color-chip .color {
+		width: 30px;
+		height: 30px;
+	}
+	.color-chip .color.active {
+		outline-offset: 2px;
+	}
+	.color-chip .color.active::after {
+		width: 18px;
+		height: 18px;
+	}
+}
+
+
+/* ## 렌트 견적 ## */
+.rent-form .aside-box .aside-head {
+	flex-direction: row;
+	justify-content: space-between;
+}
+.rent-form .aside-head .title-box .title {
+	font-size: var(--font-size-24);
+}
+.rent-form .aside-head .img-box{
+	width: 200px;
+	height: auto;
+	aspect-ratio: 5 / 3;
+	margin-bottom: 0;
+}
+.rent-form .aside-info .info-list {
+	border-top: 1px solid #D9D9D9;
+	padding-top: 6px;
+}
+@media all and (max-width: 767px) {
+	.rent-form .aside-head .title-box .title {
+		font-size: var(--font-size-20);
+	}
+	.rent-form .aside-head .img-box{
+		width: auto;
+		height: 90px;
+	}
+}
+.extra-btn {
+	color: #555555;
+}
+.extra-btn::after {
+	content: "\f105";
+	font-family: "Font Awesome 7 Free";
+	font-weight: 900;
+	color: #000000;
+	margin-left: 10px;
+}
+.extra-info .info-list li {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 5px;
+	margin-bottom: 10px;
+	padding: 15px 20px;
+	border-radius: 5px;
+	background: #F6F6F7;
+}
+.extra-info .info-title {
+	font-weight: 600;
+}
+@media all and (max-width: 767px) {
+	.extra-info .info-list li {
+		padding: 15px;
+	}
+}
+
+.consult-form .form-row {
+	display: block;
+	padding: 0;
+	margin-bottom: 16px;
+	border-bottom: none;
+}
+.consult-form .form-title  {
+	display: block;
+	margin-bottom: 5px;
+	font-weight: 600;
+}
+.consult-form :has(.agree-box) .form-title  {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 14px;
+	border-bottom: 1px solid #DFDFDF;
+}
+.consult-form .form-input  {
+	border-radius: 99px;
+	padding: 0 18px;
+	font-size: var(--font-size-15);
+}
+.consult-form .form-group .button {
+	min-width: 148px;
+}
+@media all and (max-width: 767px) {
+	.consult-form .form-group .button {
+		min-width: 80px;
+	}
+}
+
+/* ## 렌트 견적 - 추가옵션 선택 ## */
+.extra-info .add-box .checkbox-type02 {
+	--checkbox-size: 20px;
+}
+.extra-info .add-box .checkbox-type02 .checkbox-text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	margin-left: 15px;
+	color: #999999;
+}
+.extra-info .add-box .checkbox-type02 .checkbox-label {
+	height: auto;
+	border-radius: 10px;
+}
+.extra-info .add-box .checkbox-type02 .checkbox-check::before {
+	-webkit-mask-image: url("../img/contents/icon-option-check.svg");
+	mask-image: url("../img/contents/icon-option-check.svg");
+}
+.extra-info .add-img {
+	flex: 0 0 112px;
+	aspect-ratio: 5 / 3;
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+.extra-info .add-img::before {
+	content:"";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top:0;
+	z-index: -1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #F1F1F1 url("../img/layout/logo-blue.svg") no-repeat center;
+	background-size: 50%;
+}
+.extra-info .add-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.extra-info .add-text {
+	text-align: right;
+	letter-spacing: 0;
+}
+.extra-info .add-text .text {
+	font-weight: 500;
+}
+/* ## 렌트 견적 - 팝업 ## */
+.extra-info-option .checkbox.checkbox-type02 {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 10px;
+}
+.extra-info-option .checkbox-type02 .checkbox-label {
+	margin-bottom: 0;
+	border-radius: 10px;
+	border-color: #E5E5E5;
+}
+.extra-info-option .checkbox-type02 .checkbox-text {
+	color: #999999;
+	justify-content: center;
+	margin: 0;
+}
+@media all and (max-width: 767px) {
+	.extra-info-option .checkbox.checkbox-type02 {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	.modal-location .extra-info-option .checkbox.checkbox-type02 {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+/* ## 렌트 견적 - 팝업 :: 금융사 선택 ## */
+.modal-capital .checkbox-text {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	width: 100%;
+	color: #999999;
+}
+.modal-capital .checkbox-text .price {
+	margin-left: auto;
+	font-size: var(--font-size-14);
+}
+
+
+
+/* ## 신청 완료 ## */
+.rent-complete {
+	margin-top: 30px;
+	padding: 45px 20px 90px;
+	border-radius: 20px;
+	background: #fff;
+}
+.rent-complete .inner-container {
+	max-width: 840px;
+	margin: 0 auto;
+}
+.rent-complete .complete-box {
+	margin-bottom: 30px;
+	text-align: center;
+}
+.rent-complete .complete-box h3 {
+	margin-top: 20px;
+	font-size: var(--font-size-20);
+	color: var(--primary-color);
+	font-weight: 700;
+}
+.rent-complete .complete-box p {
+	margin-top: 16px;
+	color: #333333;
+}
+.complete-info {
+	display: flex;
+	align-items: flex-start;
+	gap: 30px;
+	padding: 30px 0;
+	border-top: 1px solid #D9D9D9;
+	border-bottom: 1px solid #D9D9D9;
+}
+.complete-info .aside-head {
+	flex: 1;
+}
+.complete-info .aside-head .title-box {
+	margin-bottom: 25px;
+}
+.complete-info .aside-head .title-box .title {
+	font-size: var(--font-size-24);
+}
+.complete-info .aside-head .img-box {
+	height: 250px;
+}
+.complete-info .aside-info {
+	flex: 1;
+	margin: 0;
+}
+@media all and (max-width: 1023px) {
+	.rent-complete {
+		padding: 35px 20px 70px;
+	}
+}
+@media all and (max-width: 767px) {
+	.rent-complete {
+		padding: 20px 20px 50px;
+	}
+	.rent-complete .complete-box h3 {
+		margin-top: 10px;
+		font-size: var(--font-size-18);
+	}
+	.rent-complete .complete-box p {
+		margin-top: 10px;
+		font-size: var(--font-size-14);
+	}
+	.complete-info {
+		flex-direction: column;
+		gap: 20px;
+		padding: 20px 0;
+	}
+	.complete-info .aside-head {
+		flex: none;
+		width: 100%;
+	}
+	.complete-info .aside-head .title-box .title {
+		font-size: var(--font-size-22);
+	}
+	.complete-info .aside-head .img-box {
+		width: 100%;
+		height: 200px;
+	}
+	.complete-info .aside-info {
+		flex: none;
+		width: 100%;
+	}
+	.rent-complete .button-wrap .button {
+		flex: 1 1 auto;
+	}
+}
+
+/* ## 출고 과정 ## */
+.rent-process-box {
+	margin-top: 40px;
+	padding: 30px 40px;
+	border-radius: 10px;
+	border: 1px solid #D9D9D9;
+	background: url("../img/contents/rent-process-bg.png") no-repeat right center / contain;
+}
+.rent-process-box .title {
+	margin-bottom: 8px;
+	font-size: var(--font-size-20);
+	font-weight: 700;
+}
+.rent-process-box p {
+	margin-bottom: 16px;
+	font-weight: 500;
+	color: #555555;
+}
+.rent-process-box .lnk {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	font-weight: 500;
+	color: var(--primary-color);
+}
+.rent-process-box .lnk .icon {
+	font-size: var(--font-size-14);
+}
+.modal-process .modal-header {
+	justify-content: center;
+}
+.rent-process-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px;
+}
+.rent-process-list .item-box {
+	padding: 18px;
+	border-radius: 10px;
+	background: #E9F1FC;
+	text-align: center;
+}
+.rent-process-list .num {
+	margin-bottom: 5px;
+	font-weight: 700;
+	color: var(--primary-color);
+}
+.rent-process-list .desc {
+	margin-top: 10px;
+	font-weight: 500;
+	color: #555555;
+}
+@media all and (max-width: 767px) {
+	.rent-process-box {
+		padding: 18px 18px 150px;
+		background-position: center bottom;
+	}
+	.rent-process-box .title {
+		font-size: var(--font-size-18);
+	}
+	.rent-process-box p {
+		font-size: var(--font-size-14);
+	}
+	.rent-process-box .lnk {
 		font-size: var(--font-size-14);
 	}
 }
