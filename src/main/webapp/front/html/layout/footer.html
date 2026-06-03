@@ -70,28 +70,39 @@
 			</div>
 			<div class="modal-body">
 				<form action="">
-					<ul class="form modal-consult-form">
+					<ul class="form consult-form">
 						<li class="form-row">
 							<label for="name" class="form-title form-required">성함</label>
 							<div class="form-item">
-								<input type="text" id="name" name="name" class="form-input" placeholder="이름을 입력해주세요">
+								<input type="text" id="name" name="name" class="form-input" placeholder="이름을 입력해주세요" required>
 							</div>
 						</li>
 						<li class="form-row">
 							<label for="phone" class="form-title form-required">연락처</label>
 							<div class="form-item">
-								<input type="text" id="phone" name="phone" class="form-input" placeholder="연락처를 입력해주세요">
+								<input type="text" id="phone" name="phone" class="form-input" placeholder="연락처를 입력해주세요" required>
 							</div>
 						</li>
 						<li class="form-row">
 							<label for="model" class="form-title form-required">모델명</label>
 							<div class="form-item">
-								<input type="text" id="model" name="model" class="form-input" placeholder="관심차종을 입력해주세요">
+								<input type="text" id="model" name="model" class="form-input" placeholder="관심차종을 입력해주세요" required>
 							</div>
 						</li>
 						<li class="form-row">
 							<label for="" class="form-title form-required">개인정보처리방침</label>
 							<div class="form-item">
+								<div class="agree-box">
+									<div class="agree-header">
+										<div class="checkbox">
+											<label class="checkbox-label">
+												<input type="checkbox" name="check" class="checkbox-input">
+												<span class="checkbox-check"></span>
+												<span class="checkbox-text">전체동의</span>
+											</label>
+										</div>
+									</div>
+								</div>
 								<div class="agree-box">
 									<div class="agree-header">
 										<div class="checkbox">
@@ -135,10 +146,10 @@
 							</div>
 						</li>
 					</ul>
-					<div class="button-wrap">
-						<button type="submit" class="button button-color-primary">신청하기</button>
-					</div>
 				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="button button-color-primary">신청하기</button>
 			</div>
 		</div>
 	</div>

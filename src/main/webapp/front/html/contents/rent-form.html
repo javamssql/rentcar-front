@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>그냥이차</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no, address=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="title" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="../../comn/img/layout/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../comn/img/layout/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+	<link rel="stylesheet" href="../../comn/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../comn/css/aos.css">
+	<link rel="stylesheet" href="../../comn/css/reset.css">
+	<link rel="stylesheet" href="../../comn/css/common.css">
+	<link rel="stylesheet" href="../../comn/css/front-ui.css">
+	<link rel="stylesheet" href="../../comn/css/layout.css">
+	<link rel="stylesheet" href="../../comn/css/board.css">
+	<link rel="stylesheet" href="../../comn/css/main.css">
+	<link rel="stylesheet" href="../../comn/css/contents.css">
+	<link rel="stylesheet" href="../../comn/css/member.css">
+	<script src="../../comn/js/jquery-3.7.1.min.js"></script>
+	<script src="../../comn/js/swiper-bundle.min.js"></script>
+	<script src="../../comn/js/aos.js"></script>
+	<script src="../../comn/js/include.js"></script>
+	<script src="../../comn/js/front-ui.js"></script>
+</head>
+<!-- ## 시간에 따른 테마 전환 white | black ## -->
+<body class="white">
+
+	<!-- ## header s ## -->
+	<div data-include="../layout/header.html"></div>
+	<!-- ## header e ## -->
+
+	<!-- ## contents s ## -->
+	<main class="sub-wrapper sub-bg-light">
+		<div class="container">
+
+			<!-- ## 진행 단계 s ## -->
+			<div class="rent-step">
+				<ul class="step-list">
+					<li class="step-item done">
+						<span class="icon"><i class="fa-solid fa-check"></i></span>
+						<span class="label">01. 차량선택</span>
+					</li>
+					<li class="step-item done">
+						<span class="icon"><i class="fa-solid fa-check"></i></span>
+						<span class="label">02. 옵션선택후 최저가확인</span>
+					</li>
+					<li class="step-item active">
+						<span class="icon"><i class="fa-solid fa-circle"></i></span>
+						<span class="label">03. 무료견적받기</span>
+					</li>
+				</ul>
+			</div>
+			<!-- ## 진행 단계 e ## -->
+
+			<div class="rent-view rent-form">
+				<div class="view-box">
+
+					<!-- ## 추가선택 옵션 s ## -->
+					<div class="view-card">
+						<div class="card-group">
+							<h3 class="title">추가선택옵션</h3>
+							<button type="button" class="extra-btn" onclick="frontJS.modal('extra-option').show();">나중에 선택할게요</button>
+						</div>
+					</div>
+					<!-- ## 추가선택 옵션 e ## -->
+
+					<!-- ## 추가정보 입력 s ## -->
+					<div class="view-card">
+						<div class="card-head">
+							<h3 class="title">추가정보입력</h3>
+						</div>
+						<div class="card-body">
+							<div class="extra-info">
+								<ul class="info-list">
+									<li>
+										<div class="info-title">이용자 유형</div>
+										<button type="button" class="extra-btn" onclick="frontJS.modal('user-type').show();">유형을 선택해주세요</button>
+									</li>
+									<li>
+										<div class="info-title">탁송지 선택</div>
+										<button type="button" class="extra-btn" onclick="frontJS.modal('location').show();">지역을 선택해주세요</button>
+									</li>
+									<li>
+										<div class="info-title">심사요청 금융사 선택</div>
+										<button type="button" class="extra-btn" onclick="frontJS.modal('capital').show();">금융사를 선택해주세요</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- ## 추가정보 입력 e ## -->
+
+					<!-- ## 상담정보 입력 s ## -->
+					<div class="view-card">
+						<div class="card-head">
+							<h3 class="title">상담정보 입력</h3>
+						</div>
+						<div class="card-body">
+							<form action="">
+								<ul class="form consult-form">
+									<li class="form-row">
+										<label for="name" class="form-title form-required">성함</label>
+										<div class="form-item">
+											<input type="text" id="name" name="name" class="form-input" placeholder="이름을 입력해주세요" required>
+										</div>
+									</li>
+									<li class="form-row">
+										<label for="phone" class="form-title form-required">연락처</label>
+										<div class="form-item">
+											<div class="form-group">
+												<input type="text" id="phone" name="phone" class="form-input" placeholder="연락처를 입력해주세요" required>
+												<button type="button" class="button bottoun-radius-round button-color-black">인증</button>
+											</div>
+											<div class="form-group">
+												<div class="form-certify">
+													<input type="text" id="certify" name="certify" class="form-input" placeholder="인증번호를 입력해주세요" required>
+													<span class="time">03:00</span>
+												</div>
+												<button type="button" class="button bottoun-radius-round button-color-primary">확인</button>
+											</div>
+										</div>
+									</li>
+									<li class="form-row">
+										<label for="" class="form-title form-required">개인정보처리방침</label>
+										<div class="form-item">
+											<div class="agree-box">
+												<div class="agree-header">
+													<div class="checkbox">
+														<label class="checkbox-label">
+															<input type="checkbox" name="check" class="checkbox-input">
+															<span class="checkbox-check"></span>
+															<span class="checkbox-text">전체동의</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="agree-box">
+												<div class="agree-header">
+													<div class="checkbox">
+														<label class="checkbox-label">
+															<input type="checkbox" name="check" class="checkbox-input">
+															<span class="checkbox-check"></span>
+															<span class="checkbox-text">[필수] 개인정보 수집 이용 제공동의</span>
+														</label>
+													</div>
+													<button type="button" class="button button-size-sm" onclick="frontJS.toggle(this, 'agree').toggle();">자세히보기</button>
+												</div>
+												<div class="agree-body" data-toggle="agree">
+													제 1 조 수집하는 개인 정보 항목 <br>
+													회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+													제 1 조 수집하는 개인 정보 항목 <br>
+													회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+													제 1 조 수집하는 개인 정보 항목 <br>
+													회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+												</div>
+											</div>
+											<div class="agree-box">
+												<div class="agree-header">
+													<div class="checkbox">
+														<label class="checkbox-label">
+															<input type="checkbox" name="check" class="checkbox-input">
+															<span class="checkbox-check"></span>
+															<span class="checkbox-text">[필수] 개인정보 3자 제공 동의</span>
+														</label>
+													</div>
+													<button type="button" class="button button-size-sm" onclick="frontJS.toggle(this, 'agree2').toggle();">자세히보기</button>
+												</div>
+												<div class="agree-body" data-toggle="agree2">
+													제 1 조 수집하는 개인 정보 항목 <br>
+													회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+													제 1 조 수집하는 개인 정보 항목 <br>
+													회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
+													제 1 조 수집하는 개인 정보 항목 <br>
+													회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</form>
+						</div>
+					</div>
+					<!-- ## 상담정보 입력 e ## -->
+
+				</div>
+
+				<!-- ## 주문서 s ## -->
+				<aside class="aside-box">
+					<div class="aside-head">
+						<div class="title-box">
+							<div class="tag-box">
+								<span class="tag">브랜드</span>
+								<span class="tag">2026모델명??</span>
+							</div>
+							<h3 class="title">캐스퍼 일렉트릭</h3>
+						</div>
+						<div class="img-box"><img src="../../comn/img/contents/ranking-sample01.png" alt=""></div>
+					</div>
+
+					<div class="aside-info">
+						<ul class="info-list">
+							<li class="info-item">
+								<div class="term">트림선택</div>
+								<div class="desc">프리미엄 AT</div>
+							</li>
+							<li class="info-item">
+								<div class="term">구매조건</div>
+								<div class="desc">장기렌트</div>
+							</li>
+							<li class="info-item">
+								<div class="term">계약기간</div>
+								<div class="desc">48개월</div>
+							</li>
+							<li class="info-item">
+								<div class="term">선납금</div>
+								<div class="desc">없음</div>
+							</li>
+							<li class="info-item">
+								<div class="term">주행거리</div>
+								<div class="desc">연 1만 km</div>
+							</li>
+						</ul>
+
+						<ul class="info-list total">
+							<li class="info-item">
+								<span class="term"><div class="icon"><img src="../../comn/img/contents/icon-wallet.svg" alt=""></div>총예상금액</span>
+								<span class="desc">3,555만원<strong class="price">월 580,900원</strong></span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="mob-box">
+						<div class="button-wrap button-wrap-full">
+							<button type="button" class="button button-color-black">무료견적받기</button>
+						</div>
+					</div>
+				</aside>
+				<!-- ## 주문서 e ## -->
+			</div>
+
+		</div>
+	</main>
+
+	<!-- ## 팝업 :: 추가옵션 선택 s ## -->
+	<dialog class="modal modal-sheet modal-extra-option" data-modal="extra-option">
+		<div class="modal-wrap">
+			<div class="modal-box">
+				<div class="modal-header">
+					<h4 class="modal-title">
+						<img src="../../comn/img/contents/icon-extra-option.svg" class="title-icon" alt="">추가옵션선택
+						<div class="checkbox">
+							<label class="checkbox-label">
+								<input type="checkbox" name="check" class="checkbox-input">
+								<span class="checkbox-check"></span>
+								<span class="checkbox-text">나중에 선택할게요</span>
+							</label>
+						</div>
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="extra-option">
+						<div class="extra-option-title"><img src="../../comn/img/contents/extra-color-icon.svg" alt="">색상선택</div>
+						<div class="color-box">
+							<div class="color-title">
+								<div class="title">외장색상</div>
+								<div class="color-label">외장색상을 선택해주세요</div>
+							</div>
+							<div class="color-chip">
+								<button type="button" class="color ui-color" style="--color: #ffffff;" data-label="아틀라스 화이트"></button>
+								<button type="button" class="color ui-color" style="--color: #000000;" data-label="어비스 블랙"></button>
+								<button type="button" class="color ui-color" style="--color: #9C9C9C;" data-label="문라이트 그레이"></button>
+								<button type="button" class="color ui-color" style="--color: #3B3B3B;" data-label="다크 나이트"></button>
+								<button type="button" class="color ui-color" style="--color: #7E82A5;" data-label="스틸 블루"></button>
+								<button type="button" class="color ui-color" style="--color: #394335;" data-label="포레스트 그린"></button>
+							</div>
+						</div>
+						<div class="color-box">
+							<div class="color-title">
+								<div class="title">내장색상</div>
+								<div class="color-label">내장색상을 선택해주세요</div>
+							</div>
+							<div class="color-chip">
+								<button type="button" class="color ui-color double" style="--color1: #000000; --color2: #fffaec;" data-label="블랙모노톤/캐시미어베이지"></button>
+								<button type="button" class="color ui-color double" style="--color1: #000000; --color2: #c5c5c5;" data-label="블랙모노톤/실버그레이"></button>
+								<button type="button" class="color ui-color" style="--color: #000000;" data-label="블랙모노톤"></button>
+								<button type="button" class="color ui-color" style="--color: #f2f0ee;" data-label="아이보리"></button>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-divider"></div>
+
+					<div class="extra-option">
+						<div class="extra-option-title"><img src="../../comn/img/contents/extra-option-add-icon.svg" alt="">옵션정보</div>
+						<div class="tab tab-size-md tab-type02">
+							<div class="tab-box">
+								<ul class="tab-list">
+									<li class="tab-item"><a href="javascript:void(0);" class="tab-btn active" data-tab-btn="tab" data-tab-idx="1" onClick="frontJS.tab(this);">선택옵션</a></li>
+									<li class="tab-item"><a href="javascript:void(0);" class="tab-btn" data-tab-btn="tab" data-tab-idx="2" onClick="frontJS.tab(this);">기본옵션</a></li>
+								</ul>
+							</div>
+						</div>
+						<div data-tab-cont="tab" data-tab-idx="1" class="active">
+							<div class="add-box">
+								<div class="checkbox checkbox-type02">
+									<label class="checkbox-label">
+										<input type="checkbox" name="checkbox" class="checkbox-input">
+										<span class="checkbox-check"></span>
+										<span class="checkbox-text">
+											<div class="add-img"><img src="../../comn/img/contents/extra-option-sample.jpg" alt=""></div>
+											<div class="add-text">
+												<div class="text">현대스마트센스</div>
+												<div class="price">690,000원</div>
+											</div>
+										</span>
+									</label>
+									<label class="checkbox-label">
+										<input type="checkbox" name="checkbox" class="checkbox-input">
+										<span class="checkbox-check"></span>
+										<span class="checkbox-text">
+											<div class="add-img"><img src="../../comn/img/contents/extra-option-sample.jpg" alt=""></div>
+											<div class="add-text">
+												<div class="text">현대스마트센스</div>
+												<div class="price">690,000원</div>
+											</div>
+										</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div data-tab-cont="tab" data-tab-idx="2">
+							<div class="add-box">
+								<ul class="add-list">
+									<li>
+										<!-- ## 이미지 없을 경우 ## -->
+										<div class="add-img"></div>
+										<div class="add-text">
+											<div class="text">스마트스트림 g1.6 엔진</div>
+											<div class="price">기본포함</div>
+										</div>
+									</li>
+									<li>
+										<div class="add-img"><img src="../../comn/img/contents/extra-option-sample.jpg" alt=""></div>
+										<div class="add-text">
+											<div class="text">스마트스트림 g1.6 엔진</div>
+											<div class="price">기본포함</div>
+										</div>
+									</li>
+									<li>
+										<div class="add-img"><img src="../../comn/img/contents/extra-option-sample.jpg" alt=""></div>
+										<div class="add-text">
+											<div class="text">스마트스트림 g1.6 엔진</div>
+											<div class="price">기본포함</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="button-wrap">
+						<button type="button" class="button button-line-black">선택완료</button>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('extra-option').hide();"></button>
+		</div>
+	</dialog>
+	<!-- ## 팝업 :: 추가옵션 선택 e ## -->
+
+	<!-- ## 팝업 :: 이용자 유형 s ## -->
+	<dialog class="modal modal-sheet modal-user-type" data-modal="user-type">
+		<div class="modal-wrap">
+			<div class="modal-box">
+				<div class="modal-header">
+					<h4 class="modal-title">
+						<img src="../../comn/img/contents/icon-user-type.svg" class="title-icon" alt="">이용자 유형
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="extra-info-option">
+						<div class="checkbox checkbox-type02">
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">직장인</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">개인사업자</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">법인사업자</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">프리랜서</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('user-type').hide();"></button>
+		</div>
+	</dialog>
+	<!-- ## 팝업 :: 이용자 유형 e ## -->
+
+	<!-- ## 팝업 :: 탁송지 선택 s ## -->
+	<dialog class="modal modal-sheet modal-location" data-modal="location">
+		<div class="modal-wrap">
+			<div class="modal-box">
+				<div class="modal-header">
+					<h4 class="modal-title">
+						<img src="../../comn/img/contents/icon-location.svg" class="title-icon" alt="">탁송지 선택
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="extra-info-option">
+						<div class="checkbox checkbox-type02">
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">서울</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">인천</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">인천(영종)</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">인천(강화)</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">경기(북부)</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">경기(남부)</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">세종</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">대구</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">대전</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">울산</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">부산</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">광주</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">강원(영동)</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">강원(영서)</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">충북</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">충남</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">경북</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">경남</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">전북</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">전남</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="checkbox" class="checkbox-input">
+								<span class="checkbox-text">제주</span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('location').hide();"></button>
+		</div>
+	</dialog>
+	<!-- ## 팝업 :: 탁송지 선택 e ## -->
+
+	<!-- ## 팝업 :: 금융사 선택 s ## -->
+	<dialog class="modal modal-sheet modal-capital" data-modal="capital">
+		<div class="modal-wrap">
+			<div class="modal-box">
+				<div class="modal-header">
+					<h4 class="modal-title">
+						<img src="../../comn/img/contents/icon-capital.svg" class="title-icon" alt="">심사요청 금융사 선택
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="checkbox checkbox-type02">
+						<label class="checkbox-label">
+							<input type="checkbox" name="checkbox" class="checkbox-input">
+							<span class="checkbox-check"></span>
+							<span class="checkbox-text">
+								<div class="bank-img"><img src="../../comn/img/contents/bank-wr-img.png" alt=""></div>
+								<div class="text">우리** 캐피탈</div>
+								<div class="price">월 635,179원</div>
+							</span>
+						</label>
+						<label class="checkbox-label">
+							<input type="checkbox" name="checkbox" class="checkbox-input">
+							<span class="checkbox-check"></span>
+							<span class="checkbox-text">
+								<div class="bank-img"><img src="../../comn/img/contents/bank-nh-img.png" alt=""></div>
+								<div class="text">NH** 캐피탈</div>
+								<div class="price">월 635,179원</div>
+							</span>
+						</label>
+						<label class="checkbox-label">
+							<input type="checkbox" name="checkbox" class="checkbox-input">
+							<span class="checkbox-check"></span>
+							<span class="checkbox-text">
+								<div class="bank-img"><img src="../../comn/img/contents/bank-nh-img.png" alt=""></div>
+								<div class="text">NH** 캐피탈</div>
+								<div class="price">월 635,179원</div>
+							</span>
+						</label>
+						<label class="checkbox-label">
+							<input type="checkbox" name="checkbox" class="checkbox-input">
+							<span class="checkbox-check"></span>
+							<span class="checkbox-text">
+								<div class="bank-img"><img src="../../comn/img/contents/bank-nh-img.png" alt=""></div>
+								<div class="text">NH** 캐피탈</div>
+								<div class="price">월 635,179원</div>
+							</span>
+						</label>
+						<label class="checkbox-label">
+							<input type="checkbox" name="checkbox" class="checkbox-input">
+							<span class="checkbox-check"></span>
+							<span class="checkbox-text">
+								<div class="bank-img"><img src="../../comn/img/contents/bank-nh-img.png" alt=""></div>
+								<div class="text">NH** 캐피탈</div>
+								<div class="price">월 635,179원</div>
+							</span>
+						</label>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="button-wrap">
+						<button type="button" class="button button-line-black">선택완료</button>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('capital').hide();"></button>
+		</div>
+	</dialog>
+	<!-- ## 팝업 :: 금융사 선택 e ## -->
+
+	<script>
+		contents.color();
+	</script>
+	<!-- ## contents e ## -->
+
+	<!-- ## footer s ## -->
+	<div data-include="../layout/footer.html"></div>
+	<!-- ## footer e ## -->
+</body>
+</html>
