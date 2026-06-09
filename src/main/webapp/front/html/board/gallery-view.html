@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>그냥이차</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no, address=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="title" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="../../comn/img/layout/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../comn/img/layout/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+	<link rel="stylesheet" href="../../comn/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../comn/css/aos.css">
+	<link rel="stylesheet" href="../../comn/css/reset.css">
+	<link rel="stylesheet" href="../../comn/css/common.css">
+	<link rel="stylesheet" href="../../comn/css/front-ui.css">
+	<link rel="stylesheet" href="../../comn/css/layout.css">
+	<link rel="stylesheet" href="../../comn/css/board.css">
+	<link rel="stylesheet" href="../../comn/css/main.css">
+	<link rel="stylesheet" href="../../comn/css/contents.css">
+	<link rel="stylesheet" href="../../comn/css/member.css">
+	<script src="../../comn/js/jquery-3.7.1.min.js"></script>
+	<script src="../../comn/js/swiper-bundle.min.js"></script>
+	<script src="../../comn/js/aos.js"></script>
+	<script src="../../comn/js/include.js"></script>
+	<script src="../../comn/js/front-ui.js"></script>
+</head>
+<!-- ## 시간에 따른 테마 전환 white | black ## -->
+<body class="white">
+	
+	<!-- ## header s ## -->
+	<div data-include="../layout/header.html"></div>
+	<!-- ## header e ## -->
+
+	<!-- ## contents s ## -->
+	<main class="sub-wrapper sub-bg-gray">
+		<div class="container container-wide">
+			<div class="sub-box">
+
+				<div class="sub-title-box sub-title-type02">
+					<h2 class="title">SMART GUIDE</h2>
+				</div>
+
+				<div class="board-wrap">
+					<div class="board-view">
+						<div class="board-view-header">
+							<div class="board-view-header-title">
+								<div class="board-title">
+									갤러리 게시판 게시글 제목 영역입니다.
+								</div>
+							</div>
+							<div class="board-view-info">
+								<div class="board-desc">YYYY.MM.DD</div>
+							</div>
+							<!-- ## 공유하기 s ## -->
+							<div class="share-box">
+								<button type="button" title="공유하기" class="share-open" onclick="frontJS.toggle(this, 'share').toggle();"><img src="../../comn/img/board/icon-share.svg" alt="" class="icon"></button>
+								<div class="share-item" data-toggle="share">
+									<ul class="share-list">
+										<li><a href="#lnk" title="카카오톡" class="share-lnk kakao"></a></li>
+										<li><a href="#lnk" title="URL" class="share-lnk"><i class="fa-solid fa-link fa-xs"></i></a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- ## 공유하기 e ## -->
+						</div>
+
+						<!-- ## 이벤트 게시판에서 사용 ## -->
+						<div class="gallery-util">
+							<div class="badge badge-color-black badge-size-md board-type">진행중</div>
+							<span class="board-desc">YY.MM.DD ~ YY.MM.DD</span>
+						</div>
+
+						<div class="board-view-content">
+							일반게시판 게시글 내용 영역 <br>
+							일반게시판 게시글 내용 영역 <br>
+						</div>
+
+						<div class="board-view-nav">
+							<!-- ## 비활성화 상태 disabled 클래스 추가 ## -->
+							<a href="#lnk" class="nav-btn nav-btn-prev disabled">
+								<div class="board-desc">Prev</div>
+								<div class="board-title">이전 게시물이 없습니다.</div>
+							</a>
+							<a href="#lnk" class="button button-line-black button-radius-round">목록</a>
+							<a href="#lnk" class="nav-btn nav-btn-next">
+								<div class="board-desc">Next</div>
+								<div class="board-title">다음 게시글 제목 영역입니다.</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+	<!-- ## contents e ## -->
+
+	<!-- ## footer s ## -->
+	<div data-include="../layout/footer.html"></div>
+	<!-- ## footer e ## -->
+</body>
+</html>

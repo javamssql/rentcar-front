@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>그냥이차</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no, address=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="title" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="../../comn/img/layout/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../comn/img/layout/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+	<link rel="stylesheet" href="../../comn/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../comn/css/aos.css">
+	<link rel="stylesheet" href="../../comn/css/reset.css">
+	<link rel="stylesheet" href="../../comn/css/common.css">
+	<link rel="stylesheet" href="../../comn/css/front-ui.css">
+	<link rel="stylesheet" href="../../comn/css/layout.css">
+	<link rel="stylesheet" href="../../comn/css/board.css">
+	<link rel="stylesheet" href="../../comn/css/main.css">
+	<link rel="stylesheet" href="../../comn/css/contents.css">
+	<link rel="stylesheet" href="../../comn/css/member.css">
+	<script src="../../comn/js/jquery-3.7.1.min.js"></script>
+	<script src="../../comn/js/swiper-bundle.min.js"></script>
+	<script src="../../comn/js/aos.js"></script>
+	<script src="../../comn/js/include.js"></script>
+	<script src="../../comn/js/front-ui.js"></script>
+</head>
+<!-- ## 시간에 따른 테마 전환 white | black ## -->
+<body class="white">
+	
+	<!-- ## header s ## -->
+	<div data-include="../layout/header.html"></div>
+	<!-- ## header e ## -->
+
+	<!-- ## contents s ## -->
+	<main class="sub-wrapper sub-bg-gray">
+		<div class="container container-wide">
+			<div class="sub-box">
+				<div class="sub-title-box">
+					<h2 class="title">QnA 질문하기</h2>
+				</div>
+
+				<div class="board-wrap">
+					<div class="board-write">
+						<div class="board-write-header">
+							<h3 class="board-title">차주들에게 물어보세요 !</h3>
+							<p class="board-desc">그냥이차 이용관련 문의는 카카오톡 문의가 더 빠르고 정확합니다.</p>
+						</div>
+
+						<div class="search-car">
+							<div class="btn-box">
+								<button type="button" class="search-car-btn" onclick="frontJS.modal('search-car').show();">고민차량을 선택해주세요</button>
+							</div>
+						</div>
+
+						<div class="board-write-row">
+							<form action="">
+								<ul class="form form-board">
+									<li class="form-row">
+										<div class="form-group">
+											<input type="text" id="title" name="title" class="form-input" required placeholder="제목을 입력해주세요">
+										</div>
+									</li>
+									<li class="form-row">
+										<div class="form-group">
+											<textarea name="content" id="content" rows="16" class="form-input" required placeholder="궁금한 내용을 입력해주세요"></textarea>
+										</div>
+									</li>
+								</ul>
+							</form>
+						</div>
+
+						<div class="board-write-footer">
+							<div class="button-wrap">
+								<button type="button" class="button button-color-black">질문 등록하기</button>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+	</main>
+	<!-- ## 팝업 :: 고민차량 선택 s ## -->
+	<dialog class="modal modal-sheet modal-search-car" data-modal="search-car">
+		<div class="modal-wrap">
+			<div class="modal-box">
+				<div class="modal-header">
+					<h4 class="modal-title"><img src="../../comn/img/contents/icon-search-car.svg" class="title-icon" alt="">고민차량선택</h4>
+				</div>
+				<div class="modal-body">
+					<div class="search-box search-type02">
+						<form action="">
+							<div class="search-form">
+								<input type="text" id="" name="" class="form-input" placeholder="원하시는 차종이나 차량을 입력하세요." title="검색어 입력">
+								<button type="button" class="search-btn" title="검색"><img src="../../comn/img/layout/icon-search.svg" alt=""></button>
+							</div>
+						</form>
+					</div>
+					<div class="list-box">
+						<div class="checkbox checkbox-type02">
+							<label class="checkbox-label">
+								<input type="radio" name="radio" class="checkbox-input" checked>
+								<span class="checkbox-check"></span>
+								<span class="checkbox-text">EV9</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="radio" class="checkbox-input">
+								<span class="checkbox-check"></span>
+								<span class="checkbox-text">EV6</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="radio" class="checkbox-input">
+								<span class="checkbox-check"></span>
+								<span class="checkbox-text">EV7</span>
+							</label>
+							<label class="checkbox-label">
+								<input type="radio" name="radio" class="checkbox-input">
+								<span class="checkbox-check"></span>
+								<span class="checkbox-text">펠리세이드</span>
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<div class="button-wrap">
+						<button type="button" class="button button-line-black">선택완료</button>
+					</div>
+				</div>
+			</div>
+			<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('search-car').hide();"></button>
+		</div>
+	</dialog>
+	<!-- ## 팝업 :: 고민차량 선택 e ## -->
+	<!-- ## contents e ## -->
+
+	<!-- ## footer s ## -->
+	<div data-include="../layout/footer.html"></div>
+	<!-- ## footer e ## -->
+</body>
+</html>

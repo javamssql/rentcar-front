@@ -2021,3 +2021,73 @@
 		font-size: var(--font-size-14);
 	}
 }
+
+/* ## 고민차량 선택 ## */
+.search-car {
+	padding: 20px;
+	border-radius: 10px;
+	background: #E9F1FC;
+	margin-bottom: 30px;
+}
+.search-car .btn-box {
+	max-width: 600px;
+	margin: 0 auto;
+}
+.search-car-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	height: var(--height);
+	padding:0 20px;
+	border-radius: 99px;
+	background: #fff;
+	line-height: 1;
+	width: 100%;
+}
+.search-car-btn::after {
+	content: "\f105";
+	font-family: "Font Awesome 7 Free";
+	font-weight: 900;
+	color: #000000;
+	margin-left: 10px;
+}
+.modal-search-car .search-form {
+	border: none;
+}
+.modal-search-car .search-form .form-input {
+	height: var(--height);
+	background: #E9F1FC;
+}
+.modal-search-car .list-box {
+	height: 250px;
+	padding-right: 10px;
+	margin-top: 15px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.modal-search-car .list-box .checkbox-label {
+	margin-bottom: 10px;
+}
+.modal-search-car .list-box .checkbox-check {
+	order: 3;
+}
+.modal-search-car .list-box .checkbox-check::before {
+	-webkit-mask-image: url("../img/contents/icon-option-check.svg");
+	mask-image: url("../img/contents/icon-option-check.svg");
+}
+.modal-search-car .list-box .checkbox-text {
+	margin: 0;
+}
+@media all and (max-width: 767px) {
+	.search-car {
+		padding: 12px;
+	}
+}
+.board-write .search-car {
+	padding: 0;
+	background: none;
+	margin-bottom: 20px;
+}
+.board-write .search-car-btn {
+	border: 1px solid #000;
+}
