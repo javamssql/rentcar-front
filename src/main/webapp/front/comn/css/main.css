@@ -729,9 +729,6 @@
 .main-ranking .container {
 	position: relative;
 }
-.main-ranking .main-title {
-	margin-bottom: 20px;
-}
 .main-ranking .tab-box {
 	margin-bottom: var(--space-sm);
 }
@@ -822,7 +819,7 @@
 }
 .main-ranking .main-car-button {
 	position: absolute;
-	top: 18px;
+	top: 0;
 	right: 20px;
 }
 @media all and (max-width: 1439px) {
@@ -1522,7 +1519,8 @@
 	font-weight: 700;
 }
 .main-review-slide .tag-box .tag {
-	background: #E9F1FC;
+	border-color: #E9F1FC;
+	background-color: #E9F1FC;
 	color: #999;
 }
 .main-review-slide .desc {
@@ -1621,8 +1619,8 @@
 .modal-review-info .tag-box .tag {
 	height: 32px;
 	line-height: 32px;
-	border: 1px solid #D9D9D9;
-	background: #fff;
+	border-color: #D9D9D9;
+	background-color: #fff;
 	color: #555555;
 }
 .modal-review-info .name-box {

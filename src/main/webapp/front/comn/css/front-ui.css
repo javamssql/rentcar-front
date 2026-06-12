@@ -597,6 +597,13 @@ input[type="checkbox"].switch-input:checked {
 	background-color: #fff;
 	color: #111;
 }
+.button.disabled {
+	border-color: #F2F2F2;
+	background-color: #F2F2F2;
+	color: #C2C2C2;
+	pointer-events: none;
+	cursor: none;
+}
 .button.button-size-md {
 	min-width: auto;
 	height: calc(var(--button-height) * 0.9);

@@ -400,6 +400,7 @@ const main = {
 		main.banner();
 		main.tv();
 		main.review();
+		main.popup();
 	},
 
 	visual: function () {
@@ -723,6 +724,30 @@ const main = {
 			swiper.autoplay.start();
 		});
 	},
+
+	popup: function () {
+		const elemStr = `[data-slide="pop-up"]`;
+		const swiper = new Swiper(elemStr, {
+			slidesPerView: 1,
+			loop: true,
+			speed: 500,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false
+			},
+			pagination: {
+				el: `${elemStr} .swiper-pagination`,
+				type: "fraction",
+				renderFraction: function (currentClass, totalClass) {
+					return `<span class="${currentClass}"></span> · <span class="${totalClass}"></span>`;
+				},
+			},
+			navigation: {
+				nextEl: `${elemStr} .swiper-button-next`,
+				prevEl: `${elemStr} .swiper-button-prev`,
+			},
+		});
+	},
 }
 
 
@@ -871,16 +896,28 @@ const contents = {
 	},
 
 	capital: function () {
-		const elemStr = `[data-slide="capital-slide"]`;
-		const swiper = new Swiper(elemStr, {
-			slidesPerView: 1,
-			spaceBetween: 20,
-			loop: true,
-			speed: 800,
-			autoplay: {
-				delay: 2500,
-				disableOnInteraction: false
-			},
+		const self = this;
+
+		const getSelected = function (name) {
+			return Number($(`input[name="${name}"]:checked`).val());
+		};
+
+		const getPrice = function () {
+			const period  = getSelected('period');
+			const deposit = getSelected('deposit');
+			const distance = getSelected('distance');
+			return priceTable[period]?.[deposit]?.[distance] ?? null;
+		};
+
+		const counter = new CountUp('capitalPrice', getPrice(), {
+			duration: 0.6,
+			separator: ',',
+		});
+		counter.start();
+
+		$('input[name="period"], input[name="deposit"], input[name="distance"]').on('change', function () {
+			const newPrice = getPrice();
+			if (newPrice) counter.update(newPrice);
 		});
 	},
 

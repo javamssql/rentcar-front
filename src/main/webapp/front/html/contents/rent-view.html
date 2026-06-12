@@ -70,76 +70,36 @@
 			<div class="rent-view">
 				<div class="view-box">
 
-					<!-- ## 금융사 s ## -->
-					<div class="swiper capital-slide" data-slide="capital-slide">
-						<div class="swiper-wrapper">
-							<!-- ## 금융사 없는 경우 s ## -->
-							<!-- <div class="swiper-slide">
-								<div class="capital-box">
-									<div class="capital-bank">
-										<div class="bank-text">조건에 맞는 업체가 없어요</div>
-									</div>
-									<div class="capital-content">
-										<div class="text">다른조건으로 검색해서 찾아보세요</div>
-									</div>
-								</div>
-							</div> -->
-							<!-- ## 금융사 없는 경우 e ## -->
+					<!-- ## 최저가 금융사 s ## -->
+					<!-- ## 금융사 없을 경우 s ## -->
+					<!-- <div class="capital-box">
+						<div class="capital-bank">
+							<div class="bank-text">조건에 맞는 업체가 없어요</div>
+						</div>
+						<div class="capital-content">
+							<div class="text">다른조건으로 검색해서 찾아보세요</div>
+						</div>
+					</div> -->
+					<!-- ## 금융사 없을 경우 e ## -->
 
-							<!-- ## 슬라이드별 배경색 지정 클래스 ##
-							  - slide01, slide02, slide03
-							-->
-							<div class="swiper-slide slide01">
-								<div class="capital-box">
-									<div class="capital-bank">
-										<div class="bank-text">15개사 견적중 최저가</div>
-										<div class="bank-img"><img src="../../comn/img/contents/bank-wr-img.png" alt=""></div>
-									</div>
-									<div class="capital-content">
-										<div class="capital-price">580,900<div class="unit">월/원</div></div>
-										<div class="condition-badge">
-											<span class="badge badge-line-white period">24개월</span>
-											<span class="badge badge-line-white deposit">선납금 30%</span>
-											<span class="badge badge-line-white distance">연 2만 km</span>
-										</div>
-									</div>
-								</div>
+					<div class="capital-box">
+						<div class="capital-bank">
+							<div class="bank-text">15개사 견적중 최저가</div>
+							<div class="bank-img"><img src="../../comn/img/contents/bank-wr-img.png" alt=""></div>
+						</div>
+						<div class="capital-content">
+							<div class="capital-price">
+								<span class="price" id="capitalPrice">580,900</span>
+								<span class="unit">월/원</span>
 							</div>
-							<div class="swiper-slide slide02">
-								<div class="capital-box">
-									<div class="capital-bank">
-										<div class="bank-text">15개사 견적중 최저가</div>
-										<div class="bank-img"><img src="../../comn/img/contents/bank-wr-img.png" alt=""></div>
-									</div>
-									<div class="capital-content">
-										<div class="capital-price">580,900<div class="unit">월/원</div></div>
-										<div class="condition-badge">
-											<span class="badge badge-line-white period">24개월</span>
-											<span class="badge badge-line-white deposit">선납금 30%</span>
-											<span class="badge badge-line-white distance">연 2만 km</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="swiper-slide slide03">
-								<div class="capital-box">
-									<div class="capital-bank">
-										<div class="bank-text">15개사 견적중 최저가</div>
-										<div class="bank-img"><img src="../../comn/img/contents/bank-wr-img.png" alt=""></div>
-									</div>
-									<div class="capital-content">
-										<div class="capital-price">580,900<div class="unit">월/원</div></div>
-										<div class="condition-badge">
-											<span class="badge badge-line-white period">24개월</span>
-											<span class="badge badge-line-white deposit">선납금 30%</span>
-											<span class="badge badge-line-white distance">연 2만 km</span>
-										</div>
-									</div>
-								</div>
+							<div class="condition-badge">
+								<span class="badge badge-line-white period">24개월</span>
+								<span class="badge badge-line-white deposit">선납금 30%</span>
+								<span class="badge badge-line-white distance">연 2만 km</span>
 							</div>
 						</div>
 					</div>
-					<!-- ## 금융사 e ## -->
+					<!-- ## 최저가 금융사 e ## -->
 
 					<!-- ## 구매조건 설정 s ## -->
 					<div class="view-card">
@@ -152,13 +112,13 @@
 								<li>
 									<div class="list-title"><img src="../../comn/img/contents/icon-option-period.svg" alt="" class="icon">계약기간</div>
 									<div class="radio radio-type02 count-4">
-										<input type="radio" name="period" id="period1" checked>
+										<input type="radio" name="period" id="period1" value="24" checked>
 										<label for="period1">24개월</label>
-										<input type="radio" name="period" id="period2">
+										<input type="radio" name="period" id="period2" value="36">
 										<label for="period2">36개월</label>
-										<input type="radio" name="period" id="period3">
+										<input type="radio" name="period" id="period3" value="48">
 										<label for="period3">48개월</label>
-										<input type="radio" name="period" id="period4">
+										<input type="radio" name="period" id="period4" value="60">
 										<label for="period4">60개월</label>
 										
 										<span class="slider"></span>
@@ -167,13 +127,13 @@
 								<li>
 									<div class="list-title"><img src="../../comn/img/contents/icon-option-deposit.svg" alt="" class="icon">선납금</div>
 									<div class="radio radio-type02 count-4">
-										<input type="radio" name="deposit" id="deposit1" checked>
+										<input type="radio" name="deposit" id="deposit1" value="0" checked>
 										<label for="deposit1">없음</label>
-										<input type="radio" name="deposit" id="deposit2">
+										<input type="radio" name="deposit" id="deposit2" value="10">
 										<label for="deposit2">10%</label>
-										<input type="radio" name="deposit" id="deposit3">
+										<input type="radio" name="deposit" id="deposit3" value="20">
 										<label for="deposit3">20%</label>
-										<input type="radio" name="deposit" id="deposit4">
+										<input type="radio" name="deposit" id="deposit4" value="30">
 										<label for="deposit4">30%</label>
 	
 										<span class="slider"></span>
@@ -182,11 +142,11 @@
 								<li>
 									<div class="list-title"><img src="../../comn/img/contents/icon-option-distance.svg" alt="" class="icon">연간주행거리</div>
 									<div class="radio radio-type02 count-3">
-										<input type="radio" name="distance" id="distance1" checked>
+										<input type="radio" name="distance" id="distance1" value="1" checked>
 										<label for="distance1">연 1만 km</label>
-										<input type="radio" name="distance" id="distance2">
+										<input type="radio" name="distance" id="distance2" value="2">
 										<label for="distance2">연 2만 km</label>
-										<input type="radio" name="distance" id="distance3">
+										<input type="radio" name="distance" id="distance3" value="3">
 										<label for="distance3">연 3만 km</label>
 										
 										<span class="slider"></span>
@@ -515,18 +475,24 @@
 				<aside class="aside-box">
 					<div class="aside-head">
 						<div class="title-box">
+							<h3 class="title">캐스퍼 일렉트릭</h3>
 							<div class="tag-box">
 								<span class="tag">브랜드</span>
 								<span class="tag">2026모델명??</span>
 							</div>
-							<h3 class="title">캐스퍼 일렉트릭</h3>
 						</div>
 						<div class="img-box"><img src="../../comn/img/contents/ranking-sample01.png" alt=""></div>
 					</div>
 
 					<div class="button-wrap button-wrap-full aside-btn-wrap">
-						<button type="button" class="button button-line-gray" onclick="frontJS.modal('trim').show();">트림선택<i class="fa-solid fa-angle-right icon"></i></button>
-						<button type="button" class="button button-line-gray" onclick="frontJS.modal('extra-option').show();">추가옵션<i class="fa-solid fa-angle-right icon"></i></button>
+						<button type="button" class="button button-line-gray" onclick="frontJS.modal('trim').show();">
+							<img src="../../comn/img/contents/icon-trim-btn.svg" alt="" class="img">
+							트림선택<i class="fa-solid fa-angle-right icon"></i>
+						</button>
+						<button type="button" class="button button-line-gray" onclick="frontJS.modal('extra-option').show();">
+							<img src="../../comn/img/contents/icon-extra-option-btn.svg" alt="" class="img">
+							추가옵션<i class="fa-solid fa-angle-right icon"></i>
+						</button>
 					</div>
 
 					<div class="aside-info">
@@ -669,6 +635,11 @@
 					</h4>
 				</div>
 				<div class="modal-body">
+					<!-- ## 차량 이미지 s ## -->
+					<div class="car-img">
+						<img src="../../comn/img/contents/ranking-sample01.png" alt="">
+					</div>
+					<!-- ## 차량 이미지 e ## -->
 					<div class="extra-option">
 						<div class="extra-option-title"><img src="../../comn/img/contents/extra-color-icon.svg" alt="">색상선택</div>
 						<div class="color-box">
@@ -744,7 +715,6 @@
 								<ul class="add-list">
 									<li>
 										<!-- ## 이미지 없을 경우 ## -->
-										<div class="add-img"></div>
 										<div class="add-text">
 											<div class="text">스마트스트림 g1.6 엔진</div>
 											<div class="price">기본포함</div>
@@ -780,7 +750,30 @@
 	</dialog>
 	<!-- ## 팝업 :: 추가옵션 선택 e ## -->
 
+	<!-- ## 최저가 금융사 조건별 가격 ## -->
 	<script>
+		const priceTable = {
+			24: { 0:  { 1: 720000, 2: 750000, 3: 780000 },
+				  10: { 1: 665000, 2: 695000, 3: 725000 },
+				  20: { 1: 618000, 2: 648000, 3: 675000 },
+				  30: { 1: 570000, 2: 598000, 3: 625000 } },
+			36: { 0:  { 1: 648000, 2: 678000, 3: 705000 },
+				  10: { 1: 600000, 2: 628000, 3: 655000 },
+				  20: { 1: 556000, 2: 584000, 3: 610000 },
+				  30: { 1: 515000, 2: 542000, 3: 567000 } },
+			48: { 0:  { 1: 612000, 2: 642000, 3: 670000 },
+				  10: { 1: 565000, 2: 594000, 3: 621000 },
+				  20: { 1: 522000, 2: 550000, 3: 576000 },
+				  30: { 1: 483000, 2: 510000, 3: 535000 } },
+			60: { 0:  { 1: 585000, 2: 615000, 3: 643000 },
+				  10: { 1: 538000, 2: 567000, 3: 594000 },
+				  20: { 1: 497000, 2: 524000, 3: 550000 },
+				  30: { 1: 555000, 2: 580900, 3: 607000 } }
+		};
+	</script>
+	<script type="module">
+		import { CountUp } from '../../comn/js/countUp.min.js';
+		window.CountUp = CountUp;
 		contents.capital();
 		contents.review();
 		contents.promotion();
