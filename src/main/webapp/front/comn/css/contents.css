@@ -2110,3 +2110,139 @@
 .board-write .search-car-btn {
 	border: 1px solid #000;
 }
+
+/* ## 즉시출고 목록 ## */
+.grid-card .info-box {
+	padding: 7px 0;
+	border-top: 1px solid #D9D9D9;
+	border-bottom: 1px solid #D9D9D9;
+	position: relative;
+}
+.grid-card .info-list {
+	display: flex;
+	align-items: center;
+}
+.grid-card .info-item {
+	flex: 1 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	font-size: var(--font-size-12);
+	font-weight: 500;
+	line-height: 1;
+}
+.grid-card .info-item:not(:last-child) {
+	border-right: 1px solid #D9D9D9;
+}
+.grid-card .info-item .term {
+	color: #A4A4A4;
+}
+.grid-card .info-item .desc {
+	width: 50px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	color: #555555;
+}
+.grid-card .info-item .color-chip {
+	margin-top: 0;
+}
+.grid-card .info-item .color-chip .color {
+	width: 16px;
+	height: 16px;
+}
+.grid-card .info-item .color-chip .color {
+	width: 16px;
+	height: 16px;
+}
+.grid-card .info-more-btn {
+	width: 17px;
+	height: 17px;
+}
+.grid-card .info-more-box {
+	display: none;
+	align-items: flex-start;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	padding: 15px;
+	border-radius: 10px;
+	background: #fff;
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+}
+.grid-card .info-box:has(.info-more-btn:hover) .info-more-box {
+	display: flex;
+}
+.grid-card .info-more-box .term {
+	flex-shrink: 0;
+	margin-top: 3px;
+	margin-right: 10px;
+	padding-right: 10px;
+	border-right: 1px solid #D9D9D9;
+	font-size: var(--font-size-12);
+	font-weight: 500;
+	color: #A4A4A4;
+}
+.grid-card .info-more-box .tag-box .tag {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-size: var(--font-size-13);
+}
+
+.rent-list.instant .grid-card {
+	gap: 10px;
+}
+.rent-list.instant .grid-card:hover {
+	outline: 1px solid #D9D9D9;
+	box-shadow: none;
+}
+.rent-list.instant .grid-card::after {
+	display: none;
+}
+.rent-list.instant .grid-card .title {
+	margin-top: 0;
+}
+.rent-list.instant .grid-card .img-box {
+	height: auto;
+	background: transparent;
+}
+.rent-list.instant .condition-badge {
+	flex-wrap: wrap;
+	gap: 5px;
+}
+.rent-list.instant .condition-badge .badge {
+	filter: none;
+	padding: 0 8px 0 23px;
+	background-position: left 3px center;
+	background-size: 18px;
+}
+.grid-card .btn-box {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+.grid-card .btn-box .price-box {
+	margin-top: 0;
+}
+.grid-card .btn-box .price-box .unit {
+	margin-left: 5px;
+}
+.grid-card .btn-box .button {
+	flex: 0 0 120px;
+	min-width: auto;
+	margin-left: auto;
+}
+@media all and (max-width: 767px) {
+	.rent-list.instant .grid-card {
+		flex-direction: column;
+		padding: 20px 15px;
+	}
+	.rent-list.instant .grid-card .title {
+		font-size: var(--font-size-20);
+	}
+}

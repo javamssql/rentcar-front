@@ -673,6 +673,11 @@ input[type="checkbox"].switch-input:checked {
 	border-color: #D9D9D9;
 	color: #fff;
 }
+.badge.badge-color-light {
+	background-color: #E9F1FC;
+	border-color: #E9F1FC;
+	color: #0067B9;
+}
 .badge.badge-line-primary {
 	background-color: #fff;
 	border-color: var(--primary-color);
