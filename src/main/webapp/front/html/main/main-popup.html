@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>그냥이차</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="format-detection" content="telephone=no, email=no, address=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="title" content="">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="">
+	<meta property="og:image" content="">
+	<link rel="shortcut icon" href="../../comn/img/layout/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="../../comn/img/layout/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+	<link rel="stylesheet" href="../../comn/css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="../../comn/css/aos.css">
+	<link rel="stylesheet" href="../../comn/css/reset.css">
+	<link rel="stylesheet" href="../../comn/css/common.css">
+	<link rel="stylesheet" href="../../comn/css/front-ui.css">
+	<link rel="stylesheet" href="../../comn/css/layout.css">
+	<link rel="stylesheet" href="../../comn/css/board.css">
+	<link rel="stylesheet" href="../../comn/css/main.css">
+	<link rel="stylesheet" href="../../comn/css/contents.css">
+	<link rel="stylesheet" href="../../comn/css/member.css">
+	<script src="../../comn/js/jquery-3.7.1.min.js"></script>
+	<script src="../../comn/js/swiper-bundle.min.js"></script>
+	<script src="../../comn/js/aos.js"></script>
+	<script src="../../comn/js/include.js"></script>
+	<script src="../../comn/js/front-ui.js"></script>
+</head>
+<!-- ## 시간에 따른 테마 전환 white | black ## -->
+<body class="white">
+	
+	<!-- ## header s ## -->
+	<div data-include="../layout/header.html"></div>
+	<!-- ## header e ## -->
+
+	<!-- ## contents s ## -->
+	<main class="sub-wrapper">
+		<div class="contain" style="display: flex;align-items: center;justify-content: center;height: 400px;">
+	
+			<!-- ## 메인팝업 버튼 ## -->
+			<button type="button" class="button" onclick="frontJS.modal('popup').show();">팝업 열기</button>
+
+		</div>
+	</main>
+
+	<!-- ## 팝업 :: 메인팝업 s ## -->
+	<dialog class="modal modal-popup" data-modal="popup">
+		<div class="madal-wrap">
+			<div class="modal-box">
+				<div class="modal-body">
+					<div class="swiper swiper-pop-up" data-slide="pop-up">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><a href="#lnk" class="img-box"><img src="../../comn/img/main/popup-sample01.jpg" alt=""></a></div>
+							<div class="swiper-slide"><a href="#lnk" class="img-box"><img src="../../comn/img/main/popup-sample01.jpg" alt=""></a></div>
+							<div class="swiper-slide"><a href="#lnk" class="img-box"><img src="../../comn/img/main/popup-sample01.jpg" alt=""></a></div>
+						</div>
+						<div class="slide-control">
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+					<div class="pop-up-footer">
+						<button type="button" class="pop-up-btn pop-up-today">오늘 그만보기</button>
+						<button type="button" class="pop-up-btn pop-up-close" onclick="frontJS.modal('popup').hide();">닫기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</dialog>
+	<!-- ## 팝업 :: 메인팝업 e ## -->
+
+	<script>
+		main.popup();
+	</script>
+	<!-- ## contents e ## -->
+
+	<!-- ## footer s ## -->
+	<div data-include="../layout/footer.html"></div>
+	<!-- ## footer e ## -->
+</body>
+</html>
