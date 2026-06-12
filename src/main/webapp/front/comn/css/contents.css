@@ -2246,3 +2246,61 @@
 		font-size: var(--font-size-20);
 	}
 }
+
+/* ## 스마트큐레이션 목록 ## */
+.rent-list.curation .rent-box {
+	background: #F6F6F7;
+	padding: 40px 42px;
+}
+.rent-list.curation .rent-grid {
+	padding: 0;
+	gap: 22px 20px;
+}
+.rent-list.curation .grid-card {
+	flex-direction: row;
+	align-items: center;
+	background: #fff;
+	padding: 10px 20px;
+	border-radius: 10px;
+	outline: 1px solid #fff;
+	box-shadow: 3px 3px 6px rgba(0,0,0,0.16);
+	overflow: hidden;
+}
+.rent-list.curation .grid-card:hover {
+	outline-color: var(--primary-color);
+}
+.rent-list.curation .grid-card::after {
+	display: none;
+}
+.rent-list.curation .grid-card .text-box,
+.rent-list.curation .grid-card .img-box {
+	flex: 1 0 50%;
+}
+.rent-list.curation .grid-card .text-box {
+	padding: 0;
+}
+.rent-list.curation .grid-card .img-box {
+	padding: 0;
+	margin-top: 0;
+	background: none;
+	height: auto;
+}
+@media all and (max-width: 1439px) {
+	.rent-list.curation .rent-box {
+		padding: 40px 30px;
+	}
+	.rent-list.curation .grid-card .title {
+		font-size: var(--font-size-18);
+	}
+}
+@media all and (max-width: 767px) {
+	.rent-list.curation .rent-box {
+		padding: 15px 15px 40px;
+	}
+	.rent-list.curation .rent-grid {
+		gap: 12px 0;
+	}
+	.rent-list.curation .grid-card .title {
+		font-size: var(--font-size-16);
+	}
+}
