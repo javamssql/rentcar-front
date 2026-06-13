@@ -609,9 +609,8 @@ body.black .gnb-lnk {
 .sub-wrapper.sub-bg-image { background: url("../img/layout/sub-bg-img.jpg") no-repeat top / cover; }
 .sub-wrapper.sub-bg-light { background-color: #F6F6F7; }
 .sub-wrapper.sub-bg-gray { background-color: #EFEFEF; }
-.sub-wrapper.sub-bg-gray {
-	padding-top: calc(80px + 60px);
-}
+.sub-wrapper.sub-bg-gray,
+.sub-wrapper:has(.mypage) { padding-top: calc(80px + 60px); }
 .sub-box {
 	padding: 38px 110px 0;
 	border-radius: 40px 40px 0 0;
@@ -726,7 +725,8 @@ body.black .gnb-lnk {
 	.sub-wrapper:has(.rent-view, .rent-complete) {
 		padding-bottom: 60px;
 	}
-	.sub-wrapper.sub-bg-gray {
+	.sub-wrapper.sub-bg-gray,
+	.sub-wrapper:has(.mypage) {
 		padding-top: 60px;
 	}
 	.sub-box {
@@ -761,13 +761,15 @@ body.black .gnb-lnk {
 		width: 100%;
 	}
 	.sub-nav {
+		overflow: auto hidden;
 		flex-direction: row;
 		gap: 6px;
 	}
 	.sub-nav-btn {
-		flex: 1;
+		flex: 1 0 auto;
+		width: auto;
 		height: 40px;
-		padding: 0 10px;
+		padding: 0 15px;
 		display: flex;
 		align-items: center;
 		justify-content: center;

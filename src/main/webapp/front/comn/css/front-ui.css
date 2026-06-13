@@ -658,6 +658,11 @@ input[type="checkbox"].switch-input:checked {
 	border-color: var(--primary-color);
 	color: #fff;
 }
+.badge.badge-color-secondary {
+	background-color: var(--secondary-color);
+	border-color: var(--secondary-color);
+	color: #fff;
+}
 .badge.badge-color-warning {
 	background-color: #f16060;
 	border-color: #f16060;
@@ -671,6 +676,11 @@ input[type="checkbox"].switch-input:checked {
 .badge.badge-color-gray {
 	background-color: #D9D9D9;
 	border-color: #D9D9D9;
+	color: #fff;
+}
+.badge.badge-color-darkgray {
+	background-color: #8B8B8D;
+	border-color: #8B8B8D;
 	color: #fff;
 }
 .badge.badge-color-light {
@@ -1492,7 +1502,8 @@ input[type="checkbox"].switch-input:checked {
 	border-color: #E9F1FC !important;
 }
 .form-input:disabled {
-	background: #f1f1f1;
+	background: #E9F1FC;
+	border-color: #E9F1FC;
 }
 @media all and (max-width: 1023px) {
 	.form-group:is(.form-size-md,.form-size-sm,.form-size-xs) {

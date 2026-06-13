@@ -1468,7 +1468,6 @@
 		gap: 12px;
 	}
 	.condition-badge .badge {
-		height: 45px;
 		padding: 0 15px 0 37px;
 		background-position: left 10px center;
 		font-size: var(--font-size-15);
@@ -2209,11 +2208,11 @@
 	height: auto;
 	background: transparent;
 }
-.rent-list.instant .condition-badge {
+.grid-card .condition-badge {
 	flex-wrap: wrap;
 	gap: 5px;
 }
-.rent-list.instant .condition-badge .badge {
+.grid-card .condition-badge .badge {
 	filter: none;
 	padding: 0 8px 0 23px;
 	background-position: left 3px center;
@@ -2244,6 +2243,9 @@
 	}
 	.rent-list.instant .grid-card .title {
 		font-size: var(--font-size-20);
+	}
+	.grid-card .condition-badge .badge {
+		height: 28px;
 	}
 }
 
@@ -2302,5 +2304,568 @@
 	}
 	.rent-list.curation .grid-card .title {
 		font-size: var(--font-size-16);
+	}
+}
+
+
+/* ## 마이페이지 ## */
+.mypage-myInfo-btn {
+	min-width: auto;
+}
+.mypage-myInfo-btn .icon {
+	width: 20px;
+	height: 20px;
+}
+.mypage-kakao-btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	height: 52px;
+	margin-top: 20px;
+	border-radius: 5px;
+	background: #F7E409;
+	font-weight: 700;
+	color: #381C1E;
+	transition: var(--transition);
+}
+.mypage-kakao-btn:hover {
+	filter: brightness(0.95);
+}
+.rent-list.mypage {
+	padding: 30px 0 30px 38px;
+}
+.rent-list.mypage .rent-grid {
+	padding: 0;
+}
+@media all and (max-width: 767px) {
+	:has(.mypage) .sub-box {
+		position: relative;
+		padding-top: 85px;
+	}
+	:has(.mypage) .sub-title-box {
+		padding: 0 15px !important;
+	}
+	:has(.mypage) .sub-title-box .title {
+		display: block;
+		font-size: var(--font-size-20);
+		font-weight: 700;
+	}
+	:has(.mypage) .sub-aside {
+		position: absolute;
+		top: 15px;
+	}
+	.mypage-myInfo-btn {
+		font-size: var(--font-size-14);
+		gap: 5px;
+	}
+	.mypage-myInfo-btn .icon {
+		width: 18px;
+		height: 18px;
+		margin-top: -2px;
+	}
+	.mypage-kakao-btn {
+		display: none;
+	}
+	.rent-list.mypage {
+		padding: 15px 15px 30px;
+	}
+}
+
+.mypage-status {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #E9F1FC;
+	border-radius: 8px;
+	padding: 30px 10px;
+	margin-bottom: 30px;
+}
+.status-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	flex: 0 0 18%;
+}
+.status-label {
+	line-height: 1;
+	font-size: var(--font-size-18);
+	color: #8A8A8A;
+}
+.status-count {
+	font-size: var(--font-size-28);
+	font-weight: 800;
+}
+.status-arrow {
+	font-size: var(--font-size-20);
+	color: #DCDCDC;
+}
+.status-item.active .status-count {
+	color: var(--primary-color);
+}
+@media all and (max-width: 767px) {
+	.mypage-status {
+		padding: 18px 15px;
+	}
+	.status-item {
+		gap: 4px;
+		flex: 0 0 20%;
+	}
+	.status-label {
+		font-size: var(--font-size-14);
+	}
+	.status-count {
+		font-size: var(--font-size-20);
+	}
+	.status-arrow {
+		font-size: var(--font-size-16);
+	}
+}
+
+.grid-card .checkbox {
+	--checkbox-size: 18px;
+}
+.grid-card .checkbox-check {
+	border-radius: 3px;
+	border-color: var(--primary-color);
+}
+.grid-card .checkbox-text {
+	font-size: var(--font-size-15);
+	color: var(--primary-color);
+}
+.grid-card .checkbox-input:checked + .checkbox-check {
+	background: var(--primary-color);
+}
+.grid-card .checkbox-input:checked + .checkbox-check::before {
+	background: #fff;
+}
+.grid-card .btn-close {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	font-size: var(--font-size-14);
+	color: #999999;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 1px 1px 10px rgba(0,0,0,0.12);
+	transition: var(--transition);
+	position: absolute;
+	top: 17px;
+	right: 17px;
+}
+.grid-card .btn-close:hover {
+	color: #333;
+}
+@media all and (max-width: 767px) {
+	.grid-card .btn-close {
+		width: 32px;
+		height: 32px;
+		top: 13px;
+		right: 13px;
+	}
+}
+
+/* ## 관심차고 슬라이드 ## */
+.mypage-compare .grid-card {
+	gap: 10px;
+}
+.mypage-compare .grid-card:hover {
+	outline: 1px solid #D9D9D9;
+	box-shadow: none;
+}
+.mypage-compare .grid-card:has(.checkbox-input:checked) {
+	outline: 1px solid var(--primary-color);
+}
+.mypage-compare .grid-card::after {
+	display: none;
+}
+.mypage-compare .rent-grid .text-box {
+	padding: 0;
+}
+.mypage-compare .rent-grid .text-box .title {
+	margin-bottom: 5px;
+}
+.mypage-compare .grid-card .img-box {
+	height: 145px;
+	background: transparent;
+}
+.mypage-compare .grid-card .btn-box {
+	flex-direction: column;
+	align-items: flex-start;
+}
+.mypage-compare .grid-card .btn-box .button {
+	flex: auto;
+	width: 100%;
+	margin: 0;
+}
+.mypage-compare .grid-card .price-wrap {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 14px 10px;
+	border-radius: 6px;
+	border: 1px solid #D9D9D9;
+}
+.mypage-compare .grid-card .price-box {
+	color: #000;
+	font-size: var(--font-size-20);
+}
+.mypage-compare .grid-card .price-box .unit {
+	color: #000;
+}
+.mypage-compare .swiper.rent-grid {
+	padding: 1px 1px 40px;
+}
+.mypage-compare .swiper-pagination-bullet {
+	background: var(--primary-color);
+}
+.mypage-btn-wrap {
+	margin-top: var(--space-xs);
+}
+@media all and (max-width: 767px) {
+	.mypage-compare .grid-card {
+		flex-direction: column;
+	}
+	.mypage-compare .grid-card .price-wrap {
+		padding: 10px;
+	}
+	.mypage-btn-wrap .button {
+		flex: 1;
+	}
+}
+
+/* ## 내 정보 관리 ## */
+.modal-myInfo .modal-title {
+	font-size: var(--font-size-20);
+}
+.modal-myInfo .consult-form .form-group .button {
+	min-width: 130px;
+}
+.modal-myInfo .modal-body .button-wrap {
+	margin-top: 20px;
+}
+.modal-myInfo .modal-body .button-wrap .button {
+	min-width: 180px;
+}
+.account-box {
+	border-top: 1px solid #D9D9D9;
+	margin-top: 20px;
+	padding-top: 18px;
+}
+.account-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.account-title {
+	font-weight: 600;
+}
+.account-info {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+.account-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background: #F7E409;
+}
+.account-icon img {
+	width: 16px;
+	height: 16px;
+}
+.account-id {
+	display: inline-block;
+	color: #919191;
+	letter-spacing: 0;
+}
+.withdraw-wrap {
+	text-align: center;
+	margin-top: 40px;
+}
+.withdraw-btn {
+	display: inline-block;
+	color: #555555;
+	text-decoration: underline;
+	text-underline-offset: 5px;
+}
+
+/* ## 선택비교 팝업 ## */
+.modal-compare .modal-title {
+	font-size: var(--font-size-20);
+}
+.compare-list {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.compare-item {
+	padding: 20px;
+	border: 1px solid #D9D9D9;
+	border-radius: 10px;
+}
+.compare-item.active {
+	border-color: var(--primary-color);
+}
+.compare-car {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+.compare-img {
+	flex: 0 0 140px;
+	background: #F3F3F3;
+	border-radius: 10px;
+	overflow: hidden;
+	padding: 10px;
+}
+.compare-img img {
+	width: 100%;
+	object-fit: contain;
+}
+.compare-info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.compare-title {
+	font-size: var(--font-size-20);
+	font-weight: 700;
+}
+.compare-text {
+	font-weight: 500;
+	color: #333333;
+}
+.compare-item .condition-badge {
+	flex-wrap: wrap;
+	gap: 5px;
+}
+.compare-item .condition-badge .badge {
+	filter: none;
+	padding: 0 6px 0 20px;
+	background-position: left 3px center;
+	background-size: 16px;
+	font-size: var(--font-size-12);
+}
+.compare-price-wrap {
+	margin-top: 13px;
+	padding-top: 16px;
+	border-top: 1px solid #D9D9D9;
+}
+.compare-price-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.compare-price-label {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	font-size: var(--font-size-14);
+	font-weight: 500;
+}
+.compare-price-label .icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+	background: #E9F1FC;
+}
+.compare-price-label .icon img {
+	width: 14px;
+}
+.compare-price-head .bank-img {
+	border: 1px solid #D9D9D9;
+	box-shadow: none;
+}
+.compare-price-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 5px;
+}
+.compare-price {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	height: 28px;
+	line-height: 28px;
+	padding: 0 10px;
+	border-radius: 5px;
+	background: var(--color);
+	color: #fff;
+	white-space: nowrap;
+}
+.compare-price::after {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	background: #fff;
+	font-family: "Font Awesome 7 Free";
+	font-size: 8px;
+	font-weight: 900;
+	color: var(--color);
+}
+.compare-price.up { --color: #000; }
+.compare-price.down { --color: var(--primary-color); }
+.compare-price.equal { --color: var(--secondary-color); }
+.compare-price.up::after { content: "\f062"; }
+.compare-price.down::after { content: "\f063"; }
+.compare-price.equal::after { content: "\3d"; }
+.compare-price-row .price-box {
+	font-size: var(--font-size-20);
+	font-weight: 700;
+	white-space: nowrap;
+}
+.compare-price-row .price-box .unit {
+	font-size: 14px;
+	font-weight: 400;
+	margin-left: 2px;
+}
+@media all and (max-width: 767px) {
+	.compare-item {
+		padding: 12px;
+	}
+	.compare-car {
+		gap: 12px;
+	}
+	.compare-img {
+		flex: 0 0 110px;
+	}
+	.compare-title {
+		font-size: var(--font-size-16);
+	}
+	.compare-text {
+		font-size: var(--font-size-14);
+	}
+	.compare-item .condition-badge .badge {
+		height: 28px;
+	}
+	.compare-price {
+		font-size: var(--font-size-14);
+	}
+}
+ 
+/* ## 마이페이지 견적 차량 리스트 ## */
+.grid-card .badge-box {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.grid-card .badge-box .badge {
+	border-radius: 0 0 8px 0;
+	height: calc(var(--badge-height) - 8px);
+}
+.grid-card .detail-list {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+.grid-card .detail-item {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.grid-card .detail-item .term {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	color: #999999;
+	font-weight: 500;
+}
+.grid-card .detail-item .term::before {
+	content: "";
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	margin-top: -3px;
+	filter: brightness(0) invert(1) brightness(0.6);
+}
+.grid-card .detail-item .desc {
+	font-weight: 600;
+}
+.grid-card .detail-item .term.trim::before { background: url("../img/contents/icon-trim.svg") no-repeat center / 15px; }
+.grid-card .detail-item .term.period::before { background: url("../img/contents/icon-condition-period.svg") no-repeat center / 22px; }
+.grid-card .detail-item .term.deposit::before { background: url("../img/contents/icon-condition-deposit.svg") no-repeat center / 22px; }
+.grid-card .detail-item .term.distance::before { background: url("../img/contents/icon-condition-distance.svg") no-repeat center / 22px; }
+@media all and (max-width: 767px) {
+	.grid-card .detail-list {
+		gap: 8px;
+	}
+}
+
+.mypage-garage .grid-card {
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 35px 30px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.mypage-garage .grid-card::after {
+	right: 45px;
+	color: 000;
+}
+.mypage-garage .grid-card .img-box {
+	width: 45%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	margin: 0;
+	padding: 10px;
+}
+.mypage-garage .grid-card .text-box {
+	flex: 1;
+}
+.mypage-garage .grid-card .text-box .title {
+	margin-bottom: 15px;
+	padding-bottom: 13px;
+	border-bottom: 1px solid #D9D9D9;
+	font-size: var(--font-size-24);
+}
+.mypage-garage .button-wrap {
+	flex: 0 0 100%;
+	margin-top: 0;
+}
+.mypage-garage .button-wrap .button {
+	min-width: 330px;
+}
+@media all and (max-width: 1023px) {
+	.mypage-garage .grid-card {
+		flex-direction: column;
+		padding: 35px 20px 20px;
+	}
+	.mypage-garage .grid-card::after {
+		display: none;
+	}
+	.mypage-garage .grid-card .img-box {
+		width: 100%;
+	}
+	.mypage-garage .button-wrap {
+		flex: none;
+	}
+	.mypage-garage .button-wrap .button {
+		flex: 1;
+	}
+}
+@media all and (max-width: 767px) {
+	.mypage-garage .grid-card {
+		padding: 20px 15px;
+	}
+	.mypage-garage .grid-card .text-box .title {
+		font-size: var(--font-size-20);
+		margin-top: 10px;
 	}
 }

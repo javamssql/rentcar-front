@@ -982,3 +982,38 @@ const contents = {
 	},
 
 }
+
+
+/**
+ * mypage
+ *
+ **/
+const mypage = {
+
+	compare: function () {
+		const elemStr = `[data-slide="compare-slide"]`;
+		const swiper = new Swiper(elemStr, {
+			slidesPerView: 1.3,
+			spaceBetween: 15,
+			speed: 500,
+			pagination: {
+				el: `${elemStr} .swiper-pagination`,
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 1,
+					spaceBetween: 15,
+				},
+				1024: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				1440: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+			},
+		});
+	},
+
+}
