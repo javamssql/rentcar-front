@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="hidden_close" transform="translate(-83)">
+    <g id="사각형_1042" data-name="사각형 1042" transform="translate(83)" fill="none" stroke="#bbb" stroke-width="1">
+      <rect width="32" height="32" rx="4" stroke="none"/>
+      <rect x="0.5" y="0.5" width="31" height="31" rx="3.5" fill="none"/>
+    </g>
+    <g id="그룹_2600" data-name="그룹 2600" transform="translate(-1 -1.024)">
+      <g id="그룹_2544" data-name="그룹 2544" transform="translate(-4115.863 -2034.984) rotate(-45)">
+        <ellipse id="타원_113" data-name="타원 113" cx="2.082" cy="2.082" rx="2.082" ry="2.082" transform="translate(1539.12 4430) rotate(90)" fill="#bbb"/>
+        <ellipse id="타원_114" data-name="타원 114" cx="2.198" cy="2.198" rx="2.198" ry="2.198" transform="translate(1532.332 4429.932) rotate(90)" fill="#bbb"/>
+        <ellipse id="타원_115" data-name="타원 115" cx="2.198" cy="2.198" rx="2.198" ry="2.198" transform="translate(1525.277 4429.931) rotate(90)" fill="#bbb"/>
+      </g>
+      <g id="그룹_2553" data-name="그룹 2553" transform="translate(2225.381 -4162.406) rotate(46)">
+        <ellipse id="타원_113-2" data-name="타원 113" cx="2.082" cy="2.082" rx="2.082" ry="2.082" transform="translate(1539.12 4430) rotate(90)" fill="#bbb"/>
+        <ellipse id="타원_114-2" data-name="타원 114" cx="2.198" cy="2.198" rx="2.198" ry="2.198" transform="translate(1532.332 4429.932) rotate(90)" fill="#bbb"/>
+        <ellipse id="타원_115-2" data-name="타원 115" cx="2.198" cy="2.198" rx="2.198" ry="2.198" transform="translate(1525.277 4429.931) rotate(90)" fill="#bbb"/>
+      </g>
+    </g>
+  </g>
+</svg>

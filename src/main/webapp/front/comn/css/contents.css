@@ -57,6 +57,11 @@
 	background-color: #555555;
 	color: #fff;
 }
+.tag-box.tag-color-blue .tag {
+	border-color: #E9F1FC;
+	background-color: #E9F1FC;
+	color: #999999;
+}
 .tag-box.tag-color-lightgray .tag {
 	border-color: #F6F6F7;
 	background-color: #F6F6F7;
@@ -2549,9 +2554,6 @@
 }
 
 /* ## 내 정보 관리 ## */
-.modal-myInfo .modal-title {
-	font-size: var(--font-size-20);
-}
 .modal-myInfo .consult-form .form-group .button {
 	min-width: 130px;
 }
@@ -2609,9 +2611,6 @@
 }
 
 /* ## 선택비교 팝업 ## */
-.modal-compare .modal-title {
-	font-size: var(--font-size-20);
-}
 .compare-list {
 	display: flex;
 	flex-direction: column;
@@ -3105,6 +3104,11 @@
 .rent-list-text {
 	color: #555555;
 }
+@media all and (max-width: 767px) {
+	.rent-list-title {
+		font-size: var(--font-size-20);
+	}
+}
 
 .coupon-box {
 	margin-top: 25px;
@@ -3265,5 +3269,156 @@
 @media all and (max-width: 767px) {
 	.manager-info .title {
 		font-size: var(--font-size-18);
+	}
+}
+
+/* ## 마이페이지 qna ## */
+.rent-list.mypage .board-button-box {
+	display: block;
+	padding: 35px 10px;
+	border-radius: 10px;
+	background: #E9F1FC;
+	text-align: center;
+}
+.rent-list.mypage .board-button-box .text {
+	margin-bottom: 20px;
+	font-size: var(--font-size-22);
+	font-weight: 600;
+}
+@media all and (max-width: 767px) {
+	.rent-list.mypage .board-button-box .text {
+		font-size: var(--font-size-18);
+	}
+}
+
+/* ## 마이페이지 이용후기 ## */
+.board-review .gallery-item:hover .board-title {
+	color: #000;
+}
+.board-review .gallery-item:hover .gallery-img {
+	transform: none;
+}
+.board-review .gallery-item {
+	margin-bottom: 20px;
+	padding: 30px;
+	border-radius: 15px;
+	border: 1px solid #D9D9D9;
+}
+.board-review .gallery-item .board-title {
+	font-size: var(--font-size-20);
+}
+.board-review .gallery-item .board-title:hover {
+	color: var(--primary-color);
+}
+.board-review .gallery-item .board-desc {
+	font-size: var(--font-size-14);
+	color: #000;
+}
+.board-review .gallery-item .board-desc.date {
+	color: #999999;
+}
+.board-review .gallery-text-box {
+	gap: 10px;
+	position: relative;
+}
+.board-review .gallery-content {
+	color: #555555;
+}
+.board-review .gallery-img-box {
+	flex: 0 0 200px;
+	aspect-ratio: 6 / 5;
+	border-radius: 10px;
+}
+@media all and (max-width: 1439px) {
+	.board-review .gallery-item {
+		gap: 0 30px;
+	}
+	.board-review .gallery-img-box {
+		flex: 0 0 180px;
+	}
+	.board-review .board-action-btn {
+		top: -10px;
+	}
+}
+@media all and (max-width: 1023px) {
+	.board-review .gallery-item {
+		flex-direction: column;
+		border-radius: 10px;
+		padding: 0;
+		overflow: hidden;
+	}
+	.board-review .gallery-item .board-title {
+		font-size: var(--font-size-18);
+	}
+	.board-review .gallery-text-box {
+		padding: 20px;
+	}
+	.board-review .gallery-img-box {
+		flex: 0 0 auto;
+		width: 100%;
+		border: none;
+    	border-radius: 0;
+		aspect-ratio: 3 / 2;
+	}
+	.board-review .board-action-btn {
+		top: 12px;
+		right: 12px;
+	}
+}
+
+.board-write.board-review {
+	max-width: 100%;
+	margin-top: 20px;
+	padding: 0;
+	border-radius: 0;
+	background: #fff;
+}
+.board-review .board-write-header {
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	border-top: 1px solid #D9D9D9;
+	border-bottom: 1px solid #D9D9D9;
+	padding: 16px 0;
+	text-align: left;
+}
+.board-review .board-write-header .img-box {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	flex: 0 0 210px;
+	aspect-ratio: 3 / 2;
+	padding: 15px;
+	border-radius: 10px;
+	background: #F6F6F7;
+}
+.board-review .board-write-header .img-box img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+}
+.board-review .board-write-row {
+	padding-bottom: 25px;
+	border-bottom: 1px solid #D9D9D9;
+}
+.board-review .attach-box {
+	margin-top: 20px;
+}
+.board-review .form-board .form-input {
+	border-color: #999999;
+}
+@media all and (max-width: 1023px) {
+	.board-review .board-write-header {
+		gap: 20px;
+	}
+	.board-review .board-write-header .board-title {
+		font-size: var(--font-size-18);
+	}
+	.board-review .board-write-header .img-box {
+		flex: 0 0 140px;
+	}
+	.board-review .button-wrap .button {
+		flex: 1;	
+		min-width: auto;
 	}
 }

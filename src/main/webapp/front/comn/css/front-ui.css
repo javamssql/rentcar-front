@@ -1558,6 +1558,22 @@ input[type="checkbox"].switch-input:checked {
 .form-input-wrap .button {
 	flex-shrink: 0;
 }
+.form-group-textarea {
+	position: relative;
+}
+.form-group-textarea .form-input {
+	padding-bottom: 40px;
+	resize: none;
+}
+.form-group-textarea .textarea-count {
+	position: absolute;
+	bottom: 22px;
+	right: 25px;
+	color: #D9D9D9;
+}
+.form-group-textarea .textarea-count .count-current {
+	color: #000;
+}
 @media all and (max-width: 1023px) {
 	.form-group:is(.form-size-md,.form-size-sm,.form-size-xs) {
 		width: 100%;
