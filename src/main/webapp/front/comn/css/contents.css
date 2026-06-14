@@ -131,71 +131,81 @@
 
 /* ## loader ## */
 .loader-wrapper {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	z-index: 9999;
-	width: 100%;
-	height: 100vh;
-	background: rgba(0,0,0,0.6);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
 }
 .loader-box {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 15px;
-	max-width: 150px;
-	width: 100%;
-	height: 100%;
-	margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 150px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
 }
 .loader-circle {
-	display: flex;
-	align-items: center;
-	gap: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 0 30px;
 }
 .loader-circle .circle {
-	width: 7px;
-	height: 7px;
-	border-radius: 50%;
-	background: transparent linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%) 0% 0% no-repeat padding-box;
-	box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.16);
-	animation: pulse 1.4s ease-in-out infinite;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.16);
+    opacity: 0.15;
+    animation: circleColor 2s linear infinite;
 }
-.loader-circle .circle:nth-child(2) { animation-delay: 0.2s; }
-.loader-circle .circle:nth-child(3) { animation-delay: 0.4s; }
-.loader-circle .circle:nth-child(4) { animation-delay: 0.6s; }
-@keyframes pulse {
-	0%   { transform: scale(0.8); opacity: 0.7; }
-	50%  { transform: scale(1);   opacity: 1;   }
-	100% { transform: scale(0.8); opacity: 0.7; }
+.loader-circle .circle:nth-child(2) { animation-delay: 0.4s; }
+.loader-circle .circle:nth-child(3) { animation-delay: 0.8s; }
+.loader-circle .circle:nth-child(4) { animation-delay: 1.2s; }
+@keyframes circleColor {
+    0%   { opacity: 0.15; transform: scale(1);   }
+    25%  { opacity: 1;    transform: scale(1.3); }
+    50%  { opacity: 0.15; transform: scale(1);   }
+    100% { opacity: 0.15; transform: scale(1);   }
 }
 .loader-bar {
-	display: block;
-	width: 100%;
-	height: 4px;
-	border-radius: 30px;
-	background: #fff;
-	position: relative;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 30px;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
 }
 .loader-bar::before {
-	content: "";
-	position: absolute;
-	background: var(--primary-color);
-	top: 0;
-	left: 0;
-	width: 0%;
-	height: 100%;
-	border-radius: 30px;
-	animation: moving 1.4s ease-in-out infinite;
+    content: "";
+    position: absolute;
+    background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: 30px;
+    animation: barMove 2s ease-in-out infinite;
 }
-@keyframes moving {
-	50%  { width: 100%; }
-	100% { width: 0; right: 0; left: unset; }
+@keyframes barMove {
+    0%   { width: 0%;   left: 0;    right: auto; }
+    50%  { width: 100%; left: 0;    right: auto; }
+    51%  { width: 100%; left: auto; right: 0; }
+    100% { width: 0%;   left: auto; right: 0; }
 }
 
+@media all and (max-width: 767px) {
+    .loader-wrapper {
+        background: #E9F1FC;
+    }
+}
 
 
 
