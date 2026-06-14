@@ -1974,11 +1974,13 @@
 
 /* ## 출고 과정 ## */
 .rent-process-box {
+	min-height: 150px;
 	margin-top: 40px;
 	padding: 30px 40px;
 	border-radius: 10px;
 	border: 1px solid #D9D9D9;
 	background: url("../img/contents/rent-process-bg.png") no-repeat right center / contain;
+	align-content: center;
 }
 .rent-process-box .title {
 	margin-bottom: 8px;
@@ -2023,6 +2025,11 @@
 	margin-top: 10px;
 	font-weight: 500;
 	color: #555555;
+}
+@media all and (max-width: 1023px) {
+	.rent-process-box {
+		padding: 20px;
+	}
 }
 @media all and (max-width: 767px) {
 	.rent-process-box {
@@ -2526,15 +2533,18 @@
 .mypage-btn-wrap {
 	margin-top: var(--space-xs);
 }
+@media all and (max-width: 1023px) {
+	.mypage-btn-wrap .button {
+		flex: 1;
+		min-width: auto;
+	}
+}
 @media all and (max-width: 767px) {
 	.mypage-compare .grid-card {
 		flex-direction: column;
 	}
 	.mypage-compare .grid-card .price-wrap {
 		padding: 10px;
-	}
-	.mypage-btn-wrap .button {
-		flex: 1;
 	}
 }
 
@@ -2867,5 +2877,332 @@
 	.mypage-garage .grid-card .text-box .title {
 		font-size: var(--font-size-20);
 		margin-top: 10px;
+	}
+}
+
+/* ## 나의 포인트 ## */
+.point-use {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+	padding: 20px 25px 20px 210px;
+	background: #E9F1FC url("../img/contents/mypage-point-use-img.png") no-repeat left 40px center;
+	border-radius: 10px;
+}
+.point-use-info .title {
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+.point-use-info .point {
+	font-size: 2.625rem;
+	font-weight: 800;
+	line-height: 1;
+}
+.point-use-btn {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.point-use-btn .button {
+	justify-content: space-between;
+}
+.rent-process-box.point-box {
+	background-image: url("../img/contents/mypage-point-bg.png");
+}
+@media all and (max-width: 1439px) {
+	.point-use {
+		padding: 20px 25px 20px 160px;
+		background-position: left 20px center;
+	}
+	.point-use-info .point {
+		font-size: 2.25rem;
+		font-weight: 800;
+		line-height: 1;
+	}
+}
+@media all and (max-width: 1023px) {
+	.point-use {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 20px;
+		padding: 30px 20px;
+		background-position: right top 5px;
+	}
+	.rent-process-box.point-box {
+		background-size: 180px;
+		background-position: right bottom;
+	}
+}
+@media all and (max-width: 767px) {
+	.point-use-info .point {
+		font-size: 2rem;
+	}
+	.point-use-btn {
+		width: 100%;
+		flex-direction: row;
+		gap: 8px;
+	}
+	.point-use-btn .button {
+		flex: 1;
+	}
+	.rent-process-box.point-box {
+		background-size: 85%;
+	}
+}
+
+/* ## 쿠폰교환 팝업 ## */
+.point-exchange-head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 12px;
+}
+.point-exchange-head .title {
+	font-weight: 700;
+}
+.point-exchange-head .point {
+	font-size: var(--font-size-20);
+	font-weight: 700;
+}
+.point-exchange-input {
+	margin-bottom: 30px;
+}
+
+.modal-point-exchange .checkbox-text {
+	width: 100%;
+}
+.modal-point-exchange .coupon-item {
+	padding: 0;
+	border: none;
+}
+@media all and (max-width: 767px) {
+	.modal-point-exchange .coupon-img {
+		flex: 0 0 120px;
+	}
+}
+ 
+/* ## 나의포인트 팝업 ## */
+.modal-point-history .point-use {
+	padding: 18px;
+	background-image: none;
+}
+.modal-point-history .point-use-info {
+	width: 100%;
+	text-align: center;
+}
+.modal-point-history .point-use-info .title {
+	font-size: var(--font-size-14);
+}
+.modal-point-history .point-use-info .point {
+	font-size: 2.25rem;
+}
+
+.point-save-box {
+	display: flex;
+	align-items: center;
+	gap: 25px;
+	margin-top: 10px;
+	padding: 15px 20px;
+	border-radius: 8px;
+	background: #EFEFEF;
+}
+.point-save-title .title {
+	margin-bottom: 15px;
+	font-size: var(--font-size-14);
+}
+.point-save-title .img-box {
+	width: 100px;
+}
+.point-save-list {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 7px;
+}
+.point-save-list .item-box {
+	padding: 8px 14px;
+	border-radius: 6px;
+	background: #fff;
+	color: #555555;
+}
+
+.modal-point-history .tab-box {
+	margin-bottom: 0;
+}
+.modal-point-history .tab-btn {
+	height: 45px;
+	font-weight: 400;
+	font-size: var(--font-size-16);
+}
+.point-history-item {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 15px 0;
+	border-bottom: 1px solid #D9D9D9;
+}
+.point-history-info .date {
+	font-size: var(--font-size-14);
+	color: #999999;
+	margin-bottom: 8px;
+}
+.point-history-info .title {
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+.point-history-info .desc {
+	font-size: var(--font-size-14);
+	color: #999999;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.point-history-amount {
+	font-weight: 700;
+	white-space: nowrap;
+	flex: 0 0 auto;
+}
+.point-history-amount.plus {
+	color: var(--primary-color);
+}
+.point-history-amount.minus {
+	color: #000;
+}
+.point-empty {
+	margin-top: 10px;
+	padding: 40px 0;
+	border-radius: 5px;
+	background: #F5F5F5;
+	font-size: var(--font-size-14);
+	text-align: center;
+}
+.point-empty .icon {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+}
+@media all and (max-width: 767px) {
+	.modal-point-history .point-use-info .point {
+		font-size: 2rem;
+	}
+	.point-save-list .item-box {
+		padding: 6px 10px;
+		font-size: var(--font-size-14);
+	}
+	.point-empty {
+		padding: 20px 0;
+	}
+}
+
+/* ## 쿠폰 목록 ## */
+.rent-list-title {
+	font-size: var(--font-size-24);
+	font-weight: 600;
+	margin-bottom: 14px;
+}
+.rent-list-text {
+	color: #555555;
+}
+
+.coupon-box {
+	margin-top: 25px;
+}
+.coupon-list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px 28px;
+}
+.coupon-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 12px 12px 12px 18px;
+	padding: 20px;
+	border-radius: 10px;
+	border: 1px solid #D9D9D9;
+	position: relative;
+	overflow: hidden;
+}
+.coupon-badge {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.coupon-badge .badge {
+	border-radius: 0 0 8px 0;
+}
+.coupon-img {
+	flex: 0 0 40%;
+	aspect-ratio: 8 / 5;
+	border-radius: 8px;
+	overflow: hidden;
+}
+.coupon-img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.coupon-item:has(.badge) .coupon-text {
+	padding-top: 20px;
+}
+.coupon-text {
+	flex: 1;
+}
+.coupon-text .title-box {
+	margin-bottom: 13px;
+	padding-left: 34px;
+	background: url("../img/layout/icon-logo-sm.png") no-repeat left center / 26px;
+	min-height: 26px;
+	align-content: center;
+}
+.coupon-text .title {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-weight: 700;
+}
+.coupon-text .title .icon {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+}
+.coupon-text .date {
+	font-size: var(--font-size-12);
+	color: var(--primary-color);
+}
+.coupon-text .point {
+	font-size: var(--font-size-12);
+	color: #9C9C9C;
+}
+.coupon-text .point strong {
+	display: block;
+	font-size: 20px;
+	color: var(--primary-color);
+	font-weight: 700;
+}
+@media all and (max-width: 1023px) {
+	.coupon-list {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+	}
+}
+@media all and (max-width: 767px) {
+	.coupon-list {
+		gap: 15px 0;
+	}
+	.coupon-item {
+		padding: 12px;
+	}
+	.coupon-img {
+		flex: 0 0 140px;
+	}
+	.coupon-text .title-box {
+		margin-bottom: 8px;
+		padding-left: 30px;
+		background-size: 22px;
+	}
+	.coupon-text .point strong {
+		font-size: 18px;
 	}
 }

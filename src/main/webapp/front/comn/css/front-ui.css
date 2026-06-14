@@ -482,6 +482,31 @@ body.prevent {
 	transform: none;
 }
 
+.checkbox.checkbox-type03 {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.checkbox-type03 .checkbox-label {
+	align-items: center;
+	width: 100%;
+	padding: 12px 12px 12px 8px;
+	border: 1px solid #D9D9D9;
+	border-radius: 10px;
+}
+.checkbox-type03 .checkbox-check {
+	background: #fff;
+}
+.checkbox-type03 .checkbox-text {
+	padding-left: 10px;
+	margin-left: 12px;
+	margin-right: 0;
+}
+.checkbox-type03 .checkbox-label:has(.checkbox-input:checked) {
+	border-color: var(--primary-color);
+	background: linear-gradient(to right, var(--primary-color) 36px, #fff 36px);
+}
+
 
 
 /* ## switch ## */
@@ -581,6 +606,11 @@ input[type="checkbox"].switch-input:checked {
 	border-color:#111;
 	background-color: #111;
 	color: #fff;
+}
+.button.button-color-white {
+	border-color:#fff;
+	background-color: #fff;
+	color: #000;
 }
 .button.button-line-primary {
 	border-color: var(--primary-color);
@@ -905,6 +935,11 @@ input[type="checkbox"].switch-input:checked {
 	background: #EFEFEF;
 	margin: 25px 0;
 }
+.modal-subtitle {
+	font-size: var(--font-size-20);
+	font-weight: 500;
+	margin-bottom: 18px;
+}
 @media all and (max-width: 767px) {
 	.modal {
 		--modal-border-radius: 20px;
@@ -973,6 +1008,9 @@ input[type="checkbox"].switch-input:checked {
 .modal-sheet .modal-title {
 	font-size: var(--font-size-16);
 	font-weight: 600;
+}
+.modal-sheet .modal-title:not(:has(.title-icon)) {
+	font-size: var(--font-size-20);
 }
 .modal-sheet .modal-title .title-icon {
 	width: 20px;
@@ -1467,6 +1505,7 @@ input[type="checkbox"].switch-input:checked {
 }
 .form-group.form-group-button .button {
 	flex:0 0 auto;
+	min-width: auto;
 }
 .form-required::after {
 	display: inline-flex;
@@ -1504,6 +1543,20 @@ input[type="checkbox"].switch-input:checked {
 .form-input:disabled {
 	background: #E9F1FC;
 	border-color: #E9F1FC;
+}
+.form-input-wrap {
+	position: relative;
+	width: 100%;
+}
+.form-input-wrap .input-clear {
+	position: absolute;
+	top: 50%;
+	right: 14px;
+	transform: translateY(-50%);
+	color: #C7C7C7;
+}
+.form-input-wrap .button {
+	flex-shrink: 0;
 }
 @media all and (max-width: 1023px) {
 	.form-group:is(.form-size-md,.form-size-sm,.form-size-xs) {
