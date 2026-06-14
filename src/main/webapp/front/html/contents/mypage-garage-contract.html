@@ -135,7 +135,7 @@
 						<div class="mypage-garage">
 							<ul class="rent-grid">
 								<li class="grid-item">
-									<a href="#lnk" class="grid-card">
+									<a href="#lnk" class="grid-card" onclick="frontJS.modal('car-info').show();">
 										<div class="badge-box">
 											<span class="badge badge-color-black">결제완료</span>
 										</div>
@@ -171,7 +171,7 @@
 									</a>
 								</li>
 								<li class="grid-item">
-									<a href="#lnk" class="grid-card">
+									<a href="#lnk" class="grid-card" onclick="frontJS.modal('car-info').show();">
 										<div class="badge-box">
 											<span class="badge badge-color-darkgray">출고완료</span>
 										</div>
@@ -205,7 +205,10 @@
 											</div>
 										</div>
 										<div class="button-wrap">
-											<button type="button" class="button button-color-black"><img src="../../comn/img/board/icon-write.svg" alt="" class="icon">리뷰쓰기</button>
+											<!-- ## 리뷰쓰기 버튼 : stopPropagation 처리 필요 (부모 a태그 모달 이벤트 차단) ## -->
+											<button type="button" class="button button-color-black" onclick="event.stopPropagation();">
+												<img src="../../comn/img/board/icon-write.svg" alt="" class="icon">리뷰쓰기
+											</button>
 										</div>
 									</a>
 								</li>
@@ -228,6 +231,128 @@
 		</div>
 
 	</main>
+
+	<!-- ## 팝업 :: 신청 정보 s ## -->
+	<dialog class="modal modal-sheet modal-size-sm modal-car-info" data-modal="car-info">
+		<div class="modal-wrap">
+			<div class="modal-box">
+				<div class="modal-header">
+					<h4 class="modal-title">신청정보</h4>
+				</div>
+				<div class="modal-body">
+
+					<!-- ## 신청 상세정보 s ## -->
+					<div class="aside-info">
+						<ul class="info-list">
+							<li class="info-item">
+								<span class="term">차량명</span>
+								<span class="desc">캐스퍼일렉트릭</span>
+							</li>
+							<li class="info-item">
+								<span class="term">트림</span>
+								<span class="desc">일렉트릭프리미엄 2wd</span>
+							</li>
+							<li class="info-item">
+								<span class="term">외장색상</span>
+								<span class="desc">
+									<div class="color-chip">
+										<div class="color" style="--color: #C0BB9A;"></div>
+										버터옐로우
+									</div>
+								</span>
+							</li>
+							<li class="info-item">
+								<span class="term">내장색상</span>
+								<span class="desc">
+									<div class="color-chip">
+										<div class="color" style="--color: #D4D4D4;"></div>
+										라이트그레이
+									</div>
+								</span>
+							</li>
+							<li class="info-item">
+								<span class="term">추가옵션</span>
+								<span class="desc">없음</span>
+							</li>
+						</ul>
+ 
+						<ul class="info-list">
+							<li class="info-item">
+								<span class="term">이용상품</span>
+								<span class="desc">장기렌트</span>
+							</li>
+							<li class="info-item">
+								<span class="term">선납금</span>
+								<span class="desc">0%</span>
+							</li>
+							<li class="info-item">
+								<span class="term">이용기간</span>
+								<span class="desc">60개월</span>
+							</li>
+							<li class="info-item">
+								<span class="term">연간주행거리</span>
+								<span class="desc">연 2만km</span>
+							</li>
+							<li class="info-item">
+								<span class="term">이용자유형</span>
+								<span class="desc">직장인</span>
+							</li>
+							<li class="info-item">
+								<span class="term">탁송지</span>
+								<span class="desc">경기북부</span>
+							</li>
+							<li class="info-item">
+								<span class="term">확정캐피탈사</span>
+								<span class="desc">
+									<div class="bank-img"><img src="../../comn/img/contents/bank-wr-img.png" alt="우리금융캐피탈"></div>
+								</span>
+							</li>
+						</ul>
+					</div>
+					<!-- ## 신청 상세정보 e ## -->
+ 
+					<!-- ## 담당자 정보 s ## -->
+					<div class="manager-info-box">
+						<div class="manager-info">
+							<h5 class="title">담당자 정보</h5>
+							<div class="contact-box">
+								<a href="#lnk" class="contact-btn kakao" title="카카오톡 문의">
+									<img src="../../comn/img/member/icon-kakao-brown.svg" alt="">
+								</a>
+								<a href="tel:15440000" class="contact-btn call" title="전화 문의">
+									<img src="../../comn/img/contents/icon-call.svg" alt="">
+								</a>
+							</div>
+						</div>
+						<div class="aside-info">
+							<ul class="info-list">
+								<li class="info-item">
+									<span class="term">담당자명</span>
+									<span class="desc">홍길동</span>
+								</li>
+								<li class="info-item">
+									<span class="term">금융사대표번호</span>
+									<span class="desc">1544-0000</span>
+								</li>
+								<li class="info-item">
+									<span class="term">사고접수</span>
+									<span class="desc">1544-1111</span>
+								</li>
+								<li class="info-item">
+									<span class="term">계약기간</span>
+									<span class="desc">YY.MM.DD ~ YY.MM.DD &nbsp;36개월</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- ## 담당자 정보 e ## -->
+
+				</div>
+			</div>
+			<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('car-info').hide();"></button>
+		</div>
+	</dialog>
+	<!-- ## 팝업 :: 신청 정보 e ## -->
 	
 	<!-- ## 팝업 :: 내 정보 관리 s ## -->
 	<dialog class="modal modal-sheet modal-size-sm modal-myInfo" data-modal="myInfo">

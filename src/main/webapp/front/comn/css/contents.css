@@ -3206,3 +3206,64 @@
 		font-size: 18px;
 	}
 }
+
+/* ## 신청정보 팝업 ## */
+.modal-car-info .aside-info {
+	margin-top: 0;
+}
+.manager-info-box {
+	padding: 20px;
+	border-radius: 10px;
+	background: #E9F1FC;
+	position: relative;
+	margin-top: 25px;
+}
+.manager-info-box::before {
+	content: "";
+	position: absolute;
+	top: -15px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: #D9D9D9;
+}
+.manager-info-box .aside-info .info-item .desc {
+	font-weight: 400;
+}
+.manager-info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 14px;
+}
+.manager-info .title {
+	font-size: var(--font-size-20);
+	font-weight: 700;
+}
+.manager-info .contact-box {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.manager-info .contact-btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+}
+.manager-info .contact-btn img {
+	width: 18px;
+}
+.manager-info .contact-btn.kakao {
+	background: #F7E409;
+}
+.manager-info .contact-btn.call {
+	background: #fff;
+}
+@media all and (max-width: 767px) {
+	.manager-info .title {
+		font-size: var(--font-size-18);
+	}
+}
