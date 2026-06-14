@@ -735,7 +735,7 @@
 	align-items: center;
 	justify-content: center;
 	height: 170px;
-	padding: 20px 0;
+	padding: 15px;
 	margin-top: auto;
 	border-radius: 10px;
 	background: #F3F3F3;
@@ -3420,5 +3420,134 @@
 	.board-review .button-wrap .button {
 		flex: 1;	
 		min-width: auto;
+	}
+}
+
+/* ## 마이페이지 메인 ## */
+.mypage-main .mypage-status {
+	margin-top: 30px;
+}
+.mypage-main .rent-grid {
+	padding: 5px 25px 25px;
+}
+.mypage-main .grid-card {
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 10px;
+}
+.mypage-main .grid-card::after {
+	display: none;
+}
+.mypage-main .grid-card .title {
+	font-size: var(--font-size-20);
+	margin-bottom: 10px;
+}
+.mypage-main .grid-card .text-box {
+	padding: 0;
+}
+.mypage-main .grid-card .img-box {
+	margin-top: 0;
+	flex: 0 0 40%;
+	width: auto;
+	height: auto;
+}
+.mypage-main .rent-grid .swiper-pagination {
+	display: none;
+}
+
+.mypage-menu-list {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+.mypage-menu-item {
+	background: #fff;
+	border-radius: 10px;
+	border: 1px solid #D9D9D9;
+	overflow: hidden;
+}
+.mypage-menu-btn {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 72px;
+	padding: 10px 25px;
+	transition: var(--transition);
+}
+.mypage-menu-btn::after {
+	content: "\f105";
+	font-family: "Font Awesome 7 Free";
+	font-weight: 900;
+	color: #000000;
+	margin-left: 15px;
+}
+.mypage-menu-btn .title {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	font-size: var(--font-size-20);
+	font-weight: 500;
+	margin-right: auto;
+}
+.mypage-menu-btn .title .icon {
+	width: 20px;
+	height: 20px;
+}
+@media all and (max-width: 767px) {
+	:has(.mypage-main) .sub-box {
+		padding-top: 15px;
+	}
+	.mypage-main {
+		padding: 0 15px;
+	}
+	.mypage-main .mypage-status {
+		margin: 12px 0;
+	}
+	.mypage-main .rent-grid {
+		padding: 0 14px 30px;
+	}
+	.mypage-main .grid-card {
+		gap: 10px;
+        padding: 0;
+		outline: none !important;
+		box-shadow: none !important;
+	}
+	.mypage-main .grid-card .title {
+		font-size: var(--font-size-16);
+		margin: 10px 0 0;
+	}
+	.mypage-main .grid-card .img-box {
+		flex: 0 0 40%;
+	}
+	.mypage-main .grid-card .condition-badge {
+		display: none;
+	}
+	.mypage-main .rent-grid .swiper-pagination {
+		display: block;
+	}
+	.mypage-main .mypage-kakao-btn {
+		display: flex;
+		margin-top: 10px;
+	}
+	.mypage-main .promotion-slide {
+		margin-top: 10px;
+	}
+	.mypage-menu-list {
+		gap: 10px;
+	}
+	.mypage-menu-btn {
+		height: 48px;
+		padding: 10px 14px;
+	}
+	.mypage-menu-btn {
+		font-size: var(--font-size-14);
+	}
+	.mypage-menu-btn .title {
+		font-size: 1em;
+	}
+	.mypage-menu-btn .title .icon {
+		width: 18px;
+		height: 18px;
 	}
 }

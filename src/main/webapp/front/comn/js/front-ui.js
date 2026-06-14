@@ -1016,4 +1016,54 @@ const mypage = {
 		});
 	},
 
+	garage: function () {
+		const elemStr = `[data-slide="garage-slide"]`;
+		const swiper = new Swiper(elemStr, {
+			slidesPerView: 1,
+			spaceBetween: 15,
+			speed: 500,
+			pagination: {
+				el: `${elemStr} .swiper-pagination`,
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 1.2,
+					spaceBetween: 15,
+				},
+				1024: {
+					slidesPerView: 1.8,
+					spaceBetween: 20,
+				},
+				1440: {
+					slidesPerView: 2.5,
+					spaceBetween: 30,
+				},
+			},
+		});
+	},
+
+	promotion: function () {
+		const elemStr = `[data-slide="promotion-slide"]`;
+		const swiper = new Swiper(elemStr, {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			loop: true,
+			speed: 500,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false
+			},
+			pagination: {
+				el: `${elemStr} .swiper-pagination`,
+				type: "fraction",
+			},
+			breakpoints: {
+				1024: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+			},
+		});
+	},
+
 }
