@@ -15,8 +15,8 @@
 			</div>
 			<div class="footer-row">
 				<div class="footer-lnk">
-					<a href="#lnk" class="lnk">이용약관</a>
-					<a href="#lnk" class="lnk color-primary">개인정보취급방침</a>
+					<a href="#lnk" class="lnk" onclick="frontJS.modal('policy-terms').show();">이용약관</a>
+					<a href="#lnk" class="lnk color-primary" onclick="frontJS.modal('policy-privacy').show();">개인정보취급방침</a>
 					<a href="#lnk" class="lnk">사업자정보</a>
 				</div>
 				<div class="footer-contact">
@@ -37,10 +37,10 @@
 
 <div class="quick-menu">
 	<div class="quick-list">
-		<a href="#" class="quick-btn" onclick="frontJS.modal('consult').show();">
+		<button type="button" class="quick-btn" onclick="frontJS.modal('consult').show();">
 			<div class="img"><img src="../../comn/img/layout/quick-icon01.svg" alt=""></div>
 			<span class="quick-label">간편상담</span>
-		</a>
+		</button>
 		<a href="#" class="quick-btn">
 			<div class="img"><img src="../../comn/img/layout/quick-icon02.svg" alt=""></div>
 			<span class="quick-label">나의차고</span>
@@ -60,6 +60,64 @@
 	</div>
 	<button type="button" class="top-btn" title="상단으로 이동" onclick="layout.top();"><img src="../../comn/img/layout/quick-icon-top.svg" alt=""></button>
 </div>
+
+<!-- ## 팝업 :: 이용약관 s ## -->
+<dialog class="modal modal-size-lg modal-policy" data-modal="policy-terms">
+	<div class="modal-wrap">
+		<div class="modal-box">
+			<div class="modal-body">
+				<div class="policy-docu">
+					<div class="policy-title">이용약관</div>
+					<ul class="policy-list disc">
+						<li>제1조 (목적)
+							<p class="policy-txt">이 약관은 주식회사 그냥이차에서 운영하는 웹사이트 제공하는 인터넷 관련 서비스 및 기타 부대서비스를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</p>
+						</li>
+						<li>제2조 (정의)
+							<p class="policy-txt">이 약관은 주식회사 그냥이차에서 운영하는 웹사이트 제공하는 인터넷 관련 서비스 및 기타 부대서비스를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</p>
+						</li>
+						<li>제2조 (정의)
+							<p class="policy-txt">이 약관은 주식회사 그냥이차에서 운영하는 웹사이트 제공하는 인터넷 관련 서비스 및 기타 부대서비스를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</p>
+						</li>
+						<li>제2조 (정의)
+							<p class="policy-txt">이 약관은 주식회사 그냥이차에서 운영하는 웹사이트 제공하는 인터넷 관련 서비스 및 기타 부대서비스를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('policy-terms').hide();"></button>
+</dialog>
+<!-- ## 팝업 :: 이용약관 e ## -->
+
+<!-- ## 팝업 :: 개인정보취급방침 s ## -->
+<dialog class="modal modal-size-lg modal-policy" data-modal="policy-privacy">
+	<div class="modal-wrap">
+		<div class="modal-box">
+			<div class="modal-body">
+				<div class="policy-docu">
+					<div class="policy-title">개인정보취급방침</div>
+					<ul class="policy-list disc">
+						<li>제1조 (목적)
+							<p class="policy-txt">이 약관은 주식회사 그냥이차에서 운영하는 웹사이트 제공하는 인터넷 관련 서비스 및 기타 부대서비스를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</p>
+						</li>
+						<li>제2조 (정의)
+							<p class="policy-txt">이 약관은 주식회사 그냥이차에서 운영하는 웹사이트 제공하는 인터넷 관련 서비스 및 기타 부대서비스를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</p>
+						</li>
+						<li>제2조 (정의)
+							<p class="policy-txt">이 약관은 주식회사 그냥이차에서 운영하는 웹사이트 제공하는 인터넷 관련 서비스 및 기타 부대서비스를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</p>
+						</li>
+						<li>제2조 (정의)
+							<p class="policy-txt">이 약관은 주식회사 그냥이차에서 운영하는 웹사이트 제공하는 인터넷 관련 서비스 및 기타 부대서비스를 이용함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('policy-privacy').hide();"></button>
+</dialog>
+<!-- ## 팝업 :: 개인정보취급방침 e ## -->
 
 <!-- ## 팝업 :: 간편상담 s ## -->
 <dialog class="modal modal-sheet modal-size-sm modal-consult" data-modal="consult">

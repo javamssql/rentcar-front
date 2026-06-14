@@ -67,13 +67,13 @@
 .member-sns .button.naver::before {
 	width: 14px;
 	height: 14px;
-	background:url("https://project.impacsys.kr/imPublish/img/icon-naver-white.svg") no-repeat center center;
+	background:url("../img/member/icon-naver-white.svg") no-repeat center center;
 	margin-top:-1px;
 }
 .member-sns .button.kakao::before {
 	width: 19px;
 	height: 18px;
-	background:url("https://project.impacsys.kr/imPublish/img/icon-kakao-brown.svg") no-repeat center center;
+	background:url("../img/member/icon-kakao-brown.svg") no-repeat center center;
 }
 .member-lnk {
 	--member-space: 30px;
@@ -113,7 +113,7 @@
 
 
 .policy-docu {
-	color: #616161;
+	color: #555;
 }
 .policy-docu article:first-of-type {
 	margin-top: 0;
@@ -132,9 +132,13 @@
 	color: #1d1d1d;
 }
 .policy-docu .policy-title {
-	color: var(--primary-color);
-	border-bottom: 1px solid #dcdcdc;
-	padding-bottom: 10px;
+	padding: 18px;
+	border-radius: 10px;
+	background: #EFEFEF;
+	font-size: var(--font-size-18);
+	font-weight: 600;
+	color: #000;
+	margin-bottom: 22px;
 }
 .policy-docu strong {
 	font-weight: 700;
@@ -151,8 +155,7 @@
 	margin: 5px 0;
 }
 .policy-txt {
-	margin: 10px 0;
-	line-height: 1.5;
+	font-size: var(--font-size-15);
 }
 .policy-list ul {
 	margin-top: 10px;
@@ -220,6 +223,13 @@
 @media all and (max-width: 767px) {
 	.policy-box {
 		padding: 15px 20px;
+	}
+	.policy-docu {
+		font-size: var(--font-size-14);
+	}
+	.policy-docu .policy-title {
+		padding: 15px 12px;
+		margin-bottom: 12px;
 	}
 }
 
