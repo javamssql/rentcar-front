@@ -1190,6 +1190,7 @@
 @media all and (max-width: 767px) {
 	.rent-view {
 		--aside-width: 320px;
+		margin-top: 0;
 	}
 	.aside-box {
 		padding: 20px 16px;
@@ -1953,6 +1954,7 @@
 @media all and (max-width: 767px) {
 	.rent-complete {
 		padding: 20px 20px 50px;
+		margin-top: 0;
 	}
 	.rent-complete .complete-box h3 {
 		margin-top: 10px;

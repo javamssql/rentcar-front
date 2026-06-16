@@ -762,6 +762,7 @@ const layout = {
 		const elemGnb = $(".ui-gnb");
 		const elemOpen = $(".ui-gnb-open");
 		const elemClose = $(".ui-gnb-close");
+		const elemHeader = $(".header");
 
 		// PC
 		if(frontJS.mediaCheck() === "P") {
@@ -784,6 +785,14 @@ const layout = {
 			elemClose.on("click", function() {
 				elemGnb.removeClass(frontJS.CLASSNAME.ACTIVE);
 				$("body").removeClass(frontJS.CLASSNAME.PREVENT);
+			});
+
+			$(window).on("scroll.gnb", function() {
+				if ($(this).scrollTop() > 0) {
+					elemHeader.addClass(frontJS.CLASSNAME.ACTIVE);
+				} else {
+					elemHeader.removeClass(frontJS.CLASSNAME.ACTIVE);
+				}
 			});
 		}
 	},
@@ -815,6 +824,23 @@ const layout = {
 		elemBtn.on('click', function () {
 			$(this).toggleClass(frontJS.CLASSNAME.ACTIVE);
 			elemAddr.stop(true).slideToggle(300);
+		});
+	},
+
+	quick: function() {
+		const elemBtn = $(".quick-menu .top-btn");
+		let lastScrollTop = 0;
+
+		$(window).on("scroll.quickMenu", function() {
+			const currentScrollTop = $(this).scrollTop();
+
+			if (currentScrollTop > lastScrollTop) {
+				elemBtn.addClass(frontJS.CLASSNAME.ACTIVE);
+			} else {
+				elemBtn.removeClass(frontJS.CLASSNAME.ACTIVE);
+			}
+
+			lastScrollTop = currentScrollTop;
 		});
 	},
 

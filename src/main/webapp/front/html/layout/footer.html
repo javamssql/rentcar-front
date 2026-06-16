@@ -37,11 +37,19 @@
 
 <div class="quick-menu">
 	<div class="quick-list">
+		<!-- ## 퀵메뉴 메인/서브 노출 제어 클래스 ##
+		 - 메인만 노출: main
+		 - 서브만 노출: sub
+		-->
+		<a href="#" class="quick-btn sub">
+			<div class="img"><img src="../../comn/img/layout/quick-icon06.svg" alt=""></div>
+			<span class="quick-label">HOME</span>
+		</a>
 		<button type="button" class="quick-btn" onclick="frontJS.modal('consult').show();">
 			<div class="img"><img src="../../comn/img/layout/quick-icon01.svg" alt=""></div>
 			<span class="quick-label">간편상담</span>
 		</button>
-		<a href="#" class="quick-btn">
+		<a href="#" class="quick-btn main">
 			<div class="img"><img src="../../comn/img/layout/quick-icon02.svg" alt=""></div>
 			<span class="quick-label">나의차고</span>
 		</a>
@@ -148,7 +156,6 @@
 							</div>
 						</li>
 						<li class="form-row">
-							<label for="" class="form-title form-required">개인정보처리방침</label>
 							<div class="form-item">
 								<div class="agree-box">
 									<div class="agree-header">
@@ -167,18 +174,10 @@
 											<label class="checkbox-label">
 												<input type="checkbox" name="check" class="checkbox-input">
 												<span class="checkbox-check"></span>
-												<span class="checkbox-text">[필수] 개인정보 수집 이용 제공동의</span>
+												<span class="checkbox-text">[필수] 개인정보취급방침</span>
 											</label>
 										</div>
-										<button type="button" class="button button-size-sm" onclick="frontJS.toggle(this, 'agree').toggle();">자세히보기</button>
-									</div>
-									<div class="agree-body" data-toggle="agree">
-										제 1 조 수집하는 개인 정보 항목 <br>
-										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
-										제 1 조 수집하는 개인 정보 항목 <br>
-										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
-										제 1 조 수집하는 개인 정보 항목 <br>
-										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+										<button type="button" class="button button-size-sm" onclick="frontJS.modal('policy-privacy').show();">자세히보기</button>
 									</div>
 								</div>
 								<div class="agree-box">
@@ -187,18 +186,10 @@
 											<label class="checkbox-label">
 												<input type="checkbox" name="check" class="checkbox-input">
 												<span class="checkbox-check"></span>
-												<span class="checkbox-text">[필수] 개인정보 3자 제공 동의</span>
+												<span class="checkbox-text">[필수] 이용약관</span>
 											</label>
 										</div>
-										<button type="button" class="button button-size-sm" onclick="frontJS.toggle(this, 'agree2').toggle();">자세히보기</button>
-									</div>
-									<div class="agree-body" data-toggle="agree2">
-										제 1 조 수집하는 개인 정보 항목 <br>
-										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
-										제 1 조 수집하는 개인 정보 항목 <br>
-										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
-										제 1 조 수집하는 개인 정보 항목 <br>
-										회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+										<button type="button" class="button button-size-sm" onclick="frontJS.modal('policy-terms').show();">자세히보기</button>
 									</div>
 								</div>
 							</div>
@@ -217,4 +208,5 @@
 
 <script>
 	layout.addr();
+	layout.quick();
 </script>
