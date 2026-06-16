@@ -134,7 +134,7 @@
 	}
 }
 @media all and (max-width: 1023px) {
-	.header {
+	:has(.sub-wrapper) .header {
 		position: static;
 	}
     .header.active {
