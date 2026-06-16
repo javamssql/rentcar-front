@@ -1381,6 +1381,7 @@
 	border-radius: 20px;
 	background: transparent linear-gradient(90deg, #000021 0%, #4B81FF 100%);
 	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.16);
+	position: relative;
 }
 .capital-box::after {
 	content: "";
@@ -1392,6 +1393,10 @@
 	height: 128px;
 	background: url("../img/main/live-bg.svg") no-repeat center / contain;
 }
+.capital-box.bg-color01 { background: transparent linear-gradient(90deg, #000021 0%, #4B81FF 100%); }
+.capital-box.bg-color02 { background: transparent linear-gradient(90deg, #0D8DF3 0%, #41B5FB 100%); }
+.capital-box.bg-color03 { background: transparent linear-gradient(90deg, #0048F1 0%, #2DBCFF 100%); }
+
 .capital-bank {
 	display: flex;
 	align-items: center;
@@ -1463,6 +1468,7 @@
 	background-position: left 15px center;
 	background-size: 22px;
 	filter: brightness(0) saturate(100%) invert(100%);
+	font-variant-numeric: tabular-nums;
 }
 .condition-badge .badge.period { background-image: url("../img/contents/icon-condition-period.svg"); }
 .condition-badge .badge.deposit { background-image: url("../img/contents/icon-condition-deposit.svg"); }
@@ -1482,6 +1488,15 @@
 	margin-right: 8px;
 	filter: brightness(0) saturate(100%);
 }
+.capital-empty .text {
+	margin-top: 20px;
+}
+.capital-box .condition-badge .badge {
+	justify-content: flex-start;
+}
+.capital-box .condition-badge .badge.deposit {
+	min-width: 135px;
+}
 @media all and (max-width: 1439px) {
 	.capital-content {
 		gap: 20px 40px;
@@ -1496,6 +1511,9 @@
 		padding: 0 15px 0 37px;
 		background-position: left 10px center;
 		font-size: var(--font-size-15);
+	}
+	.capital-box .condition-badge .badge.deposit {
+		min-width: 125px;
 	}
 }
 @media all and (max-width: 767px) {
@@ -1547,6 +1565,9 @@
 	.condition-list .list-title .icon {
 		width: 14px;
 		height: 14px;
+	}
+	.capital-box .condition-badge .badge.deposit {
+		min-width: 110px;
 	}
 }
 /* ## 렌트 상세 - 트림 선택 ## */
