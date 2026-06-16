@@ -52,22 +52,22 @@
 	font-size: var(--font-size-14);
 	font-weight: 300;
 }
-.tag-box.tag-color-gray .tag {
+.tag-box .tag.tag-color-gray {
 	border-color: #555555;
 	background-color: #555555;
 	color: #fff;
 }
-.tag-box.tag-color-blue .tag {
+.tag-box .tag.tag-color-blue {
 	border-color: #E9F1FC;
 	background-color: #E9F1FC;
 	color: #999999;
 }
-.tag-box.tag-color-lightgray .tag {
+.tag-box .tag.tag-color-lightgray {
 	border-color: #F6F6F7;
 	background-color: #F6F6F7;
 	color: #999999;
 }
-.tag-box.tag-line-lightgray .tag {
+.tag-box .tag.tag-line-lightgray {
 	border-color: #D9D9D9;
 	background-color: #fff;
 	color: #999999;
@@ -849,17 +849,35 @@
 .rent-list.brand .rent-brand-box .btn:hover {
 	border-color: var(--primary-color);
 }
+@media all and (max-width: 767px) {
+	.rent-list.brand .rent-grid {
+		padding: 15px 15px 60px;
+	}
+	.rent-list.brand .rent-brand-box {
+		padding: 20px 15px;
+		border-radius: 10px;
+	}
+	.rent-list.brand .rent-brand-box .btn {
+		width: 80px;
+		height: 80px;
+		font-size: var(--font-size-14);
+	}
+}
+
 .rent-brand-top {
-	padding: 20px 0;
+	grid-column: 1 / -1;
+	padding: 30px 0;
 	text-align: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: 10px;
+	border-radius: 15px;
+	background: #F6F6F7;
 }
 .rent-brand-top .text-box .title {
-	margin-bottom: 10px;
-	font-size: var(--font-size-28);
+	margin-top: 8px;
+	font-size: var(--font-size-26);
 	font-weight: 700;
 }
 .rent-brand-top .text-box .text {
@@ -887,7 +905,7 @@
 		flex-direction: column-reverse;
 	}
 	.rent-brand-top .text-box .title {
-		margin-bottom: 5px;
+		margin-top: 3px;
 		font-size: var(--font-size-20);
 	}
 	.rent-brand-top .text-box .text {
@@ -895,20 +913,11 @@
 	}
 }
 @media all and (max-width: 767px) {
-	.rent-list.brand .rent-grid {
-		padding: 15px 15px 60px;
-	}
-	.rent-list.brand .rent-brand-box {
-		padding: 20px 15px;
-		border-radius: 10px;
-	}
-	.rent-list.brand .rent-brand-box .btn {
-		width: 80px;
-		height: 80px;
-		font-size: var(--font-size-14);
-	}
 	.rent-brand-top .text-box .title {
 		font-size: var(--font-size-18);
+	}
+	.rent-brand-top .img-box {
+		width: 80px;
 	}
 }
 

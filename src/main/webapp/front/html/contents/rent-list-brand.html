@@ -107,21 +107,7 @@
 						</div>
 					</aside>
 					<section class="rent-list brand">
-						<!-- ## 필터 선택 s ## -->
-						<div class="rent-filter">
-							<button type="button" class="rent-filter-btn" onclick="frontJS.modal('filter-brand').show();"><img src="../../comn/img/contents/icon-filter-brand.svg" class="icon" alt="">제조사별</button>
-							<button type="button" class="rent-filter-btn" onclick="frontJS.modal('filter-type').show();"><img src="../../comn/img/contents/icon-filter-type.svg" class="icon" alt="">차종별</button>
-							<button type="button" class="rent-filter-btn" onclick="frontJS.modal('filter-sort').show();"><img src="../../comn/img/contents/icon-filter-sort.svg" class="icon" alt="">월 이용료 낮은순</button>
-						</div>
-						<!-- ## 필터 선택 e ## -->
 						<div class="rent-grid">
-							<div class="rent-brand-top">
-								<div class="text-box">
-									<div class="title">2주안에 출고 가능한 차량만 모아봤어요</div>
-									<div class="text">어떤 차량을 찾고계신가요?</div>
-								</div>
-								<div class="img-box"><img src="../../comn/img/contents/rent-brand-top-img.png" alt=""></div>
-							</div>
 							<div class="rent-brand-box">
 								<div class="row-box">
 									<div class="list-box">
@@ -167,98 +153,7 @@
 		</div>
 
 	</main>
-	<!-- ## 팝업 :: 필터 - 제조사선택 s ## -->
-	<dialog class="modal modal-sheet modal-size-sm modal-filter-brand" data-modal="filter-brand">
-		<div class="modal-wrap">
-			<div class="modal-box">
-				<div class="modal-header">
-					<h4 class="modal-title"><img src="../../comn/img/contents/icon-filter-brand.svg" class="title-icon" alt="">제조사선택</h4>
-				</div>
-				<div class="modal-body">
-					<div class="rent-brand-box">
-						<div class="row-box">
-							<div class="list-box">
-								<a href="#lnk" class="btn"><span class="all">ALL</span>전체</a>
-							</div>
-						</div>
-						<div class="row-box">
-							<div class="title">국산브랜드</div>
-							<div class="list-box">
-								<a href="#lnk" class="btn active"><img src="../../comn/img/contents/rent-brand-logo-hd.png" class="img" alt="">현대</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-kia.png" class="img" alt="">기아</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-rn.png" class="img" alt="">르노</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-gen.png" class="img" alt="">제네시스</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-cv.png" class="img" alt="">쉐보레</a>
-							</div>
-						</div>
-						<div class="row-box">
-							<div class="title">해외브랜드</div>
-							<div class="list-box">
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-jp.png" class="img" alt="">지프</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-mb.png" class="img" alt="">벤츠</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-ld.png" class="img" alt="">랜드로버</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-bmw.png" class="img" alt="">BMW</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-vv.png" class="img" alt="">볼보</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-vw.png" class="img" alt="">폭스바겐</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-peu.png" class="img" alt="">푸조</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-au.png" class="img" alt="">아우디</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-tsla.png" class="img" alt="">테슬라</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-ln.png" class="img" alt="">링컨</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-cd.png" class="img" alt="">캐딜락</a>
-								<a href="#lnk" class="btn"><img src="../../comn/img/contents/rent-brand-logo-pol.png" class="img" alt="">폴스타</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('filter-brand').hide();"></button>
-		</div>
-	</dialog>
-	<!-- ## 팝업 :: 필터 - 제조사선택 e ## -->
-	<!-- ## 팝업 :: 필터 - 차종선택 s ## -->
-	<dialog class="modal modal-sheet modal-size-sm modal-filter-type" data-modal="filter-type">
-		<div class="modal-wrap">
-			<div class="modal-box">
-				<div class="modal-header">
-					<h4 class="modal-title"><img src="../../comn/img/contents/icon-filter-type.svg" class="title-icon" alt="">차종선택</h4>
-				</div>
-				<div class="modal-body">
-					<div class="rent-filter-option">
-						<a href="#lnk" class="btn active">ALL</a>
-						<a href="#lnk" class="btn">SUV</a>
-						<a href="#lnk" class="btn">세단</a>
-						<a href="#lnk" class="btn">하이브리드</a>
-						<a href="#lnk" class="btn">전기차</a>
-						<a href="#lnk" class="btn">경차</a>
-					</div>
-				</div>
-			</div>
-			<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('filter-type').hide();"></button>
-		</div>
-	</dialog>
-	<!-- ## 팝업 :: 필터 - 차종선택 e ## -->
-	<!-- ## 팝업 :: 필터 - 정렬선택 s ## -->
-	<dialog class="modal modal-sheet modal-size-sm modal-filter-sort" data-modal="filter-sort">
-		<div class="modal-wrap">
-			<div class="modal-box">
-				<div class="modal-header">
-					<h4 class="modal-title"><img src="../../comn/img/contents/icon-filter-sort.svg" class="title-icon" alt="">정렬</h4>
-				</div>
-				<div class="modal-body">
-					<div class="rent-filter-option">
-						<a href="#lnk" class="btn">인기차량순</a>
-						<a href="#lnk" class="btn active">월 이용료 낮은순</a>
-						<a href="#lnk" class="btn">월 이용료 높은순</a>
-						<a href="#lnk" class="btn">출고가 낮은순</a>
-						<a href="#lnk" class="btn">출고가 높은순</a>
-					</div>
-				</div>
-			</div>
-			<button type="button" class="modal-close" title="팝업 닫기" onclick="frontJS.modal('filter-sort').hide();"></button>
-		</div>
-	</dialog>
-	<!-- ## 팝업 :: 필터 - 정렬선택 e ## -->
-
+	
 	<script>
 		contents.promotion();
 	</script>
