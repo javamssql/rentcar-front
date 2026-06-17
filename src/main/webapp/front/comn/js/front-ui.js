@@ -103,43 +103,108 @@ const frontJS = {
 					}
 				});
 
-				// sheet type: touch event
+				// sheet type: 상/하 드래그 인터랙션
 				if (elemModal.hasClass("modal-sheet")) {
+					const headerEl = elemModal.find(".modal-header")[0];
+					const sheetEl = elemModal[0];
+
 					let startY = 0;
-					let startScrollTop = 0;
-					let isScrolling = false;
-					const box = elemModal.find(".modal-box")[0];
+					let lastY = 0;
+					let currentTranslate = 0;
+					let isDragging = false;
 
-					box.addEventListener("touchstart", function (e) {
-						startY = e.touches[0].clientY;
-						startScrollTop = box.scrollTop;
-						isScrolling = false;
-					}, { passive: true });
+					const CLOSE_THRESHOLD = 100;
 
-					box.addEventListener("touchmove", function (e) {
-						const deltaY = e.touches[0].clientY - startY;
+					function getY(e) {
+						return e.touches ? e.touches[0].clientY : e.clientY;
+					}
 
-						if (startScrollTop > 0 || deltaY < 0) {
-							isScrolling = true;
+					// 헤더 내부의 클릭 가능한 요소(닫기 버튼 등)를 누른 경우 드래그 제외
+					function isInteractiveTarget(target) {
+						return !!target.closest("button, a, input, select, textarea, [data-no-drag]");
+					}
+
+					function updateDirection(currentY) {
+						const step = currentY - lastY;
+						if (step < 0) {
+							elemModal.addClass("dir-up").removeClass("dir-down");
+						} else if (step > 0) {
+							elemModal.addClass("dir-down").removeClass("dir-up");
 						}
-					}, { passive: true });
+						lastY = currentY;
+					}
 
-					box.addEventListener("touchend", function (e) {
-						const deltaY = e.changedTouches[0].clientY - startY;
+					function moveSheet(deltaY) {
+						currentTranslate = Math.max(0, deltaY);
+						sheetEl.style.transform = `translateY(${currentTranslate}px)`;
+					}
 
-						if (isScrolling || startScrollTop > 0) return;
+					function settleSheet() {
+						sheetEl.style.transition = "transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)";
 
-						if (deltaY > 60) {
+						if (currentTranslate > CLOSE_THRESHOLD) {
 							frontJS.modal(idx).hide();
+						} else {
+							sheetEl.style.transform = "translateY(0)";
 						}
-					}, { passive: true });
-            }
+
+						setTimeout(function () {
+							sheetEl.style.transition = "";
+						}, 300);
+
+						currentTranslate = 0;
+					}
+
+					function dragStart(e) {
+						if (isInteractiveTarget(e.target)) return; // 닫기 버튼 등은 드래그 제외
+
+						isDragging = true;
+						startY = getY(e);
+						lastY = startY;
+						elemModal.addClass("dragging");
+						sheetEl.style.transition = "none";
+					}
+
+					function dragMove(e) {
+						if (!isDragging) return;
+						const currentY = getY(e);
+						const deltaY = currentY - startY;
+
+						updateDirection(currentY);
+						moveSheet(deltaY);
+					}
+
+					function dragEnd() {
+						if (!isDragging) return;
+						isDragging = false;
+
+						elemModal.removeClass("dragging dir-up dir-down");
+						settleSheet();
+					}
+
+					// PC 마우스
+					headerEl.addEventListener("mousedown", dragStart);
+					document.addEventListener("mousemove", dragMove);
+					document.addEventListener("mouseup", dragEnd);
+
+					// 모바일 터치
+					headerEl.addEventListener("touchstart", dragStart, { passive: true });
+					document.addEventListener("touchmove", dragMove, { passive: true });
+					document.addEventListener("touchend", dragEnd);
+				}
 			},
 
 			// 팝업 닫기
 			hide:function () {
 				elemModal[0].close();
 				elemModal.removeClass(frontJS.CLASSNAME.ACTIVE);
+
+				if (elemModal.hasClass("modal-sheet")) {
+					elemModal.css({
+						transform: "",
+						transition: ""
+					});
+				}
 
 				if(!$("[data-modal]").hasClass(frontJS.CLASSNAME.ACTIVE))
 					elemBody.removeClass(frontJS.CLASSNAME.PREVENT);

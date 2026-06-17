@@ -1003,7 +1003,7 @@ input[type="checkbox"].switch-input:checked {
 .modal-sheet .modal-box {
 	max-height: 65vh;
 }
-.modal-sheet .modal-header::before {
+/* .modal-sheet .modal-header::before {
 	content: "";
 	display: block;
 	width: 58px;
@@ -1015,7 +1015,7 @@ input[type="checkbox"].switch-input:checked {
 	top: 20px;
 	left: 50%;
 	transform: translate(-50%);
-}
+} */
 .modal-sheet .modal-title {
 	font-size: var(--font-size-16);
 	font-weight: 600;
@@ -1046,6 +1046,32 @@ input[type="checkbox"].switch-input:checked {
 		right:28px;
 	}
 }
+.modal-sheet .sheet-handle {
+	position: absolute;
+	top: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 58px;
+	height: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.modal-sheet .sheet-handle .bar {
+	position: absolute;
+	width: 30px;
+	height: 4px;
+	background: #D9D9D9;
+	border-radius: 99px;
+	transition: var(--transition);
+}
+.modal-sheet .sheet-handle .bar-left { left: 2px; }
+.modal-sheet .sheet-handle .bar-right { right: -2px; }
+.modal-sheet.dragging .sheet-handle .bar { background: #C2C2C2; }
+.modal-sheet.dir-up .sheet-handle .bar-left { transform: rotate(-12deg); }
+.modal-sheet.dir-up .sheet-handle .bar-right { transform: rotate(12deg); }
+.modal-sheet.dir-down .sheet-handle .bar-left { transform: rotate(12deg); }
+.modal-sheet.dir-down .sheet-handle .bar-right { transform: rotate(-12deg); }
 
 
 
