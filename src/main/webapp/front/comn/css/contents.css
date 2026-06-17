@@ -737,8 +737,9 @@
 }
 .rent-grid .grid-card .unit {
 	font-size: 14px;
-	color: #999999;
 	font-weight: 400;
+	color: #999999;
+	margin-left: 5px;
 }
 .rent-grid .grid-card .img-box {
 	display: flex;
@@ -2289,9 +2290,6 @@
 }
 .grid-card .btn-box .price-box {
 	margin-top: 0;
-}
-.grid-card .btn-box .price-box .unit {
-	margin-left: 5px;
 }
 .grid-card .btn-box .button {
 	flex: 0 0 120px;
