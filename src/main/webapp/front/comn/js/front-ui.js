@@ -602,12 +602,16 @@ const main = {
 		}
 
 		const swiper = new Swiper(`${elemStr} .swiper`, {
-			effect: "cards",
+			effect: "creative",
 			grabCursor: true,
-			cardsEffect: {
-				rotate: true,
-				perSlideRotate: 0,
-				perSlideOffset: 10,
+			creativeEffect: {
+				prev: {
+					shadow: true,
+					translate: [0, 0, 0],
+				},
+				next: {
+					translate: [20, 20, 0],
+				},
 			},
 			autoplay: {
 				delay: 3000,
