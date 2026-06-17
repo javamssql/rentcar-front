@@ -194,10 +194,10 @@ const frontJS = {
 				html += `   <div class="alert-box">`;
 				html += `      <div class="alert-text">${text}</div>`;
 				html += `      <div class="alert-btn-box">`;
-				html += `         <button type="button" class="button button-color-primary" data-alert="confirm">확인</button>`;
 				if(type) {
-					html += `         <button type="button" class="button" data-alert="cancel">취소</button>`;
+					html += `         <button type="button" class="button button-line-black" data-alert="cancel">취소</button>`;
 				}
+				html += `         <button type="button" class="button button-color-primary" data-alert="confirm">확인</button>`;
 				html += `      </div>`;
 				html += `   </div>`;
 				html += `</dialog>`;
