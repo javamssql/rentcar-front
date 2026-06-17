@@ -315,10 +315,10 @@
 	border-top: var(--arrow-height) solid currentColor;
 }
 .board-view-nav .nav-btn:hover .board-desc {
-	transform: translateX(-40px);
-}
-.board-view-nav .nav-btn:hover .nav-btn-next .board-desc {
 	transform: translateX(40px);
+}
+.board-view-nav .nav-btn-next:hover .board-desc {
+	transform: translateX(-40px);
 }
 .board-view-nav .nav-btn:hover .nav-arrow .arrow-line {
 	transform: scaleX(1.5);
@@ -326,7 +326,7 @@
 .board-view-nav .nav-btn.disabled {
 	color: #D9D9D9;
 	pointer-events: none;
-	cursor: none;
+	cursor: default;
 }
 .board-view .gallery-util {
 	margin-left: 0;
