@@ -1131,7 +1131,7 @@
 	font-weight: 700;
 	color: var(--primary-color);
 }
-.aside-box .comment-box {
+.comment-box {
 	margin-top: 15px;
 	padding: 12px 14px;
 	background: #E9F1FC;
@@ -1142,7 +1142,7 @@
 	font-size: var(--font-size-14);
 	color: #0067B9;
 }
-.aside-box .comment-box .icon {
+.comment-box .icon {
 	transform: translateY(2px);
 }
 .aside-box .button-wrap {
@@ -1290,7 +1290,7 @@
 	.view-card .card-group h3.title {
 		font-size: var(--font-size-18);
 	}
-	.view-card:has(.review-slide, .board-qna, .board-faq, .promotion-slide) {
+	.view-card:has(.main-guide, .review-slide, .board-qna, .board-faq, .promotion-slide) {
 		width: calc(100% + 30px);
 		margin-left: -15px;
 		border-radius: 0;
@@ -1497,6 +1497,10 @@
 	margin-right: 8px;
 	filter: brightness(0) saturate(100%);
 }
+.condition-list .list-text {
+	font-weight: 600;
+	color: var(--primary-color);
+}
 .capital-empty .text {
 	margin-top: 20px;
 }
@@ -1505,6 +1509,19 @@
 }
 .capital-box .condition-badge .badge.deposit {
 	min-width: 135px;
+}
+.condition-list.list-col li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0;
+	padding: 12px 0;
+}
+.condition-list.list-col li:not(:last-child) {
+	border-bottom: 1px solid #D9D9D9;
+}
+.condition-list.list-col .list-title {
+	margin-bottom: 0;
 }
 @media all and (max-width: 1439px) {
 	.capital-content {
@@ -1568,7 +1585,7 @@
 		background-size: 18px;
 		font-size: var(--font-size-14);
 	}
-	.condition-list .list-title {
+	.condition-list :is(.list-title, .list-text) {
 		font-size: var(--font-size-14);
 	}
 	.condition-list .list-title .icon {
