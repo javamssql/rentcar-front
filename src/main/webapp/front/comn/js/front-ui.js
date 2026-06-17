@@ -1024,6 +1024,7 @@ const mypage = {
 			speed: 500,
 			pagination: {
 				el: `${elemStr} .swiper-pagination`,
+				clickable: true,
 			},
 			breakpoints: {
 				768: {
@@ -1050,6 +1051,7 @@ const mypage = {
 			speed: 500,
 			pagination: {
 				el: `${elemStr} .swiper-pagination`,
+				clickable: true,
 			},
 			breakpoints: {
 				768: {

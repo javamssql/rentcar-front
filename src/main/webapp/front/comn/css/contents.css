@@ -2235,26 +2235,30 @@
 	width: 16px;
 	height: 16px;
 }
-.grid-card .info-more-btn {
+.info-more-btn {
 	width: 17px;
 	height: 17px;
 }
-.grid-card .info-more-box {
+.info-more-btn:hover {
+	filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(5276%) hue-rotate(221deg) brightness(96%) contrast(111%);
+}
+.info-more-box {
 	display: none;
 	align-items: flex-start;
 	position: absolute;
 	top: 40px;
 	left: 0;
+	z-index: 5;
 	width: 100%;
 	padding: 15px;
 	border-radius: 10px;
 	background: #fff;
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
 }
-.grid-card .info-box:has(.info-more-btn:hover) .info-more-box {
+.info-box:has(.info-more-btn:hover) .info-more-box {
 	display: flex;
 }
-.grid-card .info-more-box .term {
+.info-more-box .term {
 	flex-shrink: 0;
 	margin-top: 3px;
 	margin-right: 10px;
@@ -2264,7 +2268,7 @@
 	font-weight: 500;
 	color: #A4A4A4;
 }
-.grid-card .info-more-box .tag-box .tag {
+.info-more-box .tag-box .tag {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -2517,7 +2521,10 @@
 .grid-card .checkbox-input:checked + .checkbox-check::before {
 	background: #fff;
 }
-.grid-card .btn-close {
+.grid-item {
+	position: relative;
+}
+.grid-item .btn-close {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -2532,12 +2539,25 @@
 	position: absolute;
 	top: 17px;
 	right: 17px;
+	z-index: 3;
 }
-.grid-card .btn-close:hover {
+.grid-item .btn-close:hover {
 	color: #333;
 }
+.grid-item .grid-card.disabled {
+	opacity: 0.5;
+	cursor: default;
+	outline: 1px solid #D9D9D9;
+	box-shadow: none;
+}
+.grid-item .grid-card.disabled .checkbox-label {
+	cursor: default;
+}
+.grid-item .grid-card.disabled .button {
+	pointer-events: none;
+}
 @media all and (max-width: 767px) {
-	.grid-card .btn-close {
+	.grid-item .btn-close {
 		width: 32px;
 		height: 32px;
 		top: 13px;
@@ -3279,6 +3299,21 @@
 /* ## 신청정보 팝업 ## */
 .modal-car-info .aside-info {
 	margin-top: 0;
+}
+.modal-car-info .aside-info .info-item {
+	position: relative;
+}
+.modal-car-info .aside-info .desc {
+	margin-left: auto;
+}
+.modal-car-info .info-more-btn {
+	margin-left: 5px;
+}
+.modal-car-info .info-more-box {
+	transform: translateY(-1px);
+}
+.modal-car-info:has(.info-more-btn:hover) .info-more-box {
+	display: flex;
 }
 .manager-info-box {
 	padding: 20px;

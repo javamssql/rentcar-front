@@ -441,6 +441,10 @@ body.prevent {
 	transform:translate(-50%, -50%);
 	background: var(--primary-color);
 }
+.checkbox-input:disabled + .checkbox-check {
+	border-color: #eee;
+	background: #eee;
+}
 @media all and (max-width: 767px) {
 	.checkbox {
 		--checkbox-size: 18px;
