@@ -658,7 +658,7 @@ input[type="checkbox"].switch-input:checked {
 	font-size: calc(var(--button-font-size) * 0.9);
 }
 .button:hover {
-	box-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.25);
 }
 @media all and (max-width: 1023px) {
 	.button {
@@ -1003,19 +1003,6 @@ input[type="checkbox"].switch-input:checked {
 .modal-sheet .modal-box {
 	max-height: 65vh;
 }
-/* .modal-sheet .modal-header::before {
-	content: "";
-	display: block;
-	width: 58px;
-	height: 4px;
-	background: #ddd;
-	border-radius: 2px;
-	margin: 0 auto;
-	position: absolute;
-	top: 20px;
-	left: 50%;
-	transform: translate(-50%);
-} */
 .modal-sheet .modal-title {
 	font-size: var(--font-size-16);
 	font-weight: 600;
