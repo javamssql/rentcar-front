@@ -1116,9 +1116,19 @@
 .qna-view .board-view-header {
 	padding: 25px;
 	border-radius: 15px;
-	background: #F6F6F7;
+	background: #E9F1FC;
 	border: none;
 	margin-bottom: 30px;
+}
+.qna-view .board-view-header::after {
+	content: "";
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 45px;
+	height: 45px;
+	background: url("../img/layout/icon-logo-sm.png") no-repeat center / contain;
+	filter: brightness(0) saturate(100%) invert(100%);
 }
 .qna-view .board-qna-info .label {
 	background: #fff;
@@ -1132,21 +1142,38 @@
 	justify-content: flex-start;
 	gap: 20px;
 }
+.qna-view .board-total {
+	padding-bottom: 15px;
+	border-bottom: 1px solid #F6F6F7;
+}
 .board-qna-btn {
 	display: inline-flex;
 	align-items: center;
 	gap: 3px;
 	font-size: var(--font-size-14);
 }
-.qna-view .board-qna-answer.active {
-	border-radius: 15px;
-	border: 2px solid var(--primary-color);
-}
-.qna-view .board-qna-answer.active .board-qna-btn {
+.qna-view .board-qna-btn.active {
 	color: var(--primary-color);
 }
-.qna-view .board-qna-answer.active .board-qna-btn .icon {
+.qna-view .board-qna-btn.active .icon {
 	filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(5276%) hue-rotate(221deg) brightness(96%) contrast(111%);
+}
+.board-qna-btn.btn-thumbs .icon { transform-origin: 70% 100%; width: 18px; height: 18px; }
+.board-qna-btn.btn-thumbs.active .icon { animation: thumbsPop .45s ease; }
+@keyframes thumbsPop {
+  0%   { transform: scale(1) rotate(0deg); }
+  30%  { transform: scale(1.1) rotate(-12deg); }
+  55%  { transform: scale(0.9) rotate(6deg); }
+  80%  { transform: scale(1.08) rotate(-3deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+.board-qna-btn.btn-check .icon { transition: transform .25s ease; }
+.board-qna-btn.btn-check.active .icon { animation: checkBounce .4s ease; }
+@keyframes checkBounce {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.18); }
+  70%  { transform: scale(0.94); }
+  100% { transform: scale(1); }
 }
 
 

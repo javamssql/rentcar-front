@@ -2673,8 +2673,9 @@
 	width: 24px;
 	height: 24px;
 	border-radius: 50%;
-	background: #F7E409;
 }
+.account-icon.kakao { background: #F7E409; }
+.account-icon.naver { background: #03c75a; }
 .account-icon img {
 	width: 16px;
 	height: 16px;
@@ -3373,20 +3374,20 @@
 }
 
 /* ## 마이페이지 qna ## */
-.rent-list.mypage .board-button-box {
+.rent-list.mypage > .board-button-box {
 	display: block;
 	padding: 35px 10px;
 	border-radius: 10px;
 	background: #E9F1FC;
 	text-align: center;
 }
-.rent-list.mypage .board-button-box .text {
+.rent-list.mypage > .board-button-box .text {
 	margin-bottom: 20px;
 	font-size: var(--font-size-22);
 	font-weight: 600;
 }
 @media all and (max-width: 767px) {
-	.rent-list.mypage .board-button-box .text {
+	.rent-list.mypage > .board-button-box .text {
 		font-size: var(--font-size-18);
 	}
 }
