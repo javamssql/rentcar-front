@@ -74,7 +74,6 @@
 }
 @media all and (max-width: 767px) {
 	.tag-box .tag {
-		font-size: var(--font-size-12);
 		padding: 0 12px;
 	}
 }
@@ -429,6 +428,9 @@
 	.ranking-slide-active .img-box {
 		max-width: 150px;
 	}
+	.ranking-slide-active .swiper-slide {
+		transition: none;
+	}
 }
 @media all and (max-width: 1023px) {
 	.ranking-box {
@@ -498,22 +500,25 @@
 	}
 	.ranking-slide-active .text-box {
 		flex-direction: column-reverse;
+		align-items: flex-start;
 		justify-content: center;
 		gap: 5px;
 		padding: 18px 6px 8px;
 	}
 	.ranking-slide-active .text-box .title {
 		margin-bottom: 5px;
-		font-size: var(--font-size-13);
+		font-size: var(--font-size-14);
+		font-weight: 500;
 	}
 	.ranking-slide-active .text-box .price {
 		margin-top: 0;
-		font-size: var(--font-size-12);
+		font-size: var(--font-size-13);
 		color: #999999;
 		font-weight: 400;
 	}
 	.ranking-slide-active .img-box {
 		max-width: 80%;
+		margin: 0 auto;
 	}
 }
 
@@ -805,7 +810,7 @@
 	}
 	.rent-grid .grid-card .price-box {
 		margin-top: 0;
-		font-size: var(--font-size-20);
+		font-size: var(--font-size-18);
 	}
 	.rent-grid .grid-card .img-box {
 		flex: 0 0 145px;
@@ -815,7 +820,6 @@
 	}
 	.rent-empty {
 		padding: 20px;
-		font-size: var(--font-size-14);
 	}
 }
 
@@ -1139,7 +1143,7 @@
 	display: flex;
 	justify-content: center;
 	gap: 5px;
-	font-size: var(--font-size-14);
+	font-size: var(--font-size-15);
 	color: #0067B9;
 }
 .comment-box .icon {
@@ -1278,11 +1282,11 @@
 		margin-bottom: 15px;
 	}
 	.view-card .card-head .title {
-		font-size: var(--font-size-20);
+		font-size: var(--font-size-22);
 	}
 	.view-card .card-head .more-btn {
 		gap: 2px;
-		font-size: var(--font-size-14);
+		font-size: var(--font-size-15);
 	}
 	:has(.card-group) .view-card {
 		padding: 20px;
@@ -1313,7 +1317,7 @@
 }
 @media all and (max-width: 767px) {
 	.view-card .review-slide .title {
-		font-size: var(--font-size-16);
+		font-size: var(--font-size-18);
 	}
 }
 /* ## 렌트 상세 - qna ## */
@@ -1577,15 +1581,14 @@
 		font-size: 14px;
 	}
 	.condition-badge {
-		gap: 8px;
+		flex-wrap: wrap;
+		gap: 4px;
 	}
 	.condition-badge .badge {
 		height: 35px;
-		padding: 0 10px 0 32px;
+		padding: 0 8px 0 22px;
 		background-size: 18px;
-		font-size: var(--font-size-14);
-	}
-	.condition-list :is(.list-title, .list-text) {
+		background-position: left 3px center;
 		font-size: var(--font-size-14);
 	}
 	.condition-list .list-title .icon {
@@ -1593,7 +1596,7 @@
 		height: 14px;
 	}
 	.capital-box .condition-badge .badge.deposit {
-		min-width: 110px;
+		min-width: 92px;
 	}
 }
 /* ## 렌트 상세 - 트림 선택 ## */
@@ -1605,6 +1608,10 @@
 }
 .modal-trim .checkbox-type02 .checkbox-text {
 	justify-content: space-between;
+	gap: 20px;
+}
+.modal-trim .checkbox-type02 .checkbox-text .text:nth-child(2) {
+	flex-shrink: 0;
 }
 /* ## 렌트 상세 - 추가옵션 선택 ## */
 .modal-extra-option .modal-title .checkbox {
@@ -1661,7 +1668,7 @@
 	padding-left: 10px;
 	margin-left: 10px;
 	border-left: 1px solid #D9D9D9;
-	font-size: var(--font-size-14);
+	font-size: var(--font-size-15);
 }
 .color-chip {
 	display: flex;
@@ -1743,7 +1750,7 @@
 }
 .extra-option .add-text .price {
 	margin-top: 5px;
-	font-size: var(--font-size-14);
+	font-size: var(--font-size-15);
 	color: #999999;
 }
 .extra-option .add-list li {
@@ -2109,15 +2116,6 @@
 		padding: 18px 18px 150px;
 		background-position: center bottom;
 	}
-	.rent-process-box .title {
-		font-size: var(--font-size-18);
-	}
-	.rent-process-box p {
-		font-size: var(--font-size-14);
-	}
-	.rent-process-box .lnk {
-		font-size: var(--font-size-14);
-	}
 }
 
 /* ## 고민차량 선택 ## */
@@ -2318,6 +2316,9 @@
 	margin-left: auto;
 }
 @media all and (max-width: 767px) {
+	.grid-card .info-item {
+		font-size: var(--font-size-14);
+	}
 	.rent-list.instant .grid-card {
 		flex-direction: column;
 		padding: 20px 15px;
@@ -2383,9 +2384,6 @@
 	.rent-list.curation .rent-grid {
 		gap: 12px 0;
 	}
-	.rent-list.curation .grid-card .title {
-		font-size: var(--font-size-16);
-	}
 }
 
 
@@ -2439,6 +2437,7 @@
 	.mypage-myInfo-btn {
 		font-size: var(--font-size-14);
 		gap: 5px;
+		height: 40px;
 	}
 	.mypage-myInfo-btn .icon {
 		width: 18px;
@@ -2872,15 +2871,15 @@
 }
 .grid-card .detail-item {
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
+	gap: 20px;
 }
 .grid-card .detail-item .term {
 	display: inline-flex;
-	align-items: center;
 	gap: 5px;
 	color: #999999;
 	font-weight: 500;
+	flex-shrink: 0;
 }
 .grid-card .detail-item .term::before {
 	content: "";
@@ -2892,6 +2891,7 @@
 }
 .grid-card .detail-item .desc {
 	font-weight: 600;
+	text-align: right;
 }
 .grid-card .detail-item .term.trim::before { background: url("../img/contents/icon-trim.svg") no-repeat center / 15px; }
 .grid-card .detail-item .term.period::before { background: url("../img/contents/icon-condition-period.svg") no-repeat center / 22px; }
@@ -3021,7 +3021,7 @@
 }
 @media all and (max-width: 767px) {
 	.point-use-info .point {
-		font-size: 2rem;
+		font-size: var(--font-size-30);
 	}
 	.point-use-btn {
 		width: 100%;
@@ -3063,13 +3063,13 @@
 }
 @media all and (max-width: 767px) {
 	.modal-point-exchange .coupon-img {
-		flex: 0 0 120px;
+		flex: 0 0 100px;
 	}
 }
  
 /* ## 나의포인트 팝업 ## */
 .modal-point-history .point-use {
-	padding: 18px;
+	padding: 18px 10px;
 	background-image: none;
 }
 .modal-point-history .point-use-info {
@@ -3077,7 +3077,7 @@
 	text-align: center;
 }
 .modal-point-history .point-use-info .title {
-	font-size: var(--font-size-14);
+	font-size: var(--font-size-15);
 }
 .modal-point-history .point-use-info .point {
 	font-size: 2.25rem;
@@ -3094,7 +3094,7 @@
 }
 .point-save-title .title {
 	margin-bottom: 15px;
-	font-size: var(--font-size-14);
+	font-size: var(--font-size-15);
 }
 .point-save-title .img-box {
 	width: 100px;
@@ -3170,11 +3170,11 @@
 }
 @media all and (max-width: 767px) {
 	.modal-point-history .point-use-info .point {
-		font-size: 2rem;
+		font-size: var(--font-size-30);
 	}
 	.point-save-list .item-box {
 		padding: 6px 10px;
-		font-size: var(--font-size-14);
+		font-size: var(--font-size-15);
 	}
 	.point-empty {
 		padding: 20px 0;
@@ -3285,7 +3285,7 @@
 		padding: 12px;
 	}
 	.coupon-img {
-		flex: 0 0 140px;
+		flex: 0 0 120px;
 	}
 	.coupon-text .title-box {
 		margin-bottom: 8px;
@@ -3387,7 +3387,11 @@
 	font-weight: 600;
 }
 @media all and (max-width: 767px) {
+	.rent-list.mypage > .board-button-box {
+		padding: 18px 10px;
+	}
 	.rent-list.mypage > .board-button-box .text {
+		margin-bottom: 10px;
 		font-size: var(--font-size-18);
 	}
 }

@@ -55,3 +55,6 @@ input[type="radio"] { position: absolute; width: 1px; height: 1px; padding: 0; m
 ::-webkit-scrollbar { width: 8px; height: 4px; }
 ::-webkit-scrollbar-thumb { background: #ddd; }
 ::-webkit-scrollbar-track { background: #f6f6f6; }
+@media all and (max-width: 767px) {
+	html, input, select, textarea, button { font-size: 14px; }
+}

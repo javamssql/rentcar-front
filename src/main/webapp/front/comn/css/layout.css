@@ -459,12 +459,11 @@
 	}
 	.footer-copy {
 		position: absolute;
-		bottom: -40px;
+		bottom: -30px;
 		width: 100%;
 	}
 	.footer-lnk {
 		justify-content: center;
-		font-size: var(--font-size-14);
 	}
 	.footer-contact {
 		text-align: center;
@@ -591,9 +590,6 @@
 	}
 	.quick-menu .quick-btn img {
 		width: 28px;
-	}
-	.quick-menu .quick-label {
-		font-size: var(--font-size-12);
 	}
 	.quick-menu .top-btn {
 		margin-top: 0;

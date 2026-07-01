@@ -376,7 +376,6 @@ body.prevent {
 	.radio-type02 label {
 		height: 40px;
 		line-height: 40px;
-		font-size: var(--font-size-14);
 	}
 }
 
@@ -492,6 +491,13 @@ body.prevent {
 	mask-image: url("../img/contents/icon-option-check.svg");
 	transform: none;
 }
+@media all and (max-width: 767px) {
+	.checkbox-type02 .checkbox-label {
+		height: 42px;
+		padding: 8px 12px;
+		margin-bottom: 8px;
+	}
+}
 
 .checkbox.checkbox-type03 {
 	display: flex;
@@ -510,7 +516,6 @@ body.prevent {
 }
 .checkbox-type03 .checkbox-text {
 	padding-left: 10px;
-	margin-left: 12px;
 	margin-right: 0;
 }
 .checkbox-type03 .checkbox-label:has(.checkbox-input:checked) {

@@ -1292,10 +1292,7 @@
 		gap: 8px;
 	}
 	.main-guide .text-box .title {
-		font-size: var(--font-size-16);
-	}
-	.main-guide .text-box .desc {
-		font-size: var(--font-size-14);
+		font-size: var(--font-size-18);
 	}
 }
 
@@ -1585,17 +1582,8 @@
 		gap: 8px;
 		padding: 18px;
 	}
-	.main-review-slide .label {
-		font-size: var(--font-size-12);
-	}
 	.main-review-slide .title {
 		font-size: var(--font-size-16);
-	}
-	.main-review-slide .desc {
-		font-size: var(--font-size-14);
-	}
-	.main-review-slide .name-box {
-		font-size: var(--font-size-12);
 	}
 }
 
@@ -1715,7 +1703,7 @@
 }
 @media all and (max-width: 767px) {
 	.modal-review-slide .swiper-slide .img-box {
-		height: 220px;
+		height: 180px;
 	}
 	.modal-review-slide .swiper-pagination {
 		bottom: 5px;
@@ -1731,21 +1719,18 @@
 		gap: 8px;
 		margin: 12px 0;
 	}
-	.modal-review-info .name-box {
-		font-size: var(--font-size-12);
-	}
 	.modal-review-title {
 		padding-bottom: 8px;
 		margin-bottom: 15px;
 		font-size: var(--font-size-20);
 	}
 	.modal-review-desc {
-		font-size: var(--font-size-14);
+		height: 140px;
 	}
 	.modal-review-pagination {
 		flex-shrink: 0;
 		gap: 30px;
-		font-size: var(--font-size-14);
+		font-size: var(--font-size-15);
 	}
 	.modal-review-pagination .btn {
 		height: 36px;
