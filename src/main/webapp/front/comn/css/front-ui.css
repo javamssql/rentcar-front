@@ -1404,7 +1404,6 @@ input[type="checkbox"].switch-input:checked {
 	.paging-pages :is(a, span) {
 		width: 33px;
 		height: 33px;
-		font-size: var(--font-size-14);
 	}
 }
 
@@ -1634,7 +1633,6 @@ input[type="checkbox"].switch-input:checked {
 	}
 	.form-certify .time {
 		right: 15px;
-		font-size: var(--font-size-14);
 	}
 }
 

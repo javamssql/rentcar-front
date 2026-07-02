@@ -440,7 +440,6 @@
 		justify-content: center;
 		gap: 3px;
 		color: #555;
-		font-size: var(--font-size-14);
 		cursor: pointer;
 	}
 	.footer-addr .addr-btn img {
@@ -794,7 +793,7 @@ body.black .gnb-lnk {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: var(--font-size-14);
+		font-size: var(--font-size-15);
 	}
 	.sub-nav-btn::after {
 		display: none;

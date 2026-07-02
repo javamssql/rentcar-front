@@ -43,10 +43,7 @@
 		margin-bottom: 25px;
 	}
 	.main-title .title {
-		font-size: var(--font-size-24);
-	}
-	.main-title .desc {
-		font-size: var(--font-size-14);
+		font-size: var(--font-size-26);
 	}
 }
 
@@ -344,18 +341,18 @@
 		font-size: 2.625rem;
 	}
 	.main-visual-text .text {
-		font-size: var(--font-size-14);
+		font-size: var(--font-size-16);
 		margin-bottom: 5px;
 	}
 	.main-visual-text .desc {
 		margin-bottom: 15px;
-		font-size: var(--font-size-14);
+		font-size: var(--font-size-16);
 	}
 	.main-visual-card {
 		width: 62%;
 	}
 	.main-visual-card .text-box .text {
-		font-size: var(--font-size-20);
+		font-size: var(--font-size-22);
 	}
 	.main-visual-card .custom-pagination {
 		height: 50px;
@@ -505,9 +502,6 @@
 		margin-bottom: 0;
 		margin-right: auto;
 	}
-	.main-live-counter .text {
-		font-size: var(--font-size-14);
-	}
 	.main-live-counter .counter {
 		font-size: var(--font-size-24);
 	}
@@ -522,12 +516,6 @@
 		height: 160px;
 		padding: 20px 22px;
 		background-size: 88px;
-	}
-	.main-live-slide .swiper-slide .time {
-		font-size: var(--font-size-14);
-	}
-	.main-live-slide .swiper-slide .text {
-		font-size: var(--font-size-16);
 	}
 }
 
@@ -685,26 +673,18 @@
 	}
 	.main-curation-slide .text {
 		padding-top: 10px;
-		font-size: var(--font-size-18);
 	}
 	.main-curation-slide .price strong {
 		font-size: var(--font-size-20);
 	}
 	.main-curation-slide .price .unit {
 		margin-left: 3px;
-		font-size: var(--font-size-14);
 	}
 	.main-banner-slide .swiper-slide {
 		height: 180px;
 	}
 	.main-banner-slide .text-box {
 		padding: 20px;
-	} 
-	.main-banner-slide .text-box .title {
-		font-size: var(--font-size-16);
-	}
-	.main-banner-slide .text-box .text {
-		font-size: var(--font-size-14);
 	}
 	.main-banner-slide .swiper-pagination {
 		display: block;
@@ -714,7 +694,7 @@
 		right: 12px;
 		width: auto;
 		color: #fff;
-		font-size: var(--font-size-13);
+		font-size: var(--font-size-14);
 		font-weight: 300;
 		background: rgba(0,0,0,.5);
 		padding: 5px 13px;
@@ -893,13 +873,13 @@
 		padding-right: 0;
 	}
 	.main-ranking-list .label-box .label {
-		font-size: var(--font-size-16);
+		font-size: var(--font-size-18);
 	}
 	.main-ranking-list .tag-box {
 		display: none;
 	}
 	.main-ranking-list .price {
-		font-size: var(--font-size-16);
+		font-size: var(--font-size-18);
 		position: unset;
 		transform: none;
 	}
@@ -1127,11 +1107,8 @@
 		padding-right: 80px;
 	}
 	.main-cost .cost-header .title {
-		font-size: var(--font-size-24);
+		font-size: var(--font-size-26);
 		word-break: keep-all;
-	}
-	.main-cost .cost-header span {
-		font-size: var(--font-size-14);
 	}
 	.main-cost .cost-circle {
 		top: 28px;
@@ -1156,10 +1133,6 @@
 		width: 100%;
 		height: 34px;
 		padding: 0;
-		font-size: var(--font-size-14);
-	}
-	.main-cost .cost-text {
-		font-size: var(--font-size-14);
 	}
 	.main-cost .cost-content {
 		overflow: auto hidden;
@@ -1185,7 +1158,6 @@
 		display: block;
 		color: #000;
 		text-align: center;
-		font-size: var(--font-size-14);
 	}
 	.main-cost .cost-content :is(.item3, .item4) {
 		flex: 1 0 250px;
@@ -1497,10 +1469,9 @@
 	}
 	.modal-tv-pagination .text-box span {
 		margin-bottom: 5px;
-		font-size: var(--font-size-12);
+		font-size: var(--font-size-14);
 	}
 	.modal-tv-pagination .text-box .title {
-		font-size: var(--font-size-14);
 		font-weight: 500;
 	}
 }
@@ -1710,7 +1681,7 @@
 		width: 54px;
 		height: 26px;
 		line-height: 26px;
-		font-size: var(--font-size-12);
+		font-size: var(--font-size-14);
 		font-weight: 300;
 	}
 	.modal-review-info {

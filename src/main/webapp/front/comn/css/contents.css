@@ -610,8 +610,10 @@
 @media all and (max-width: 767px) {
 	.rent-filter-btn {
 		height: 40px;
-		font-size: var(--font-size-12);
 		color: #999999;
+	}
+	.rent-filter-btn::after {
+		margin-left: 8px;
 	}
 	.rent-filter-btn .icon {
 		width: 16px;
@@ -681,6 +683,11 @@
 }
 .rent-brand-box .btn .img {
 	mix-blend-mode: multiply;
+}
+@media all and (max-width: 767px) {
+	.rent-brand-box .btn {
+		font-size: var(--font-size-14);
+	}
 }
 
 
@@ -806,7 +813,7 @@
 	}
 	.rent-grid .grid-card .title {
 		margin-top: 15px;
-		font-size: var(--font-size-16);
+		font-size: var(--font-size-18);
 	}
 	.rent-grid .grid-card .price-box {
 		margin-top: 0;
@@ -1562,17 +1569,11 @@
 	.capital-bank {
 		gap: 12px;
 	}
-	.capital-bank .bank-text {
-		font-size: var(--font-size-14);
-	}
 	.capital-bank .bank-img {
 		padding: 0 2px;
 	}
 	.capital-content {
 		gap: 12px 40px;
-	}
-	.capital-content .text {
-		font-size: var(--font-size-16);
 	}
 	.capital-price {
 		font-size: 2rem;
@@ -2021,11 +2022,9 @@
 	}
 	.rent-complete .complete-box h3 {
 		margin-top: 10px;
-		font-size: var(--font-size-18);
 	}
 	.rent-complete .complete-box p {
 		margin-top: 10px;
-		font-size: var(--font-size-14);
 	}
 	.complete-info {
 		flex-direction: column;
@@ -2035,9 +2034,6 @@
 	.complete-info .aside-head {
 		flex: none;
 		width: 100%;
-	}
-	.complete-info .aside-head .title-box .title {
-		font-size: var(--font-size-22);
 	}
 	.complete-info .aside-head .img-box {
 		width: 100%;
@@ -3174,7 +3170,7 @@
 	}
 	.point-save-list .item-box {
 		padding: 6px 10px;
-		font-size: var(--font-size-15);
+		font-size: var(--font-size-14);
 	}
 	.point-empty {
 		padding: 20px 0;
