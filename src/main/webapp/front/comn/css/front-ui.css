@@ -895,7 +895,6 @@ input[type="checkbox"].switch-input:checked {
 .modal-title .title-icon {
 	width: 26px;
 	height: 26px;
-	filter: invert(19%) sepia(100%) saturate(6625%) hue-rotate(224deg) brightness(96%) contrast(103%);
 }
 .modal-body {
 	padding:30px 40px;

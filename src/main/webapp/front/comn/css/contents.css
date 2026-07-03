@@ -619,7 +619,7 @@
 		width: 16px;
 		height: 16px;
 		margin-right: 5px;
-		filter: invert(66%) sepia(3%) saturate(44%) hue-rotate(314deg) brightness(94%) contrast(80%);
+		filter: brightness(0) saturate(100%) invert(70%) sepia(0%) saturate(0%) hue-rotate(196deg) brightness(99%) contrast(95%);
 	}
 }
 .rent-filter-option .btn {
@@ -632,13 +632,29 @@
 	border-radius: 10px;
 	border: 1px solid #E5E5E5;
 	color: #999999;
+	position: relative;
+}
+.rent-filter-option .btn::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	width: 20px;
+	height: 20px;
+	background: var(--primary-color);
+	-webkit-mask-image: url("../img/contents/icon-option-check.svg");
+	mask-image: url("../img/contents/icon-option-check.svg");
+	mask-size: contain;
+	display: none;
 }
 .rent-filter-option .btn.active {
 	border-color: var(--primary-color);
 	color: var(--primary-color);
 	font-weight: 700;
-	background: url("../img/contents/icon-option-check.svg") no-repeat center right 20px;
-	filter: invert(19%) sepia(100%) saturate(6625%) hue-rotate(224deg) brightness(96%) contrast(103%);
+}
+.rent-filter-option .btn.active::after {
+	display: block;
 }
 
 
@@ -1169,7 +1185,7 @@
 }
 .aside-btn-wrap .button .icon {
 	margin-left: auto;
-	filter: invert(19%) sepia(100%) saturate(6625%) hue-rotate(224deg) brightness(96%) contrast(103%);
+	color: var(--primary-color);
 }
 .aside-btn-wrap .button .img {
 	width: 18px;
@@ -1437,6 +1453,8 @@
 	border-radius: 4px;
 	background: #fff;
 	box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+	flex: 0 0 auto;
+    width: auto;
 }
 .bank-img img {
 	width: 100%;
@@ -2605,6 +2623,7 @@
 .mypage-compare .grid-card .price-box {
 	color: #000;
 	font-size: var(--font-size-20);
+	flex-shrink: 0;
 }
 .mypage-compare .grid-card .price-box .unit {
 	color: #000;
