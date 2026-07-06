@@ -552,9 +552,6 @@
 	.quick-menu .quick-btn {
 		padding: 10px 0;
 	}
-	.quick-menu .quick-label {
-		font-size: var(--font-size-13);
-	}
 	.quick-menu .top-btn {
 		margin-top: 8px;
 		width: 72px;
@@ -858,6 +855,9 @@ body.black .gnb-lnk {
 	z-index: 1;
 	border-radius: 99px;
 	background: rgba(0,0,0,0.3);
+}
+.modal-popup .slide-control:has(.swiper-pagination-lock) {
+	display: none;
 }
 .modal-popup :is(.swiper-button-next, .swiper-button-prev) {
 	flex-shrink: 0;

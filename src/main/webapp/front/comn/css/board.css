@@ -1009,7 +1009,9 @@
 /* ## board qna ##  */
 .board-qna-item {
 	display: block;
-	margin-bottom: 48px;
+	padding-bottom: 20px;
+	margin-bottom: 28px;
+	border-bottom: 1px solid #F6F6F7;
 }
 .board-qna-info {
 	display: flex;
@@ -1053,9 +1055,8 @@
 	letter-spacing: 0;
 }
 .board-qna-answer {
-	margin-top: 15px;
-	padding: 16px 15px 16px 38px;
-	border-radius: 5px;
+	padding: 20px 15px 20px 38px;
+	border-top: 1px solid #F6F6F7;
 	background: #F6F6F7;
 	position: relative;
 }
@@ -1093,14 +1094,8 @@
 	filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(5276%) hue-rotate(221deg) brightness(96%) contrast(111%);
 }
 @media all and (max-width: 767px) {
-	.board-qna-item {
-		margin-bottom: 30px;
-	}
 	.board-qna-info {
 		margin-bottom: 10px;
-	}
-	.board-qna-answer {
-		margin-top: 10px;
 	}
 }
 .qna-view .board-view-header {
@@ -1132,10 +1127,6 @@
 	justify-content: flex-start;
 	gap: 20px;
 }
-.qna-view .board-total {
-	padding-bottom: 15px;
-	border-bottom: 1px solid #F6F6F7;
-}
 .board-qna-btn {
 	display: inline-flex;
 	align-items: center;
@@ -1145,11 +1136,28 @@
 .qna-view .board-qna-btn.active {
 	color: var(--primary-color);
 }
-.qna-view .board-qna-btn.active .icon {
-	filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(5276%) hue-rotate(221deg) brightness(96%) contrast(111%);
+.board-qna-btn::before {
+	content: "";
+	display: inline-block;
+	background-color: currentColor;
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
 }
-.board-qna-btn.btn-thumbs .icon { transform-origin: 70% 100%; width: 18px; height: 18px; }
-.board-qna-btn.btn-thumbs.active .icon { animation: thumbsPop .45s ease; }
+.board-qna-btn.btn-thumbs::before {
+	width: 18px;
+	height: 18px;
+	mask-image: url('../../comn/img/board/icon-thumbs-up.svg');
+	transform-origin: 70% 100%;
+}
+.board-qna-btn.btn-check::before {
+	width: 24px;
+	height: 24px;
+	mask-image: url('../../comn/img/board/icon-list-check.svg');
+	transition: transform .25s ease;
+}
+.board-qna-btn.btn-thumbs.active::before { animation: thumbsPop .45s ease; }
+.board-qna-btn.btn-check.active::before { animation: checkBounce .4s ease; }
 @keyframes thumbsPop {
   0%   { transform: scale(1) rotate(0deg); }
   30%  { transform: scale(1.1) rotate(-12deg); }
@@ -1157,8 +1165,6 @@
   80%  { transform: scale(1.08) rotate(-3deg); }
   100% { transform: scale(1) rotate(0deg); }
 }
-.board-qna-btn.btn-check .icon { transition: transform .25s ease; }
-.board-qna-btn.btn-check.active .icon { animation: checkBounce .4s ease; }
 @keyframes checkBounce {
   0%   { transform: scale(1); }
   40%  { transform: scale(1.18); }

@@ -1685,9 +1685,6 @@ input[type="checkbox"].switch-input:checked {
 	background: #E9F1FC;
 	margin-bottom: 5px;
 }
-.share-lnk:hover {
-	color: var(--primary-color);
-}
 .share-lnk:where(.kakao,.band,.blog)::after {
 	content:"";
 	display: block;
@@ -1696,9 +1693,6 @@ input[type="checkbox"].switch-input:checked {
 .share-lnk.kakao::after {
 	height: 20px;
 	background:url("../img/board/icon-kakao.svg") no-repeat center top;
-}
-.share-lnk.kakao:hover::after {
-	filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(5276%) hue-rotate(221deg) brightness(96%) contrast(111%);
 }
 @media all and (max-width: 767px) {
 	.share-open {

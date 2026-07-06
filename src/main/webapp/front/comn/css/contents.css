@@ -829,11 +829,9 @@
 	}
 	.rent-grid .grid-card .title {
 		margin-top: 15px;
-		font-size: var(--font-size-18);
 	}
 	.rent-grid .grid-card .price-box {
 		margin-top: 0;
-		font-size: var(--font-size-18);
 	}
 	.rent-grid .grid-card .img-box {
 		flex: 0 0 145px;
@@ -1213,7 +1211,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		z-index: 100;
+		z-index: 20;
 		padding: 0 15px calc(12px + env(safe-area-inset-bottom));
 		background: #fff;
 	}
@@ -1454,10 +1452,9 @@
 	background: #fff;
 	box-shadow: 3px 3px 0 rgba(0,0,0,0.1);
 	flex: 0 0 auto;
-    width: auto;
 }
 .bank-img img {
-	width: 100%;
+    width: auto;
 	height: 100%;
 	object-fit: contain;
 }
@@ -2250,9 +2247,22 @@
 .info-more-btn {
 	width: 17px;
 	height: 17px;
+	display: inline-block;
+	color: #cecece;
+	position: relative;
+}
+.info-more-btn::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: currentColor;
+	mask-image: url('../../comn/img/contents/icon-plus.svg');
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
 }
 .info-more-btn:hover {
-	filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(5276%) hue-rotate(221deg) brightness(96%) contrast(111%);
+	color: var(--primary-color);
 }
 .info-more-box {
 	display: none;
@@ -2337,9 +2347,6 @@
 		flex-direction: column;
 		padding: 20px 15px;
 	}
-	.rent-list.instant .grid-card .title {
-		font-size: var(--font-size-20);
-	}
 	.grid-card .condition-badge .badge {
 		height: 28px;
 	}
@@ -2386,9 +2393,6 @@
 @media all and (max-width: 1439px) {
 	.rent-list.curation .rent-box {
 		padding: 40px 30px;
-	}
-	.rent-list.curation .grid-card .title {
-		font-size: var(--font-size-18);
 	}
 }
 @media all and (max-width: 767px) {
@@ -3669,5 +3673,21 @@
 	.mypage-menu-btn .title .icon {
 		width: 18px;
 		height: 18px;
+	}
+}
+
+.mypage-mob-box {
+	display: none;
+}
+@media all and (max-width: 767px) {
+	.mypage-mob-box {
+		display: block;
+		margin-top: 30px;
+	}
+	.mypage-mob-box .mypage-kakao-btn {
+		display: flex;
+	}
+	.mypage-mob-box .promotion-slide {
+		margin-top: 10px;
 	}
 }
