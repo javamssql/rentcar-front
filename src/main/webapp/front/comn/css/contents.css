@@ -601,6 +601,7 @@
 	width: 20px;
 	height: 20px;
 	margin-right: 10px;
+	filter: brightness(0) saturate(100%) invert(50%);
 }
 @media all and (max-width: 1023px) {
 	.rent-filter-btn {
@@ -619,7 +620,6 @@
 		width: 16px;
 		height: 16px;
 		margin-right: 5px;
-		filter: brightness(0) saturate(100%) invert(70%) sepia(0%) saturate(0%) hue-rotate(196deg) brightness(99%) contrast(95%);
 	}
 }
 .rent-filter-option .btn {
@@ -2261,8 +2261,8 @@
 	mask-position: center;
 	mask-size: contain;
 }
-.info-more-btn:hover {
-	color: var(--primary-color);
+.info-more-btn:hover::before {
+	background-color: var(--primary-color);
 }
 .info-more-box {
 	display: none;

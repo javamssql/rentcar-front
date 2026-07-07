@@ -1131,10 +1131,13 @@
 	display: inline-flex;
 	align-items: center;
 	gap: 3px;
-	font-size: var(--font-size-14);
+	font-size: 14px;
 }
 .qna-view .board-qna-btn.active {
 	color: var(--primary-color);
+}
+.qna-view .board-qna-btn.active::before {
+	background: var(--primary-color);
 }
 .board-qna-btn::before {
 	content: "";
@@ -1147,13 +1150,13 @@
 .board-qna-btn.btn-thumbs::before {
 	width: 18px;
 	height: 18px;
-	mask-image: url('../../comn/img/board/icon-thumbs-up.svg');
+	mask-image: url('../img/board/icon-thumbs-up.svg');
 	transform-origin: 70% 100%;
 }
 .board-qna-btn.btn-check::before {
 	width: 24px;
 	height: 24px;
-	mask-image: url('../../comn/img/board/icon-list-check.svg');
+	mask-image: url('../img/board/icon-list-check.svg');
 	transition: transform .25s ease;
 }
 .board-qna-btn.btn-thumbs.active::before { animation: thumbsPop .45s ease; }
