@@ -829,12 +829,14 @@
 	}
 	.rent-grid .grid-card .title {
 		margin-top: 15px;
+		font-size: var(--font-size-18);
 	}
 	.rent-grid .grid-card .price-box {
 		margin-top: 0;
+		font-size: var(--font-size-18);
 	}
 	.rent-grid .grid-card .img-box {
-		flex: 0 0 145px;
+		flex: 0 0 120px;
 		height: 100%;
 		padding: 10px;
 		margin-top: 0;
@@ -2347,6 +2349,9 @@
 		flex-direction: column;
 		padding: 20px 15px;
 	}
+	.rent-list.instant .grid-card .price-box {
+		font-size: var(--font-size-24);
+	}
 	.grid-card .condition-badge .badge {
 		height: 28px;
 	}
@@ -2857,7 +2862,7 @@
 		gap: 12px;
 	}
 	.compare-img {
-		flex: 0 0 110px;
+		flex: 0 0 90px;
 	}
 	.compare-title {
 		font-size: var(--font-size-16);
@@ -2865,8 +2870,14 @@
 	.compare-text {
 		font-size: var(--font-size-14);
 	}
+	.compare-item .condition-badge {
+		gap: 3px;
+	}
 	.compare-item .condition-badge .badge {
-		height: 28px;
+		height: auto;
+		padding: 6px 4px 6px 17px;
+		background-position: left 1px center;
+		background-size: 15px;
 	}
 	.compare-price {
 		font-size: var(--font-size-14);
@@ -2965,13 +2976,18 @@
 		display: none;
 	}
 	.mypage-garage .grid-card .img-box {
+		flex: auto;
 		width: 100%;
+	}
+	.mypage-garage .grid-card .text-box {
+		flex: auto;
 	}
 	.mypage-garage .button-wrap {
 		flex: none;
 	}
 	.mypage-garage .button-wrap .button {
 		flex: 1;
+		min-width: auto;
 	}
 }
 @media all and (max-width: 767px) {
