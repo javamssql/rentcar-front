@@ -2461,6 +2461,13 @@
 		position: absolute;
 		top: 15px;
 	}
+	:has(.mypage) .sub-aside {
+		order: 2;
+		padding: 0 15px 20px 15px;
+	}
+	:has(.mypage) .sub-aside .promotion-slide {
+		display: block;
+	}
 	.mypage-myInfo-btn {
 		font-size: var(--font-size-14);
 		gap: 5px;
@@ -2476,12 +2483,6 @@
 	}
 	.rent-list.mypage {
 		padding: 15px 15px 30px;
-	}
-	:has(.mypage) .sub-aside .promotion-slide {
-		display: block;
-	}
-	:has(.mypage) .sub-aside {
-		order: 2;
 	}
 }
 
