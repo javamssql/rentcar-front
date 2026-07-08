@@ -2258,7 +2258,7 @@
 	position: absolute;
 	inset: 0;
 	background-color: currentColor;
-	mask-image: url('../../comn/img/contents/icon-plus.svg');
+	mask-image: url('../img/contents/icon-plus.svg');
 	mask-repeat: no-repeat;
 	mask-position: center;
 	mask-size: contain;
