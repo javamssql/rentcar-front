@@ -449,6 +449,10 @@
 	.footer-addr .addr-btn.active img {
 		transform: rotate(180deg);
 	}
+	.footer-addr .addr-box {
+		display: none;
+		padding-top: 10px;
+	}
 	.footer-addr .info {
 		justify-content: center;
 	}
