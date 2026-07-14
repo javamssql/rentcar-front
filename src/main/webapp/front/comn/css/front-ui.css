@@ -959,6 +959,13 @@ input[type="checkbox"].switch-input:checked {
 	.modal {
 		--modal-border-radius: 20px;
 	}
+	.modal-box {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+	.modal-box::-webkit-scrollbar {
+		display: none;
+	}
 	.modal-header {
 		padding:40px 45px 10px 20px;
 	}

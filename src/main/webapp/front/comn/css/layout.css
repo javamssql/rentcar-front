@@ -792,16 +792,33 @@ body.black .gnb-lnk {
 		justify-content: center;
 		font-size: var(--font-size-15);
 	}
+	body:not(:has(.mypage)) .sub-nav-btn {
+		padding: 0 10px;
+	}
 	.sub-nav-btn::after {
 		display: none;
 	}
 	.sub-nav-btn .icon {
-		width: 18px;
-		height: 18px;
+		width: 16px;
+		height: 16px;
 		margin-right: 5px;
 	}
 	.sub-aside .promotion-slide {
 		display: none;
+	}
+}
+@media all and (max-width: 369px) {
+	body:not(:has(.mypage)) .sub-nav {
+		gap: 4px;
+	}
+	body:not(:has(.mypage)) .sub-nav-btn {
+		/* padding: 0 10px; */
+		font-size: var(--font-size-14);
+	}
+	body:not(:has(.mypage)) .sub-nav-btn .icon {
+		width: 15px;
+		height: 15px;
+		margin-right: 2px;
 	}
 }
 

@@ -622,6 +622,17 @@
 		margin-right: 5px;
 	}
 }
+@media all and (max-width: 369px) {
+	.rent-filter-btn {
+		font-size: var(--font-size-14);
+	}
+	.rent-filter-btn .icon {
+		width: 15px;
+		height: 15px;
+		margin-right: 2px;
+	}
+}
+
 .rent-filter-option .btn {
 	display: flex;
 	align-items: center;
