@@ -781,6 +781,11 @@ body.black .gnb-lnk {
 		overflow: auto hidden;
 		flex-direction: row;
 		gap: 6px;
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+	.sub-nav::-webkit-scrollbar {
+		display: none;
 	}
 	.sub-nav-btn {
 		flex: 1 0 auto;
@@ -812,7 +817,6 @@ body.black .gnb-lnk {
 		gap: 4px;
 	}
 	body:not(:has(.mypage)) .sub-nav-btn {
-		/* padding: 0 10px; */
 		font-size: var(--font-size-14);
 	}
 	body:not(:has(.mypage)) .sub-nav-btn .icon {
